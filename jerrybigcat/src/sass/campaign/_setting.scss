@@ -1,0 +1,184 @@
+
+.setting-container {
+
+}
+
+.setting-header {
+	padding-bottom: 20px;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.subtitle {
+		color: $text-light;
+	}
+}
+
+.setting-content {
+	margin: 0 auto;
+	max-width: 700px;
+
+	h3 {
+		margin: 30px 0;
+	}
+
+	dl {
+		
+		&:after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+
+		input {
+			text-align: center;
+		}
+
+		dt,dd {
+			float:left;
+		}
+		dt {
+			width: 200px;
+		}
+		dd {
+			max-width: calc(100% - 200px);
+			padding-left: 30px;
+			color: $text-light;
+		}
+	}
+}
+
+.setting-footer {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.setting-time {
+	margin-bottom: 50px;
+}
+
+.time-area {
+	display: inline-block;
+	margin-right: 30px;
+	min-width: 380px;
+	vertical-align: middle;
+
+	label {
+		float: left;
+		color: $text-light;
+		margin-right: 10px;
+	}
+
+	input {
+		width: 300px;
+	}
+
+	& > .m1-dropdown {
+		width: 280px;
+	}
+}
+.time-slot {
+	display: inline-block;
+	min-width: 200px;
+	vertical-align: middle;
+
+	& > .m1-dropdown {
+		width: 100%;
+	}
+}
+
+.auto-respond {
+	margin-top: 50px;
+}
+
+.end-condition-box {
+	position: relative;
+
+	.icon-setting {
+		float: right;
+		margin-top: 10px;
+	}
+}
+
+.auto-respond-box {
+	position: relative;
+	margin-bottom: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
+
+	.m1-tag {
+		margin: 0 ;
+	}
+
+	.respond-title {
+		margin-bottom: 10px;
+	}
+
+	.respond-intro {
+		color: $text-light;
+
+	}
+
+	.event-intro {
+		margin-left: 10px;
+		color: $brand-primary;
+	}
+
+	.icon-email {
+		position: absolute;
+		left: 30px;
+		top: 30px;
+	}
+
+	.icon-setting {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		font-size: 20px;
+	}
+}
+
+.add-end-condition {
+	text-align: center;
+
+	span {
+		display: inline-block;
+		width: 160px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		background-color: $text-lightest;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&.select {
+			background-color: $brand-primary;
+			color: $white;
+		}
+
+		&:first-child {
+			margin-right: 16px;
+		}
+	}
+}
+
+.set-auto-respond {
+
+	.m1-form-label {
+		width: 70px;
+	}
+	.m1-form-content {
+		margin-left: 70px;
+	}
+
+	.m1-dropdown-form {
+		width: 100%;
+	}
+
+	.m1-col-6 {
+		&:first-child {
+			padding-right: 16px;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.field-container {
+	margin-top:30px;
+
+	.m1-tab-content {
+		margin-top: 20px;
+	}
+
+	.m1-tag-ignore {
+		float: right;
+		color: $text-base;
+		background-color: $text-lightest;
+	}
+
+	.m1-table {
+
+		td:nth-child(3) {
+			label {
+				line-height: 26px;
+			}
+		}
+	}
+}
+
+.field-setting-form {
+	padding-right: 30px;
+
+	.iconfont {
+			position: absolute;
+			right: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 16px;
+			cursor: pointer;
+		}
+}
+
+.field-type {
+	.m1-dropdown {
+		& > .m1-btn {
+			padding-left: 10px;
+		}
+	}
+
+	.m1-dropdown-menu {
+		width: 100%;
+	}
+
+	.multi-item li {
+		position: relative;
+		margin-top: 10px;
+	}
+	
+}

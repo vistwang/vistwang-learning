@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'newFont';
+    src: url('../font/emblem.ttf');
+    url('../font/emblem.ttf') format('truetype')
+}
+
+body{
+    font-family: newFont;
+}

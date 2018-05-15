@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <style>
+        .box{
+            height: 100px;
+            width: 300px;
+            border-radius: 10px;
+            margin: 0 auto 50px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .box1:nth-child(1){
+            background-color: red;
+        }
+
+        .box2{
+            background-color: orange;
+        }
+        .box3{
+            background-color: yellow;
+        }
+        .box4{
+            background-color: green;
+        }
+        .box5{
+            background-color: blue;
+        }
+        .box6{
+            background-color: indigo;
+        }
+        .box7{
+            background-color: purple;
+        }
+        .box8{
+            background-color: cyan;
+        }
+        .box9{
+            background-color: magenta;
+        }
+        .box10{
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+<button class="btn btn-primary" name=".box1">点我定位到位置1</button>
+<button class="btn btn-primary" name=".box2">点我定位到位置2</button>
+<button class="btn btn-primary" name=".box3">点我定位到位置3</button>
+<button class="btn btn-primary" name=".box4">点我定位到位置4</button>
+<button class="btn btn-primary" name=".box5">点我定位到位置5</button>
+<button class="btn btn-primary" name=".box6">点我定位到位置6</button>
+<button class="btn btn-primary" name=".box7">点我定位到位置7</button>
+<button class="btn btn-primary" name=".box8">点我定位到位置8</button>
+<button class="btn btn-primary" name=".box9">点我定位到位置9</button>
+<button class="btn btn-primary" name=".box10">点我定位到位置10</button>
+
+<div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+    <div class="box box7">7</div>
+    <div class="box box8">8</div>
+    <div class="box box9">9</div>
+    <div class="box box10">10</div>
+</div>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+
+$('button').click(function () {
+    var gg = $(this).attr('name');
+    var scroll_offset = $(gg).offset(); //得到box这个div层的offset，包含两个值，top和left
+
+    $("body,html").animate({
+        scrollTop:scroll_offset.top //让body的scrollTop等于pos的top，就实现了滚动
+    })
+})
+
+</script>
+</body>
+</html>

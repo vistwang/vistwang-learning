@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick='alert("你是猪啊")'>121212</button>
+<script>
+    //重写alert
+    window.alert=function (msg) {
+        console.log(msg)
+    }
+
+    var c={}
+    if(JSON.stringify(c) == "{}"){
+        console.log('hahahah')
+    }
+    if(!c){
+        console.log('hahahah2')
+    }
+    var gg = undefined
+
+    if(gg){
+        console.log('undefined成功')
+    }
+</script>
+</body>
+</html>

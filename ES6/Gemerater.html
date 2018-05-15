@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generater</title>
+    <style>
+        body{
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+<h1>Generater迭代器</h1>
+<script>
+    function* foo(name) {
+        yield '我的名字是：'+name;
+        yield '我执行到第二个yield';
+        if(name.length>5){
+            yield '名称的长度很长';
+        }else {
+            yield '名称的长度短短短短';
+        }
+    }
+
+    function* foo2(name) {
+        yield '我的名字是：'+name;
+        yield '我执行到第二个yield';
+        if(name.length>5){
+            yield '名称的长度很长';
+        }else {
+            yield '名称的长度短短短短';
+        }
+    }
+
+    //foo('yang');
+</script>
+</body>
+</html>

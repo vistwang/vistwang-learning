@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    var tt = 0;
+    function ajaxFuc() {
+        var url = 'http://soupai_t.m1world.com/contact/'+'list';
+        var parse = {
+            page:1,
+            limit:10
+        };
+
+        $.ajax({
+            type:'get',
+            url:url,
+            data:parse,
+            beforeSend:function(XMLHttpRequest){
+                //ShowLoading();
+            },
+            success:function(data,textStatus){
+                console.log(data);
+            },
+            complete:function(XMLHttpRequest,textStatus){
+                //HideLoading();
+            },
+            error:function(){
+                //请求出错处理
+            }
+        });
+    }
+
+    //ajaxFuc();
+
+    var tt = 1234232322323233.0;
+    var tt2 = 1234232322323243.0;
+
+    let now = new Date();
+    let startTime = new Date(now.toLocaleDateString()).getTime();
+    let endTime = new Date(new Date(new Date(+now + 1000 * 24 * 60 * 60)).toLocaleDateString()).getTime();
+
+    console.log(tt2-tt);
+    console.log(startTime);
+    console.log(endTime);
+
+</script>
+</body>
+</html>

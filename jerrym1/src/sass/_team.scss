@@ -1,0 +1,179 @@
+
+.empty-content{
+	padding:50px;
+	text-align: center;
+	p{
+		margin-top:30px;
+		color: $text-light;
+	}
+	.no-add{
+		width: 140px;
+	}
+	.coming-soon{
+		width: 155px;
+	}
+}
+.team-content {
+	h3 {
+		margin-top:0;
+		line-height: 14px;
+	}
+}
+.team-set-auth{
+	padding: 30px 0;
+
+	h3{
+		margin-top:0;
+		margin-bottom: 10px;
+		line-height: 14px;
+	}
+
+	& > h3 {
+		margin-bottom: 20px;
+	}
+
+	.m1-modal-body & {
+		padding: 0;
+
+		& > h3{
+			margin-top: 0;
+		}
+	}
+
+}
+.team-auth-type{
+	p{
+		line-height: 1;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.team-general-auth{
+	margin-top:30px;
+	.m1-tag{
+		padding-left: 24px;
+		padding-right: 24px;
+		font-size: 16px;
+
+		.iconfont{
+			font-size: 20px;
+		}
+	}
+}
+
+.team-auth-high, .member-content{
+	.m1-tag{
+		margin-top:0;
+	}
+	.m1-table {
+		tr > td{
+			&:first-child{
+				text-align: left;
+				padding-left:0;
+			}
+		}
+	}
+}
+.team-auth-high{
+	margin-top:20px;
+	padding: 30px;
+	border:1px dashed $brand-primary;
+
+	h3 {
+		margin-top:0;
+		margin-bottom: 20px;
+		padding-left: 10px;
+		border-left: 3px solid $brand-primary;
+		
+	}
+
+	h4{
+		padding:10px 0;
+		font-size: 14px;
+
+		.m1-search-group {
+			float: right;
+		}
+	}
+
+	.team-auth-base {
+		margin-bottom: 20px;
+	}
+
+	.m1-table {
+		
+		tr{
+			td{
+				height: 60px;
+			}
+		}
+	}
+}
+.team-auth-app-header{
+	padding-bottom: 10px;
+	border-bottom: 1px solid $text-lightest;
+
+	h3{
+		float:left;
+		margin: 13px 0;
+	}
+	.m1-btn-group{
+		float:right;
+	}
+	.m1-btn{
+		width: 80px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&:after{
+		display: block;
+		content: " ";
+		clear:both;
+	}
+}
+
+.team-auth-app-footer {
+	margin-top: 20px;
+	span{
+		margin-right: 20px;
+	}
+}
+
+.auth-toggle-high{
+	margin-top:20px;
+	line-height: 1;
+	span{
+		cursor: pointer;
+	}
+}
+
+.member-content{
+
+	tr {
+		 td{
+		 	height: 60px;
+		 }
+		 
+	}
+	 
+	 .avatar-container{
+	 	display: flex;
+	 	align-items: center;
+	 }
+
+	.avatar{
+		display: block;
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+		background-color: $brand-ignore;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

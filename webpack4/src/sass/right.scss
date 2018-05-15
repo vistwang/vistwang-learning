@@ -1,0 +1,123 @@
+
+.right-content{
+  width: 1074px;
+  float: right;
+  .banner-ad-box{
+    margin: 0 0 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    .J-adv:first-child{
+      margin-right: 14px;
+      width: 760px;
+      height: 90px;
+      &:last-child{
+        width: 300px;
+        height: 90px;
+      }
+    }
+  }
+  main{
+    float: left;
+    width: 760px;
+    min-height: 500px;
+    margin-right: 8px;
+    .carousel{
+      width: 760px;
+      height: 300px;
+      background: #fff;
+      margin: 0 auto 8px;
+      overflow: hidden;
+    }
+  }
+  aside{
+    float: right;
+    width: 300px;
+    display: block;
+    overflow: hidden;
+    & *{
+      font-family: PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Verdana,Roboto,Noto,Helvetica Neue,sans-serif !important;
+    }
+
+    .right_box{
+      width: 100%;
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
+      background: #fff;
+      padding: 16px 16px;
+      margin-bottom: 8px;
+      margin-top: 0;
+      h3.feed_new_tit{
+        font-size: 16px;
+        color: #4f4f4f;
+        height: 28px;
+        margin-bottom: 7px;
+
+        span.line{
+          display: block;
+          float: left;
+          width: 3px;
+          height: 15px;
+          background: #cf2730;
+          overflow: hidden;
+          margin: 0 5px 0 0;
+        }
+        span.txt{
+          display: block;
+          float: left;
+          font-size: 16px;
+          color: #2c3033;
+        }
+      }
+      .recommend{
+        .recom-list{
+          li{
+            margin-bottom: 16px;
+            height: 48px;
+            div.img_box{
+              float: left;
+              margin-right: 10px;
+              a{
+                cursor: pointer;
+                img{
+                  display: block;
+                  width: 64px;
+                  height: 48px;
+                  border: 1px solid #e3e3e3;
+                  border-radius: 3px;
+                }
+              }
+            }
+
+            div.content{
+              padding-top: 2px;
+              div{
+                a{
+                  display: block;
+                  margin-bottom: 3px;
+                  font-size: 14px;
+                  color: #707070;
+                  letter-spacing: 0;
+                  line-height: 22px;
+                  max-width: 200px;
+                  overflow: hidden;
+                  cursor: pointer;
+                  font-weight: bold;
+
+                  &:hover{
+                    color: #c92027;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

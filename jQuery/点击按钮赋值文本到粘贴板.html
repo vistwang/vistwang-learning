@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea name="" id="" cols="30" rows="10" id="content">啊撒打发阿斯顿发射点发生dads发的发射点发生</textarea>
+<button id="copy">复制</button>
+<br>
+
+<textarea id="contents" cols="40" rows="5">sdffffffffffffffffffffffasssssssss</textarea>
+<br />
+<input type="button" onClick="jsCopy();" value="复制" />
+
+</body>
+</html>
+<script src=""></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="zeroclipboard/ZeroClipboard.min.js" ></script>
+<script type="text/javascript">
+    // 将【复制】按钮充当复制数据的元素载体
+    ZeroClipboard.config( { swfPath: './zeroclipboard/ZeroClipboard.swf' });
+    var clip = new ZeroClipboard( document.getElementById("copy") );
+    clip.on('copy', function (event) {
+        event.clipboardData.setData('text/plain', $('#content').text());
+        alert('已复制');
+    });
+
+
+</script>

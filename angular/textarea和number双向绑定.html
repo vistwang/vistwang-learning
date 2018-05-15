@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+<textarea name="" id="" cols="30" rows="10" ng-model="arr"></textarea>
+
+<button ng-click="change()">显示</button>
+<br>
+<input type="text" ng-click="allin()" ng-readonly="all">
+
+<div>
+    <input type="number" ng-model="number"><span>{{number}}</span>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.arr = '';
+        $scope.all = true;
+        $scope.allin = function () {
+            alert('1111')
+        };
+
+        $scope.change = function () {
+            console.log($scope.arr);
+        }
+
+        $scope.number = '';
+        $scope.obj1 = {name:'小米'};
+        $scope.obj2 = {name:'小花'};
+
+    });
+
+    var INDUSTRY = [
+        {id:1,name:'IT服务',parentId:0},
+        {id:2,name:'制造业',parentId:0},
+        {id:3,name:'批发/零售',parentId:0},
+        {id:4,name:'生活服务',parentId:0},
+        {id:5,name:'文化/体育/娱乐业',parentId:0},
+        {id:6,name:'建筑/房地产',parentId:0},
+        {id:7,name:'教育',parentId:0},
+        {id:8,name:'运输/物流/仓储',parentId:0},
+        {id:9,name:'医疗',parentId:0},
+        {id:10,name:'政府',parentId:0},
+        {id:11,name:'金融',parentId:0},
+        {id:12,name:'能源/采矿',parentId:0},
+        {id:13,name:'农林渔牧',parentId:0},
+        {id:14,name:'其他',parentId:0},
+        {id:15,name:'计算机软件/硬件/信息服务',parentId:1},
+        {id:16,name:'互联网和相关服务',parentId:1},
+        {id:17,name:'其他',parentId:1},
+        {id:18,name:'机械/电子',parentId:2},
+        {id:19,name:'重工制造',parentId:2},
+        {id:20,name:'汽车',parentId:2},
+        {id:21,name:'其他',parentId:2},
+        {id:22,name:'服装/纺织',parentId:3},
+        {id:23,name:'超市/便利店/百货商场',parentId:3},
+        {id:24,name:'食品/饮料',parentId:3},
+        {id:25,name:'家具/家纺',parentId:3},
+        {id:26,name:'日用品/化妆品',parentId:3},
+        {id:27,name:'家电/数码',parentId:3},
+        {id:28,name:'烟酒',parentId:3},
+        {id:29,name:'文教/工美/体育/娱乐用品',parentId:3},
+        {id:30,name:'批发',parentId:3},
+        {id:31,name:'其他',parentId:3},
+        {id:32,name:'酒店/住宿',parentId:4},
+        {id:33,name:'餐饮',parentId:4},
+        {id:34,name:'租赁和商务服务',parentId:4},
+        {id:35,name:'其他',parentId:4},
+        {id:36,name:'新闻传媒',parentId:5},
+        {id:37,name:'文化/体育',parentId:5},
+        {id:38,name:'娱乐/旅游',parentId:5},
+        {id:39,name:'其他',parentId:5},
+        {id:40,name:'房地产',parentId:6},
+        {id:41,name:'建筑业',parentId:6},
+        {id:42,name:'建材装修',parentId:6},
+        {id:43,name:'其他',parentId:6},
+        {id:44,name:'学前教育',parentId:7},
+        {id:45,name:'初中等教育',parentId:7},
+        {id:46,name:'高等教育',parentId:7},
+        {id:47,name:'培训机构',parentId:7},
+        {id:48,name:'其他',parentId:7},
+        {id:49,name:'道路/铁路运输',parentId:8},
+        {id:50,name:'航空运输',parentId:8},
+        {id:51,name:'水上运输',parentId:8},
+        {id:52,name:'物流/仓储',parentId:8},
+        {id:53,name:'邮政/快递',parentId:8},
+        {id:54,name:'其他',parentId:8},
+        {id:55,name:'医院/医疗机构',parentId:9},
+        {id:56,name:'医药制造',parentId:9},
+        {id:57,name:'医药流通',parentId:9},
+        {id:58,name:'医疗器械',parentId:9},
+        {id:59,name:'其他',parentId:9},
+        {id:60,name:'党政机关',parentId:10},
+        {id:61,name:'国家权利/行政机构',parentId:10},
+        {id:62,name:'检察院/法院/公安',parentId:10},
+        {id:63,name:'民政/人社/交通/卫生',parentId:10},
+        {id:64,name:'发改委/经信委/商务局/统计局',parentId:10},
+        {id:65,name:'国土/规划',parentId:10},
+        {id:66,name:'税务/海关/工商/环保/物价/药品',parentId:10},
+        {id:67,name:'政协/民主党派',parentId:10},
+        {id:68,name:'地方政府',parentId:10},
+        {id:69,name:'其他',parentId:10},
+        {id:70,name:'保险',parentId:11},
+        {id:71,name:'银行',parentId:11},
+        {id:72,name:'证券/投资/基金',parentId:11},
+        {id:73,name:'其他',parentId:11},
+        {id:74,name:'钢铁',parentId:12},
+        {id:75,name:'有色金属',parentId:12},
+        {id:76,name:'石油/天然气',parentId:12},
+        {id:77,name:'煤炭',parentId:12},
+        {id:78,name:'其他',parentId:12},
+        {id:79,name:'农林渔牧',parentId:13},
+        {id:80,name:'科学研究和技术服务业',parentId:14},
+        {id:81,name:'水利和环境管理',parentId:14},
+        {id:82,name:'社会组织',parentId:14},
+        {id:83,name:'电力/热力/燃气/水供应业',parentId:14},
+        {id:84,name:'国际组织',parentId:14},
+        {id:85,name:'其他',parentId:14},
+    ]
+
+</script>
+</body>
+</html>

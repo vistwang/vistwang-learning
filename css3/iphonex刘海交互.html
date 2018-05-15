@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刘海交互</title>
+
+    <style>
+
+        .box {
+            /*shape-outside属性要想生效，本身需要是浮动float元素。*/
+            width: 600px;
+            height: 400px;
+            border: 2px solid darkcyan;
+        }
+
+        img{
+            float:left;
+            width:200px;
+            height:200px;
+            shape-outside:circle(100px at 100px 100px);
+        }
+        .boxSon{
+            float:left;
+            width:100px;
+            height:100px;
+            background-color:#000;
+        }
+        .boxSon1{
+            shape-outside:polygon(50px 0,100px 37px,82px 100px,19px 100px,0 37px);
+            -webkit-clip-path:polygon(50px 0,100px 37px,82px 100px,19px 100px,0 37px);
+        }
+        .boxSon2{
+            shape-outside:polygon(100px 0,200px 100px,100px 200px,0px 100px);
+            -webkit-clip-path:polygon(100px 0,200px 100px,100px 200px,0px 100px);
+        }
+        .boxSon3{
+            background-color:#c0a16b;
+            shape-outside:circle(100px at 100px 100px);
+            -webkit-clip-path:circle(100px at 100px 100px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/timg.jpg" alt="">
+    <div class="boxSon boxSon1"></div>
+    <div class="boxSon boxSon2"></div>
+    <div class="boxSon boxSon3"></div>
+    <script>
+        var g =[]
+        if(g.length){
+            console.log('1111')
+        }else{
+            console.log('22222')
+        }
+    </script>
+</div>
+</body>
+</html>

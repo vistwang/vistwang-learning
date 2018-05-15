@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.m1world.com/m1ui/1.0.0/css/bigcat.css"/>
+    <script src="js/angular1.6.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <style>
+        div{
+            margin: 100px;
+        }
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+
+<div>
+    <span class="m1-tgl">
+        <input id="form-push" type="checkbox" ng-checked="str" ng-click="form_switch($event)"/>
+        <label class="m1-tgl-switch" for="form-push" ></label>
+    </span>
+    <p>
+        <button class="m1-btn m1-btn-primary" ng-click="sds()">改变</button>
+    </p>
+</div>
+
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.str = true;
+        $scope.str2 = '';
+        $scope.arr2 = [1212,3333,556];
+        $scope.sds = function () {
+            $scope.str = !$scope.str;
+        };
+
+        $scope.stop_propagation = function ($event) {
+            $event.stopPropagation();//阻止事件冒泡
+            $event.preventDefault();//阻止事件默认行为
+        };
+
+        $scope.form_switch = function ($event) {
+            $scope.str = false;
+            $scope.stop_propagation($event);
+        };
+
+        [{"id":3615,"name":"北京市","parentId":1,"py":"beijingshi","pyhc":"bjs"},{"id":3614,"name":"重庆市","parentId":22,"py":"chongqingshi","pyhc":"cqs"},{"id":3613,"name":"上海市","parentId":9,"py":"shanghaishi","pyhc":"shs"},{"id":3616,"name":"天津市","parentId":2,"py":"tianjinshi","pyhc":"tjs"},]
+
+
+    });
+
+
+</script>
+</body>
+</html>

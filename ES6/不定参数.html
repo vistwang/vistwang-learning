@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不定参数</title>
+</head>
+<body>
+<script>
+    //...x代表传入的参数不定，x表示传入所有参数的数组名
+    function foo(...x) {
+        return x.reduce((y,z)=>y+z,100);
+        //数组的reduce方法 用于快速遍历数组项进行特殊计算 可传入第二个参数例子：100  进行传入的第一个初始值
+        //第一次计算就是100和x中第一个数传入reduce的回调函数
+    }
+
+    function foo2(...x) {
+        return x.reduceRight((y,z)=>y+z,100);
+        //数组的reduce方法 用于快速遍历数组项进行特殊计算 可传入第二个参数例子：100  进行传入的第一个初始值
+        //第一次计算就是100和x中最后一个数传入reduce的回调函数  如果未传入100 第一次计算是数组x最后两个数传入回调函数
+    }
+
+    alert(foo(1,2,3,4,5));
+    alert(foo2(1,2,3,4,5));
+
+
+    //拓展参数
+    let arr=['小米','三星','华为','苹果','苹果'];
+    function foo3(phone1,phone2,phone3) {
+        //return phone1+phone2+phone3;
+        return `hello ${phone1},${phone2},${phone3}`
+        //return `hello, phone1,phone2,${phone3}`//${phone3} 为模版占位符
+    }
+
+    alert(foo3(...arr));
+</script>
+</body>
+</html>

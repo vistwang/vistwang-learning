@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes maoPao {
+            from {width: 0px}
+            to {width: 30px}
+        }
+
+        @-moz-keyframes maoPao /* Firefox */
+        {
+            from {width: 0px}
+            to {width: 30px}
+        }
+
+        @-webkit-keyframes maoPao /* Safari 和 Chrome */
+        {
+            from {width: 0px}
+            to {width: 30px}
+        }
+
+        @-o-keyframes maoPao /* Opera */
+        {
+            from {width: 0px}
+            to {width: 30px}
+        }
+
+        .maopao{
+            margin-left: 3px;
+            letter-spacing:5px;
+            overflow: hidden;
+            display: inline-block;
+            animation: maoPao 2.5s infinite normal ;
+            -moz-animation: maoPao 2.5s infinite normal ;	/* Firefox */
+            -webkit-animation: maoPao 2.5s infinite normal ;	/* Safari 和 Chrome */
+            -o-animation: maoPao 2.5s infinite normal ;	/* Opera */
+        }
+    </style>
+</head>
+<body>
+<!--animation语法
+　　设置好了关键帧，就可以设置animation属性了，animation也是一个符合属性，可以简写，语法如下：
+
+animation{ animation-name  animation-duration  animatino-timing-function  animation-delay animation-iteration-count animation-direction animtion-play-state  animation-fill-mode}
+
+　　animation-name：用来调用@keyframes定义好的动画，与@keyframes定义的动画名称一致
+
+　　animation-duration ：指定元素播放动画所持续的时间
+
+　　animatino-timing-function ： 和transition中的transition-timing-function 中的值一样。根据上面@keframes中分析的animation中可能存在多个小动画，因此这里的值设置是针对每一个小动画所在时间范围内的属性变换速率。
+
+　　animation-delay：定义在浏览器开始执行动画之前等待的时间，这里是指整个animation执行之前的等待时间，而不是上面说的多个小动画
+
+　　animation-iteration-count：定义动画的播放次数，其通常为整数，默认是1,；取值为infinite，动画将无限次的播放。
+
+　　animation-direction：主要用来设置动画播放方向，其主要有两个值：
+
+normal 默认值，如果设置为normal时，动画每次循环都是向前（即按顺序）播放
+alternate（轮流），动画播放在第偶数次向前播放，第奇数次向反方向播放（animation-iteration-count取值大于1时设置有效）
+　　animtion-play-state：属性是用来控制元素动画的播放状态。其主要有两个值：
+
+running，可以通过该值将暂停的动画重新播放，这里的重新播放不是从元素动画的开始播放，而是从暂停的那个位置开始播放。
+paused，暂停播放
+      注意：使用animtion-play-state属性，当元素动画结束后，元素的样式将回到最原始设置状态（这也是为什么要引入animation-fill-mode属性的原因）
+
+　animation-fill-mod：　默认情况下，动画结束后，元素的样式将回到起始状态，animation-fill-mode属性可以控制动画结束后元素的样式。主要具有四个属性值：
+
+none（默认，回到动画没开始时的状态。）
+forwards（动画结束后动画停留在结束状态）
+backwords（动画回到第一帧的状态）
+both（根据animation-direction轮流应用forwards和backwards规则）。-->
+
+<p class="success-p">登录成功，正在跳转至大猫自动化营销平台<span class="maopao">...</span></p>
+<p class="loading-p">正在授权金数据账户登录大猫自动化营销平台<span class="maopao">...</span></p>
+
+<div></div>
+</body>
+</html>

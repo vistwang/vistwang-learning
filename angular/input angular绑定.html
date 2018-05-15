@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<input type="text" ng-model="str"><span>{{str}}</span>
+<input type="text" value="str2">
+<input type="text" value="{{arr}}">
+<input type="text" value="{{arr2 | date:'yyyy-MM-dd'}}">
+
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope,$filter) {
+
+        $scope.str = '111';
+        $scope.str2 = 'sss';
+        $scope.arr = '2015-02-23';
+        $scope.arr2 = 1513824832192;
+
+
+
+    });
+
+
+</script>
+</body>
+</html>

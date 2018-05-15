@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" utf-8">
+    <meta name="author" content="http://www.softwhy.com/"/>
+    <title>漂浮广告代码</title>
+    <style type="text/css">
+        #thediv {
+            z-index: 100;
+            position: absolute;
+            top: 43px;
+            left: 2px;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script type="text/javascript">
+        var xPos = 300;
+        var yPos = 200;
+        var step = 1;
+        var delay = 8;
+        var height = 0;
+        var Hoffset = 0;
+        var Woffset = 0;
+        var yon = 0;
+        var xon = 0;
+        var pause = true;
+        var interval;
+
+        function changePos() {
+            width = document.documentElement.clientWidth;
+            height = document.documentElement.clientHeight;
+            //现在js中可以直接通过ID名去操纵DOM，建议使用js选择器先选择 如：var thediv = document.getElementById('thediv');
+            Hoffset = thediv.offsetHeight;
+            Woffset = thediv.offsetWidth;
+            thediv.style.left = (xPos + document.body.scrollLeft + document.documentElement.scrollLeft) + "px";
+            thediv.style.top = (yPos + document.body.scrollTop + document.documentElement.scrollTop) + "px";
+            if (yon) {
+                yPos = yPos + step;
+            }
+            else {
+                yPos = yPos - step;
+            }
+            if (yPos < 0) {
+                yon = 1;
+                yPos = 0;
+            }
+            if (yPos >= (height - Hoffset)) {
+                yon = 0;
+                yPos = (height - Hoffset);
+            }
+            if (xon) {
+                xPos = xPos + step;
+            }
+            else {
+                xPos = xPos - step;
+            }
+            if (xPos < 0) {
+                xon = 1;
+                xPos = 0;
+            }
+            if (xPos >= (width - Woffset)) {
+                xon = 0;
+                xPos = (width - Woffset);
+            }
+        }
+
+        function start() {
+            thediv.visibility = "visible";
+            interval = setInterval('changePos()', delay);
+        }
+
+        function pause_resume(bool) {
+            pause = bool;
+            if (pause) {
+                clearInterval(interval);
+                pause = false;
+            }
+            else {
+                interval = setInterval(changePos, delay);
+                pause = true;
+            }
+        }
+
+        window.onload = function () {
+            thediv.style.top = yPos;
+            start();
+
+            //jQuery用法 如果项目中用了jQuery就可以利用下面的选择器和jQuery事件
+            //$('#thediv').mouseover(()=>pause_resume(true));
+            //$('#thediv').mouseout(()=>pause_resume(false));
+        }
+    </script>
+</head>
+<body>
+<div id="thediv" onmouseover="pause_resume(true)" onmouseout="pause_resume(false)">吃鸡</div>
+</body>
+</html>

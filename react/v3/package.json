@@ -1,0 +1,50 @@
+{
+  "name": "m1-account",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --host metest.m1world.com --port 8080 --content-base dist",
+    "build": "webpack"
+  },
+  "author": "jerry lang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "js-base64": "^2.1.9",
+    "qrcode.react": "^0.7.1",
+    "rc-banner-anim": "^0.5.16",
+    "rc-queue-anim": "^1.2.2",
+    "react": "^15.5.4",
+    "react-bootstrap-daterangepicker": "^3.4.0",
+    "react-dom": "^15.5.4",
+    "react-geetest": "^1.0.2",
+    "react-router-dom": "^4.1.1",
+    "react-tooltip": "^3.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.23.0",
+    "bundle-loader": "^0.5.5",
+    "classnames": "^2.2.5",
+    "create-react-class": "^15.6.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "qs": "^6.4.0",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

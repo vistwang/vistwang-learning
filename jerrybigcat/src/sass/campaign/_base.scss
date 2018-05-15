@@ -1,0 +1,174 @@
+.header {
+	margin-bottom: 20px;
+	
+	.title {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.btn-save {
+		float:right;
+	}
+}
+
+.m1-nav > li > a {
+	color: $text-base;
+}
+
+.step-container {
+
+	ul {
+		text-align: center;
+
+		li {
+			position: relative;
+			display: inline-block;
+			width: 200px;
+			height: 50px;
+			border-top:1px solid $text-lightest;
+			border-bottom:1px solid $text-lightest;
+			line-height: 50px;
+			text-align: center;
+
+			&:first-child {
+				border-left: 1px solid $text-lightest;
+			}
+
+			&:before, &:after {
+				content: ' ';
+				display: block;
+				position: absolute;
+				top: 6px;
+				right:-17px;
+				width: 35.5px;
+				height: 35.3px;
+				border-top: 1px solid $text-lightest;
+				border-right: 1px solid $text-lightest;
+				border-top-right-radius:4px;
+				transform: rotate(45deg);
+			}
+
+			&:before {
+				right: inherit;
+				left: -17px;
+				border-top-color: transparent;
+				border-right-color: transparent;
+			}
+
+			&.current {
+				color: $brand-primary;
+				border-top-color: $brand-primary;
+				border-bottom-color: $brand-primary;
+				background-color: $brand-tag-primary;
+				
+				&:first-child {
+					border-left-color: $brand-primary;
+				}
+
+				&:after {
+					border-top-color: $brand-primary;
+					border-right-color: $brand-primary;
+					background-color: $brand-tag-primary;
+					z-index: 1;
+				}
+				
+				&:not(:first-child):before {
+					background-color: $white;
+					border-top-color: $brand-primary;
+					border-right-color: $brand-primary;
+					z-index: 1;
+				}
+			}
+
+			&.complete {
+				color: $brand-success;
+			}
+			
+			.m1-tag-circle {
+				margin-right: 10px;
+			}
+
+		}
+	}
+}
+
+.btn-add {
+	border: 1px dashed $text-lightest;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-bg;
+	}
+
+	& > .iconfont {
+		margin-right: 6px;
+	}
+
+	&.small {
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+.create-campaign-bottom {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.condition-or, .condition-and {
+	span {
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 20px;
+		line-height: 18px;
+		border: 1px solid $text-lightest;
+		border-radius: 4px;
+		text-align: center;
+		background-color: $white;
+		z-index: 1;
+		color: $text-light;
+	}
+}
+
+.condition-or {
+	position:relative;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+
+	&:before {
+		position: absolute;
+		left: 50%;
+		display: inline-block;
+		content: ' ';
+		width: 1px;
+		height: 50px;
+		border-right: 1px dashed $text-lighter;
+	}
+}
+
+.condition-and {
+	display: inline-block;
+	position:relative;
+	padding-right: 20px;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		display: inline-block;
+		content: ' ';
+		width: 100%;
+		height: 1px;
+		border-top: 1px dashed $text-lighter;
+	}
+}

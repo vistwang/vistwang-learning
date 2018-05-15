@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .assistor {
+            position: relative; /*关键点*/
+            display: block;
+            width: 500px;
+            height: 300px;
+            margin: 100px auto 0 auto;
+            background-color: #ddd;
+        }
+        .parent {
+            width: 500px;
+            height: 300px;
+            background-color: #888;
+            overflow: auto; /*关键点*/
+            /*transform: translate(0,0);*/
+        }
+        .btn{
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+            background-color: #bd2c00;
+        }
+        .child {
+            position: fixed; /*关键点*/
+            width: 130px;
+            height: 120px;
+            margin: 100px 50px;
+            background-color: #333;
+        }
+
+        .box{
+            width: 100px;
+            height: 300px;
+            overflow: visible;
+        }
+        .son{
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #ccc;
+            position: relative;
+        }
+        
+        .children{
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            background-color: #ddd;
+            left: 100%;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="assistor">
+    <div class="parent">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="child"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"><div class="children"></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>球球</title>
+    <style>
+        @keyframes fun {
+            0%{
+                top:0;
+                left:0;
+            }
+            10%{
+                top:0;
+                left:20%;
+            }
+            20%{
+                top:93%;
+                left:20%;
+            }
+            30%{
+                top:93%;
+                left:40%;
+            }
+            40%{
+                top:0;
+                left:40%;
+            }
+            50%{
+                top:0;
+                left:60%;
+            }
+            60%{
+                top:93%;
+                left:60%;
+            }
+            70%{
+                top:93%;
+                left:80%;
+            }
+            80%{
+                top:0;
+                left:80%;
+            }
+            90%{
+                top:0;
+                left:98%;
+            }
+            100%{
+                top:93%;
+                left:98%;
+            }
+        }
+
+        @keyframes fun2 {
+            from{
+                transform: rotate(0deg);
+                background-color: red;
+            }
+            to{
+                transform: rotate(360deg);
+                background-color: purple;
+            }
+        }
+       .father{
+           width: 95vw;
+           height: 95vh;
+           position: relative;
+       }
+        .box{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: skyblue;
+        }
+
+        .box1{
+            background-color: red;
+            animation: fun 10s ease-in-out 0s infinite;
+        }
+        .box2{
+            background-color: orange;
+            animation: fun 10s ease-in-out .5s infinite;
+        }
+        .box3{
+            background-color: yellow;
+            animation: fun 10s ease-in-out 1s infinite;
+        }
+        .box4{
+            background-color: green;
+            animation: fun 10s ease-in-out 1.5s infinite;
+        }
+        .box5{
+            background-color: blue;
+            animation: fun 10s ease-in-out 2s infinite;
+        }
+        .box6{
+            background-color: indigo;
+            animation: fun 10s ease-in-out 2.5s infinite;
+        }
+        .box7{
+            background-color: purple;
+            animation: fun 10s ease-in-out 3s infinite;
+        }
+
+        .box8{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 0;
+            animation: fun2 3s linear 0s infinite;
+        }
+
+        .mi{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+</div>
+</body>
+</html>

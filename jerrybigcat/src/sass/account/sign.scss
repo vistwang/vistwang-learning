@@ -1,0 +1,355 @@
+@import "../public/variables.scss";
+@import "../public/common.scss";
+@import "../public/modal.scss";
+@import "banner.scss";
+@import "active_email.scss";
+
+$sign-left-width: 320px !default;
+$sign-right-width: calc(100% - #{$sign-left-width});
+$form-width: 220px;
+
+.sign-container {
+	position: relative;
+	margin: 0 auto;
+	// height:100vh;
+	background-color: $white;
+}
+.sign-left{
+	position: absolute;
+	height: 100%;
+	width: $sign-left-width;
+	overflow-y: scroll;
+}
+.sign-right{
+	float: right;
+	width: $sign-right-width;
+	height: 100%;
+	background-color: #F8FCFE;
+}
+
+.sign-form{
+	
+	padding-top:60px;
+}
+
+.sign-form-header{
+	position: absolute;
+	top:0;
+	right:0;
+	padding: 30px;
+	text-align: right;
+}
+
+.sign-logo {
+	text-align: center;
+	font-size: 60px;
+	line-height: 60px;
+
+	a {
+		color: $text-base;
+	}
+}
+
+.sign-form-content {
+	.m1-form{
+		width: $form-width;
+		margin: 50px auto;
+	}
+	.m1-form-content {
+		margin-left: 0;
+		text-align: center;
+
+		.iconfont {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: $text-lighter;
+			font-size: 16px;
+		}
+
+		input {
+			padding-left: 28px;
+
+			&:-webkit-autofill{
+				-webkit-box-shadow: 0 0 0px 1000px white inset;
+			}
+		}
+	}
+
+	.form-icon-right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+
+		.iconfont{
+			position: static;
+
+			&:hover {
+				color: $text-light;
+			}
+		}
+
+		.m1-loading {
+			color: $text-lighter;
+		}
+	}
+
+	p{
+		margin-bottom: 0;
+		text-align: center;
+		color: $text-light;
+		line-height: 13px;
+	}
+
+	.geetest_holder.geetest_wind {
+		min-width: $form-width
+	}
+}
+@media screen and (max-width: 899px) {
+	body{
+		background-color: $white;
+	}
+	.sign-left {
+		position: static;
+		height: initial;
+		width: initial;
+		min-width: initial;
+		overflow-y:initial;
+	}
+	.sign-right {
+		display: none;
+	}
+}
+@media screen and (min-width: 560px) and (max-width: 899px) and (min-height: 1000px) {
+	.sign-left {
+		height: 100vh;
+	}
+	.sign-form{
+		position: absolute;
+		width:100%;
+		top:50%;
+		-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.sign-container {
+		width: 900px;
+		height: 560px;
+		-moz-box-shadow: 0 0 55px 11px rgba(222, 221, 221, 0.6);
+		-webkit-box-shadow: 0 0 55px 11px rgba(222, 221, 221, 0.6);
+		-o-box-shadow: 0 0 55px 11px rgba(222, 221, 221, 0.6);
+		box-shadow: 0 0 55px 11px rgba(222, 221, 221, 0.6);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+}
+@media screen and (min-width: 1280px) {
+	$sign-left-width: 335px;
+	.sign-container{
+		// 1000x625   865x580
+		width: 1000px;
+		height: 625px;
+	}
+
+	.sign-left {
+		width: $sign-left-width;
+	}
+	.sign-right {
+		width: calc(100% - #{$sign-left-width});
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) and (min-height: 500px){
+	.sign-container {
+		margin-top: calc((100vh - 560px) / 2);
+	}
+}
+@media screen and (min-width: 1280px) and (min-height: 625px) {
+	.sign-container {
+		margin-top: calc((100vh - 625px) / 2);
+	}
+}
+
+.login-box{
+	.m1-btn{
+		float:right;
+	}
+
+	&.full .m1-btn{
+		width: 100%;
+	}
+}
+.forget-pwd{
+	line-height: 16px;
+	color: $text-lighter;
+	.m1-tgl{
+		float: left;
+		margin-right: 10px;
+	}
+	
+	a{
+		float: right;
+		margin-left: 10px;
+	}
+}
+
+.no-account{
+	text-align: center;
+	color: $text-lighter;
+	a {
+		margin-left: 5px;
+	}
+}
+
+.separator{
+	position: relative;
+	margin:30px 0;
+	color: $text-lighter;
+	hr{
+		border-bottom: 1px dashed $text-lightest;
+	}
+
+	.or{
+	    display: inline-block;
+		position: absolute;
+		left: 50%;
+	    transform: translate(-50%,-50%);
+		width: 40px;
+		line-height: 13px;
+		background-color: $color-bg;
+	    text-align: center;
+
+	}
+}
+
+.three-bind-login{
+	margin-bottom: 30px;
+	text-align: center;
+	a{
+		display: inline-block;
+	    margin-right: 10px;
+	    width: 40px;
+	    height: 40px;
+	    border-radius: 50%;
+	    background-color: #ccc;
+	    color: #fff;
+	    line-height: 40px;
+	    text-align: center;
+	    font-size: 22px;
+
+	    &.sina:hover {
+			background-color: $color-sina;
+	    }
+	    &.wechat:hover {
+			background-color: $color-wechat;
+	    }
+	    &.qq:hover {
+			background-color: $color-qq;
+	    }
+	    &.mingdao:hover {
+			background-color: $color-mingdao;
+	    }
+	}
+
+	&.fixed{
+		position: absolute;
+		bottom: 0;
+		width: calc(100% - 10px);
+		background-color: rgba($white, .8);
+		margin:5px;
+		padding: 16px 0;
+		border-radius: 5px;
+
+		a{
+		    &.sina {
+				background-color: $color-sina;
+		    }
+		    &.wechat {
+				background-color: $color-wechat;
+		    }
+		    &.qq {
+				background-color: $color-qq;
+		    }
+		    &.mingdao {
+				background-color: $color-mingdao;
+		    }
+		}
+	}
+}
+
+.three-bind-box{
+	position: fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color: rgba($black, .5);
+}
+
+.login-bottom{
+	margin-top:50px;
+	a{
+		&:first-child{
+			float: left;
+		}
+		&:last-child{
+			float:right;
+		}
+	}
+}
+
+.code-text {
+	margin-top: 30px;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.register-box{
+	margin: 30px 0;
+
+	 .m1-btn {
+		width: 100%;
+	 }
+}
+
+.has-account {
+	margin-bottom: 50px;
+}
+
+.verify-code {
+	.m1-form-content{
+		&:after{
+			content: ' ';
+			display: block;
+			clear: both;
+		}
+	}
+	.input-content{
+		float:left;
+		width: calc(100% - 105px);
+	}
+
+	.m1-btn{
+		float:right;
+		margin-top:-6px;
+		padding:8px 0;
+		width: 100px;
+	}
+}
+
+.sign-banner{
+	height: 100%;
+}
+
+.banner-container{
+	height:100%;
+}
+
+.sign-banner-loading {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+

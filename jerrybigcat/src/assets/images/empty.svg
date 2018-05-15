@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="78px" viewBox="0 0 107 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 22 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="35.5459165" y="21.5782447" width="15.2878866" height="3.7951057" rx="1.89755285"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.2878866" height="3.7951057" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="31.2461984" y="22.5270211" width="44.4304205" height="44.1181038" rx="4"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44.4304205" height="44.1181038" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="104.328622" cy="42.6636771" rx="2.67137809" ry="2.66367713"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.34275618" height="5.32735426" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <ellipse id="path-7" cx="12.2261484" cy="2.21973094" rx="2.22614841" ry="2.21973094"></ellipse>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4.45229682" height="4.43946188" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="Group-22-Copy">
+            <path d="M43,7 L46.1482493,10.1391736" id="Path-5" stroke="#1DACFD" stroke-linecap="round"></path>
+            <path d="M43,9.93724404 L46.3385007,7" id="Path-5-Copy-2" stroke="#1DACFD" stroke-linecap="round"></path>
+            <use id="Rectangle-2-Copy-4" stroke="#1DACFD" mask="url(#mask-2)" stroke-width="2" fill="#94969B" xlink:href="#path-1"></use>
+            <use id="Rectangle" stroke="#1DACFD" mask="url(#mask-4)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-3"></use>
+            <path d="M40.8011276,39.1321928 C40.8011276,39.1321928 44.2343705,43.5793291 48.3038394,39.1306086" id="Path-2-Copy-2" stroke="#1DACFD" stroke-linecap="round"></path>
+            <path d="M58.4777465,39.1321928 C58.4777465,39.1321928 61.9109894,43.5793291 65.9804583,39.1306086" id="Path-2-Copy-3" stroke="#1DACFD" stroke-linecap="round"></path>
+            <path d="M48.4450709,47.6717148 C48.4450709,47.6717148 53.036026,53.6184548 58.4777465,47.6695964" id="Path-2-Copy-4" stroke="#1DACFD" stroke-linecap="round" transform="translate(53.461409, 48.991840) rotate(-180.000000) translate(-53.461409, -48.991840) "></path>
+            <ellipse id="Oval-5" fill-opacity="0.25" fill="#1DACFD" cx="52.9836622" cy="76.1328892" rx="26.1772541" ry="1.71384035"></ellipse>
+            <use id="Oval-7" stroke="#1DACFD" mask="url(#mask-6)" stroke-width="2" opacity="0.4" xlink:href="#path-5"></use>
+            <path d="M75.5,14 L75.5,18.714511" id="Path-2" stroke="#1DACFD" stroke-linecap="round"></path>
+            <path d="M78,20.2284656 L81.2513203,17" id="Path-3" stroke="#1DACFD" stroke-linecap="round"></path>
+            <path d="M79,22.5 L83.5734972,22.5" id="Path-4" stroke="#1DACFD" stroke-linecap="round"></path>
+            <use id="Oval-7-Copy-2" stroke="#1DACFD" mask="url(#mask-8)" stroke-width="2" opacity="0.4" xlink:href="#path-7"></use>
+            <path d="M0.823976071,43.6596253 L3.97222534,46.7987989" id="Path-5" stroke="#1DACFD" stroke-linecap="round" transform="translate(2.398101, 45.229212) rotate(12.000000) translate(-2.398101, -45.229212) "></path>
+            <path d="M0.842889104,46.6188534 L4.1813898,43.6816093" id="Path-5-Copy-2" stroke="#1DACFD" stroke-linecap="round" transform="translate(2.512139, 45.150231) rotate(12.000000) translate(-2.512139, -45.150231) "></path>
+        </g>
+    </g>
+</svg>

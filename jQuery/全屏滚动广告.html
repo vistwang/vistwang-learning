@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>随屏滚动</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        html{
+            height:100%;
+        }
+        body{
+            height:200%;
+        }
+        .box{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background:red
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box1" style="bottom:0;left:0;">AD1</div>
+<div class="box" id="box2" style="top:0;right:0;">AD2</div>
+
+
+<script type="text/javascript">
+    /*$(function(){
+
+        $.floatingAd({
+            //频率
+            delay: 60,
+            //超链接后是否关闭漂浮
+            isLinkClosed: true,
+            //漂浮内容
+            ad:	[{
+                //关闭区域背景透明度(0.1-1)
+                headFilter: 0.3,
+                //图片
+                'img': 'images/baidu_sylogo1.gif',
+                //图片高度
+                //'imgHeight': 220,
+                //图片宽度
+                //'imgWidth': 176,
+                //图片链接
+                'linkUrl': 'http://www.baidu.com/',
+                //浮动层级别
+                'z-index': 100,
+                //标题
+                'title': '度娘'
+            },{
+                'img': 'images/logo_png.png',
+                //'imgHeight': 220,
+                //'imgWidth': 176,
+                'linkUrl': 'http://www.google.com/',
+                'z-index': 101,
+                'title': '谷歌',
+                //关闭按键图片
+                'closed-icon': 'images/list-remove.png'
+            }],
+            //关闭事件
+            onClose: function(elem){
+                alert('关闭');
+            }
+        });
+
+        $("#aa").floatingAd({
+            onClose:function(elem){}
+        });
+
+    });*/
+
+    console.log(box1.offsetHeight);
+</script>
+</body>
+
+</html>

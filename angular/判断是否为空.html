@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>-->
+    <script src="http://contact.m1world.com/lib/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<script>
+    var gg={
+        gride:100
+    }
+
+    console.log(gg.gride)
+
+    function chang(aa) {
+        aa.gride=10;
+    }
+
+    chang(gg)
+
+    console.log(gg.gride)
+
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$location) {
+        //判断是否为空  如果是undefined， null， ''， NaN，false，0，[]，{} ，空白字符串，都返回true，否则返回false
+        $scope.isEmpty=function (v) {
+            switch (typeof v) {
+                case 'undefined':
+                    return true;
+                case 'string':
+                    if (v.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
+                    break;
+                case 'boolean':
+                    if (!v) return true;
+                    break;
+                case 'number':
+                    if (0 === v || isNaN(v)) return true;
+                    break;
+                case 'object':
+                    if (null === v || v.length === 0) return true;
+                    for (var i in v) {
+                        return false;
+                    }
+                    return true;
+            }
+            return false;
+        };
+
+
+
+
+        $scope.name = "John Doe";
+
+
+        console.log($scope.isEmpty(' '));
+        console.log($scope.isEmpty(" "));
+        console.log($scope.isEmpty(null));
+
+
+
+        var field = [
+            "name",
+            "gender",
+            "gmtBirthday",
+            "company",
+            "job",
+            "email",
+            "phone",
+            "telephone",
+            "fax",
+            "website",
+            "country",
+            "province",
+            "city",
+            "address",
+            "postCode",
+            "qq",
+            "weibo",
+            "weixin",
+            "registeredSources",
+            "gmtRegistration",
+            "gmtFirstVisit",
+            "gmtLastVisit",
+            "remark",
+            "groups",
+            "tags",
+            "sources",
+            "gmtCreate",
+            "gmtModified",
+            "399949442104426496",
+        ]
+    });
+</script>
+</body>
+</html>

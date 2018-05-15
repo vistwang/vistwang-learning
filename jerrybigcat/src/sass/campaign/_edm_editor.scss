@@ -1,0 +1,146 @@
+
+.edm-editor {
+
+}
+
+.edm-menu-bar {
+	padding: 10px;
+	border-bottom: 1px solid $text-lightest;
+
+	.left {
+		float: left;
+	}
+
+	.right {
+		float: right;
+
+		& > .m1-btn {
+			padding:0;
+			margin-left: 10px;
+		}
+	}
+
+	.m1-dropdown {
+		& > .m1-btn {
+			padding: 0;
+			border: none;
+		}
+	}
+}
+
+.edm-iframe-container {
+	min-height: 600px;
+
+
+	& > iframe {
+		width: 100%;
+		min-height: 600px;
+	}
+}
+
+.event-condition {
+	display: inline-block;
+
+	.tag-links {
+		margin-left: 20px;
+	}
+
+	.m1-dropdown {
+		margin-left: 20px;
+		.m1-dropdown-menu > ul > li {
+			min-width: 180px;
+			border-top: none;
+		}
+	}
+}
+
+.send-setting {
+
+	.m1-form-label {
+		width: 70px;
+	}
+
+	.m1-form-content {
+		margin-left: 70px;
+	}
+	
+	.btn-add {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.email-account-info {
+		padding: 15px;
+		height: 110px;
+		border: 1px solid $text-lightest;
+	}
+
+	.email-service {
+		float: left;
+		padding-right: 15px;
+		width: 110px;
+		border-right: 1px solid $text-lightest;
+
+		.logo{
+			height: 50px;
+			text-align: center;
+
+			img {
+				vertical-align: middle;
+				max-height: 50px;
+			}
+		}
+
+		p{
+			margin-top: 10px;
+			margin-bottom: 0;
+			line-height: 14px;
+			text-align: center;
+
+		}
+	}
+
+	.info {
+		margin-left: 110px;
+		padding-left: 15px;
+		p {
+			line-height: 14px;
+			margin-bottom: 15px;
+		}
+	}
+
+	
+
+	.input-test {
+		&:after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+
+		input {
+			width: 380px;
+		}
+		.m1-btn {
+			float: right;
+		}
+	}
+
+	.email-account-change {
+		margin-top: 10px;
+		a {
+			color: $brand-primary;
+		}
+	}
+}	
+
+.btn-add-email-account {
+	margin-top: 20px;
+	cursor: pointer;
+	a {
+		color: $text-base;
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+}

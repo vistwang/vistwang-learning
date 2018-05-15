@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+        #main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+<p>sddddddddddddddd</p>
+
+<!--<div ng-bind-html="change | trustHtml"></div>-->
+
+
+<iframe id="iframeEmail" frameborder="0"></iframe>
+
+<div id="main">sdfadfsadfadfsd</div>
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.arr = '';
+
+        $scope.change  = '<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Title</title><style>p{color: red};li{color: yellow}</style></head><body><ul><li>1211212122</li><li>1211212122</li><li>1211212122</li></ul> </body></html>';
+
+         //var $iframeOpenEmail = document.getElementById('iiiiii');
+
+        function edmIframeHandler(data) {
+            var iframe = document.getElementById('iframeEmail');
+            var doc = iframe.contentDocument || iframe.contentWindow.document; /*获得document对象, contentDocument w3c标准ie8以上起作用*/
+            iframe.width = '100%';
+            //doc.write(data);
+            doc= data;
+        }
+
+        edmIframeHandler($scope.change)
+
+    });
+    app.filter('trustHtml', function ($sce) {
+        return function (input) {
+            return $sce.trustAsHtml(input);
+        }
+    });
+
+
+</script>
+</body>
+</html>

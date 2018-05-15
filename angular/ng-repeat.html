@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+        .show_if{
+            display: none;
+        }
+
+        ul > li:first-child{
+            background-color: #bd2c00;
+        }
+    </style>
+
+    <!--<script src="http://contact.m1world.com/lib/angular.min.js"></script>-->
+</head>
+<body ng-controller="myCtrl">
+<ul>
+    <li>什么</li>
+    <li>什么</li>
+    <li>什么</li>
+    <li>什么</li>
+</ul>
+<div style="display: block" class="show_if" ng-if="if_dom[0]" ng-show="show_dom[3]">angular.js - ng-show不能正常使用是为什么? - SegmentFault</div>
+<div class="show_if" ng-if="if_dom[1]" ng-show="show_dom[1]">angular.js - ng-show不能正常使用是为什么?</div>
+<div ng-repeat="attr in attrs">
+    <div ng-repeat="name in names[attr.filter]">{{name.name}}</div>
+    <button ng-click="funwang(attr.filter)">点我加名字</button>
+</div>
+
+
+
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+        $scope.arr = [
+            [{name:'小花'}],
+            [{name:'小米'}],
+            [{name:'小狗'}],
+            [{name:'小计'}]
+            ];
+        $scope.if_dom = [true,false];
+        $scope.show_dom = [true,true];
+        $scope.names = {};
+        $scope.attrs = [
+            {filter:'name',name:'孙悟空'},
+            {filter:'age',name:'猪八戒'},
+            {filter:'hight',name:'唐山'},
+        ];
+
+        angular.forEach($scope.attrs,function (item) {
+            $scope.names[item.filter] = [];
+        });
+
+        $scope.funwang = function (filter) {
+            $scope.names[filter].push({
+                name:attr.name
+            });
+        }
+
+        console.log($scope.arr)
+
+        angular.forEach($scope.arr,function (item,index) {
+            var gg = item.slice(0); //数组的拷贝
+            $scope.arr[index] = [gg];
+        })
+
+        console.log($scope.arr)
+
+    });
+
+
+</script>
+</body>
+</html>

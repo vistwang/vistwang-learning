@@ -1,0 +1,36 @@
+@import "./common.scss";
+@import "./left.scss";
+@import "./right.scss";
+
+body{
+  background-color: #f5f5d5;
+}
+
+.container{
+  width: 1228px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+}
+
+.w-body{
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+.media-box{
+  padding: 40px 30px;
+  width: 625px;
+}
+
+.media-box .media{
+  margin: 0 0 17px;
+  padding: 0 2px 17px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.media-box .media .media-heading{
+  font-weight: 700;
+}
+
+

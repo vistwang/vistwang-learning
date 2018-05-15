@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断对象是否为空对象</title>
+</head>
+<body>
+<script>
+    var c={}
+    var d={
+        age:4,
+        name:"转给你",
+        hobby:['篮球','拳击','电竞']
+    }
+    var data='{"name":"goatling"}'
+    //三种方法
+    //1 for in 遍历  该方法也是jq  isEmptyObject 方法的源码实现
+    function aa() {
+        for(i in c){
+            return true
+        }
+        return false
+    }
+    if(aa(c)){console.log('该对象为空1')}
+
+    //2 判断JSON.stringify(c)
+    if(JSON.stringify(c) == '{}'){console.log('该对象为空2')}
+
+
+    //3 判断Object.keys(c).length 长度是否为0
+    if(Object.keys(c).length == 0){console.log('该对象为空3')}
+
+    d=JSON.stringify(d)
+    data=JSON.parse(data)
+    alert(d)
+    console.log(data)
+
+    //判断对象的长度
+
+</script>
+</body>
+</html>

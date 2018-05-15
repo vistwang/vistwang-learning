@@ -1,0 +1,3260 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>M1-UI</title>
+    <link rel="icon" href="favicon.ico"/>
+    <!--lib-->
+    <link href="http://cdn.bootcss.com/highlight.js/9.11.0/styles/default.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="http://www.m1world.com/public/hf/css/m1.theme.css">
+    <script src="http://www.m1world.com/public/hf/js/m1.header.js"></script>
+    <link rel="stylesheet" href="css/m1.css"/>
+    <link rel="stylesheet" href="css/example.css"/>
+</head>
+<body>
+
+<div class="m1-body">
+
+    <div class="m1-left">
+
+        <ul class="m1-nav">
+            <li class="m1-dropdown m1-dropdown-right">
+                <a>指南<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                <ul class="m1-dropdown-menu">
+                    <li><a href="#standard">Standard 规范</a></li>
+                    <li class="m1-divide"></li>
+                    <li><a href="#color">Color 色彩</a></li>
+                    <li><a href="#icon">Icon 图标</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="m1-subnav">
+                    <li class="m1-dropdown m1-dropdown-right">
+                        <a href="#standard">Standard 规范<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                        <ul class="m1-dropdown-menu">
+                            <li><a href="#standard">Standard 规范</a></li>
+                            <li><a href="#color">Color 色彩</a></li>
+                            <li><a href="#icon">Icon 图标</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#color">Color 色彩</a></li>
+                    <li><a href="#icon">Icon 图标</a></li>
+                </ul>
+            </li>
+            <li class="m1-dropdown m1-dropdown-right">
+                <a>布局<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                <ul class="m1-dropdown-menu">
+                    <li><a href="#layout">Layout 布局</a></li>
+                    <li><a href="#nav-left">Navbar 左侧导航</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="m1-subnav">
+                    <li><a href="#layout">Layout 布局</a></li>
+                    <li><a href="#nav-left">Navbar 左侧导航</a></li>
+                </ul>
+            </li>
+            <li class="m1-dropdown m1-dropdown-right">
+                <a>基础组件<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                <ul class="m1-dropdown-menu">
+                    <li><a href="#input">Input 输入框</a></li>
+                    <li><a href="#radio">Radio 单选框</a></li>
+                    <li><a href="#checkbox">Checkbox 多选框</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="m1-subnav">
+                    <li><a href="#input">Input 输入框</a></li>
+                    <li><a href="#radio">Radio 单选框</a></li>
+                    <li><a href="#checkbox">Checkbox 多选框</a></li>
+                    <li><a href="#switch">Switch 开关</a></li>
+                    <li><a href="#button">Button 按钮</a></li>
+                    <li><a href="#progress">Progress 进度条</a></li>
+                    <li><a href="#tag">Tag 标签</a></li>
+                    <li><a href="#text">Text 文本</a></li>
+                    <li><a href="#table">Table 表格</a></li>
+                    <li><a href="#ul">Ul 无序列表</a></li>
+                    <li><a href="#panel">Panel 面板</a></li>
+                    <li><a href="#form">Form 表单</a></li>
+                    <li><a href="#alert">Alert 警告</a></li>
+                </ul>
+            </li>
+            <li class="m1-dropdown m1-dropdown-right">
+                <a>动效组件<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                <ul class="m1-dropdown-menu">
+                    <li><a href="#layer">Layer 弹层</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="m1-subnav">
+                    <li><a href="#back-top">BackTop 回滚</a></li>
+                    <li><a href="#tooltip">Tooltip 提示</a></li>
+                    <li><a href="#tabs">Tabs 标签页</a></li>
+                    <li><a href="#dropdown">DropDown 下拉菜单</a></li>
+                    <li><a href="#date-picker">DatePicker 日期选择</a></li>
+                    <li><a href="#layer">Layer 弹层</a></li>
+                    <li><a href="#loading">Loading 加载</a></li>
+                    <li><a href="#pagination">Pagination 分页</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="m1-right">
+
+        <!--规范-->
+        <div id="standard" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>规范</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-col-12">
+                        <p>1、M1应用采用左右布局：左侧导航、右侧内容</p>
+                        <pre>
+                            <code class="html">
+                                &lt;div class=&quot;m1-body&quot;&gt;
+                                &nbsp;&nbsp;&lt;div class=&quot;m1-left&quot;&gt;导航&lt;/div&gt;
+                                &nbsp;&nbsp;&lt;div class=&quot;m1-right&quot;&gt;内容&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+
+                        <p>2、元素id“-”链接，如：id="content-ceshi"、id="btn-yuansu"</p>
+
+                        <p>3、元素类名“-”链接，如：class="m1-content"、class="contact-title"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--色彩-->
+        <div id="color" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>色彩</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>主色</h3>
+
+                    <div class="demo-color primary1">选中色、主色<br/>#1DACFD</div>
+                    <div class="demo-color primary2">标签及部分按钮<br/>#E8F7FF</div>
+                    <div class="demo-color primary3">推荐须知及文本背景色<br/>#F5FBFF</div>
+
+                </div>
+                <div class="m1-row">
+                    <h3>文本色</h3>
+
+                    <div class="demo-color neutral1">重要文本、标题<br/>#282828</div>
+                    <div class="demo-color neutral2">正常文本色<br/>#4E5257</div>
+                    <div class="demo-color neutral3">中浅色文本<br/>#94969B</div>
+                    <div class="demo-color neutral4">浅色文本<br/>#C9CACD</div>
+                    <div class="demo-color neutral5">编辑框、列表、输入框<br/>#EEEEEE</div>
+                </div>
+                <div class="m1-row">
+                    <h3>配色</h3>
+
+                    <p>需要在不同的场景中使用（例如:表示突出的标记、表示成功的提示、表示警告的信息、表示危险的操作）。</p>
+
+                    <div class="demo-color support1">主要<br/>#1DACFD</div>
+                    <div class="demo-color support2">成功<br/>#00D081</div>
+                    <div class="demo-color support3">错误<br/>#FF5350</div>
+                    <div class="demo-color support4">警告<br/>#F9BB00</div>
+                    <div class="demo-color support5">忽视<br/>#C9CACD</div>
+                </div>
+            </div>
+        </div>
+
+        <!--图标-->
+        <div id="icon" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>图标</h2>
+            </div>
+            <div class="m1-panel-content">
+                <p>图标前缀：iconfont，如：“&lt;i class=&quot;iconfont icon-m1-diamond&quot;&gt;&lt;/i&gt;”</p>
+
+                <div class="m1-row">
+                    <h3>图标集</h3>
+
+                    <!--<div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-api"></i>
+
+                            <p>icon-m1-api</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-goldendata"></i>
+
+                            <p>icon-m1-goldendata</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-add-to"></i>
+
+                            <p>icon-m1-add-to</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-edit-o"></i>
+
+                            <p>icon-m1-edit-o</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-toggle-field"></i>
+
+                            <p>icon-m1-toggle-field</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-field"></i>
+
+                            <p>icon-m1-field</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-mail-o"></i>
+
+                            <p>icon-m1-mail-o</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-delete-o"></i>
+
+                            <p>icon-m1-delete-o</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-purse"></i>
+
+                            <p>icon-m1-purse</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-mail"></i>
+
+                            <p>icon-m1-mail</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-currency"></i>
+
+                            <p>icon-m1-currency</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-wallet"></i>
+
+                            <p>icon-m1-wallet</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-cooperation"></i>
+
+                            <p>icon-m1-cooperation</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-addpeople"></i>
+
+                            <p>icon-m1-addpeople</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-sms"></i>
+
+                            <p>icon-m1-sms</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-praise"></i>
+
+                            <p>icon-m1-praise</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-voucher"></i>
+
+                            <p>icon-m1-voucher</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-batch"></i>
+
+                            <p>icon-m1-batch</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-search"></i>
+
+                            <p>icon-m1-search</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-crown"></i>
+
+                            <p>icon-m1-crown</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-badge"></i>
+
+                            <p>icon-m1-badge</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-diamond"></i>
+
+                            <p>icon-m1-diamond</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-free"></i>
+
+                            <p>icon-m1-free</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-circle"></i>
+
+                            <p>icon-m1-circle</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-more"></i>
+
+                            <p>icon-m1-more</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-arrow-left"></i>
+
+                            <p>icon-m1-arrow-left</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-arrow-right"></i>
+
+                            <p>icon-m1-arrow-right</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-close"></i>
+
+                            <p>icon-m1-close</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-right"></i>
+
+                            <p>icon-m1-right</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-edit"></i>
+
+                            <p>icon-m1-edit</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-upload"></i>
+
+                            <p>icon-m1-upload</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-delete"></i>
+
+                            <p>icon-m1-delete</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-browse"></i>
+
+                            <p>icon-m1-browse</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-mingdao"></i>
+
+                            <p>icon-m1-mingdao</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-retransmission"></i>
+
+                            <p>icon-m1-retransmission</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-wechat-payment"></i>
+
+                            <p>icon-m1-wechat-payment</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-qq"></i>
+
+                            <p>icon-m1-qq</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-wechat"></i>
+
+                            <p>icon-m1-wechat</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-sina"></i>
+
+                            <p>icon-m1-sina</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-alipay"></i>
+
+                            <p>icon-m1-alipay</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-unfold-up"></i>
+
+                            <p>icon-m1-unfold-up</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-unfold-down"></i>
+
+                            <p>icon-m1-unfold-down</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-unfold-right"></i>
+
+                            <p>icon-m1-unfold-right</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-unfold-left"></i>
+
+                            <p>icon-m1-unfold-left</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-qr-code"></i>
+
+                            <p>icon-m1-qr-code</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-phone"></i>
+
+                            <p>icon-m1-phone</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-rocket"></i>
+
+                            <p>icon-m1-rocket</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-pack-up"></i>
+
+                            <p>icon-m1-pack-up</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-pack-down"></i>
+
+                            <p>icon-m1-pack-down</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-angle-left"></i>
+
+                            <p>icon-m1-angle-left</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-calendar"></i>
+
+                            <p>icon-m1-calendar</p>
+                        </div>
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-sitemap"></i>
+
+                            <p>icon-m1-sitemap</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-smiling"></i>
+
+                            <p>icon-m1-smiling</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-folder-open"></i>
+
+                            <p>icon-m1-folder-open</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-folder-close"></i>
+
+                            <p>icon-m1-folder-close</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-group"></i>
+
+                            <p>icon-m1-group</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-company"></i>
+
+                            <p>icon-m1-company</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-position"></i>
+
+                            <p>icon-m1-position</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-authentication"></i>
+
+                            <p>icon-m1-authentication</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-rocket"></i>
+
+                            <p>icon-m1-rocket</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-user"></i>
+
+                            <p>icon-m1-user</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-eye"></i>
+
+                            <p>icon-m1-eye</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-eye-close"></i>
+
+                            <p>icon-m1-eye-close</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-phone"></i>
+
+                            <p>icon-m1-phone</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-lock-o"></i>
+
+                            <p>icon-m1-lock-o</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-logo-normal"></i>
+
+                            <p>icon-m1-logo-normal</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-logo-weight"></i>
+
+                            <p>icon-m1-logo-weight</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-logo-thin"></i>
+
+                            <p>icon-m1-logo-thin</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-industry"></i>
+
+                            <p>icon-m1-industry</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-sign"></i>
+
+                            <p>icon-m1-sign</p>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="iconfont icon-m1-footprint"></i>
+
+                            <p>icon-m1-footprint</p>
+                        </div>
+
+                        &lt;!&ndash;ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd&ndash;&gt;
+                    </div>-->
+
+                    <ul class="icon_lists clear">
+
+                        <li>
+                            <i class="icon iconfont icon-m1-api"></i>
+                            <div class="name">m1-api</div>
+                            <div class="fontclass">.icon-m1-api</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-goldendata"></i>
+                            <div class="name">m1-goldendata</div>
+                            <div class="fontclass">.icon-m1-goldendata</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-add-to"></i>
+                            <div class="name">m1-add-to</div>
+                            <div class="fontclass">.icon-m1-add-to</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-edit-o"></i>
+                            <div class="name">m1-edit-o</div>
+                            <div class="fontclass">.icon-m1-edit-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-field"></i>
+                            <div class="name">m1-field</div>
+                            <div class="fontclass">.icon-m1-field</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-purse"></i>
+                            <div class="name">m1-purse</div>
+                            <div class="fontclass">.icon-m1-purse</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-mail"></i>
+                            <div class="name">m1-mail</div>
+                            <div class="fontclass">.icon-m1-mail</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-currency"></i>
+                            <div class="name">m1-currency</div>
+                            <div class="fontclass">.icon-m1-currency</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-wallet"></i>
+                            <div class="name">m1-wallet</div>
+                            <div class="fontclass">.icon-m1-wallet</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-cooperation"></i>
+                            <div class="name">m1-cooperation</div>
+                            <div class="fontclass">.icon-m1-cooperation</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-sms"></i>
+                            <div class="name">m1-sms</div>
+                            <div class="fontclass">.icon-m1-sms</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-praise"></i>
+                            <div class="name">m1-praise</div>
+                            <div class="fontclass">.icon-m1-praise</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-voucher"></i>
+                            <div class="name">m1-voucher</div>
+                            <div class="fontclass">.icon-m1-voucher</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-batch"></i>
+                            <div class="name">m1-batch</div>
+                            <div class="fontclass">.icon-m1-batch</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-search"></i>
+                            <div class="name">m1-search</div>
+                            <div class="fontclass">.icon-m1-search</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-crown"></i>
+                            <div class="name">m1-crown</div>
+                            <div class="fontclass">.icon-m1-crown</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-badge"></i>
+                            <div class="name">m1-badge</div>
+                            <div class="fontclass">.icon-m1-badge</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-diamond"></i>
+                            <div class="name">m1-diamond</div>
+                            <div class="fontclass">.icon-m1-diamond</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-circle"></i>
+                            <div class="name">m1-circle</div>
+                            <div class="fontclass">.icon-m1-circle</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-arrow-left"></i>
+                            <div class="name">m1-arrow-left</div>
+                            <div class="fontclass">.icon-m1-arrow-left</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-close"></i>
+                            <div class="name">m1-close</div>
+                            <div class="fontclass">.icon-m1-close</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-right"></i>
+                            <div class="name">m1-right</div>
+                            <div class="fontclass">.icon-m1-right</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-edit"></i>
+                            <div class="name">m1-edit</div>
+                            <div class="fontclass">.icon-m1-edit</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-upload"></i>
+                            <div class="name">m1-upload</div>
+                            <div class="fontclass">.icon-m1-upload</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-delete"></i>
+                            <div class="name">m1-delete</div>
+                            <div class="fontclass">.icon-m1-delete</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-browse"></i>
+                            <div class="name">m1-browse</div>
+                            <div class="fontclass">.icon-m1-browse</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-retransmission"></i>
+                            <div class="name">m1-retransmission</div>
+                            <div class="fontclass">.icon-m1-retransmission</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-wechat-payment"></i>
+                            <div class="name">m1-wechat-payment</div>
+                            <div class="fontclass">.icon-m1-wechat-payment</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-alipay"></i>
+                            <div class="name">m1-alipay</div>
+                            <div class="fontclass">.icon-m1-alipay</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-qq"></i>
+                            <div class="name">m1-qq</div>
+                            <div class="fontclass">.icon-m1-qq</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-wechat"></i>
+                            <div class="name">m1-wechat</div>
+                            <div class="fontclass">.icon-m1-wechat</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-sina"></i>
+                            <div class="name">m1-sina</div>
+                            <div class="fontclass">.icon-m1-sina</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-unfold-right"></i>
+                            <div class="name">m1-unfold-right</div>
+                            <div class="fontclass">.icon-m1-unfold-right</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-qr-code"></i>
+                            <div class="name">m1-qr-code</div>
+                            <div class="fontclass">.icon-m1-qr-code</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-toggle-field"></i>
+                            <div class="name">m1-toggle-field</div>
+                            <div class="fontclass">.icon-m1-toggle-field</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-unfold-left"></i>
+                            <div class="name">m1-unfold-left</div>
+                            <div class="fontclass">.icon-m1-unfold-left</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-unfold-down"></i>
+                            <div class="name">m1-unfold-down</div>
+                            <div class="fontclass">.icon-m1-unfold-down</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-arrow-right"></i>
+                            <div class="name">m1-arrow-right</div>
+                            <div class="fontclass">.icon-m1-arrow-right</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-pack-down"></i>
+                            <div class="name">m1-unfold-down</div>
+                            <div class="fontclass">.icon-m1-pack-down</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-pack-up"></i>
+                            <div class="name">m1-pack-up</div>
+                            <div class="fontclass">.icon-m1-pack-up</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-unfold-up"></i>
+                            <div class="name">m1-unfold-up</div>
+                            <div class="fontclass">.icon-m1-unfold-up</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-angle-left"></i>
+                            <div class="name">m1-angle-left</div>
+                            <div class="fontclass">.icon-m1-angle-left</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-delete-o"></i>
+                            <div class="name">m1-delete-o</div>
+                            <div class="fontclass">.icon-m1-delete-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-more"></i>
+                            <div class="name">m1-more</div>
+                            <div class="fontclass">.icon-m1-more</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-addpeople"></i>
+                            <div class="name">m1-addpeople</div>
+                            <div class="fontclass">.icon-m1-addpeople</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-sitemap"></i>
+                            <div class="name">m1-sitemap</div>
+                            <div class="fontclass">.icon-m1-sitemap</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-calendar"></i>
+                            <div class="name">m1-calendar</div>
+                            <div class="fontclass">.icon-m1-calendar</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-smiling"></i>
+                            <div class="name">m1-smiling</div>
+                            <div class="fontclass">.icon-m1-smiling</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-mail-o"></i>
+                            <div class="name">m1-mail-o</div>
+                            <div class="fontclass">.icon-m1-mail-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-dot"></i>
+                            <div class="name">m1-dot</div>
+                            <div class="fontclass">.icon-m1-dot</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-loading-line3"></i>
+                            <div class="name">loading-line3</div>
+                            <div class="fontclass">.icon-loading-line3</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-loading-line2"></i>
+                            <div class="name">loading-line2</div>
+                            <div class="fontclass">.icon-loading-line2</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-loading-line1"></i>
+                            <div class="name">loading-line1</div>
+                            <div class="fontclass">.icon-loading-line1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-mingdao"></i>
+                            <div class="name">m1-mingdao</div>
+                            <div class="fontclass">.icon-m1-mingdao</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-free"></i>
+                            <div class="name">m1-free</div>
+                            <div class="fontclass">.icon-m1-free</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-folder-open"></i>
+                            <div class="name">m1-folder-open</div>
+                            <div class="fontclass">.icon-m1-folder-open</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-folder-close"></i>
+                            <div class="name">m1-folder-close</div>
+                            <div class="fontclass">.icon-m1-folder-close</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-group"></i>
+                            <div class="name">m1-group</div>
+                            <div class="fontclass">.icon-m1-group</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-company"></i>
+                            <div class="name">m1-company</div>
+                            <div class="fontclass">.icon-m1-company</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-position"></i>
+                            <div class="name">m1-position</div>
+                            <div class="fontclass">.icon-m1-position</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-user"></i>
+                            <div class="name">m1-user</div>
+                            <div class="fontclass">.icon-m1-user</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-authentication"></i>
+                            <div class="name">m1-authentication</div>
+                            <div class="fontclass">.icon-m1-authentication</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-phone"></i>
+                            <div class="name">m1-phone</div>
+                            <div class="fontclass">.icon-m1-phone</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-lock-o"></i>
+                            <div class="name">m1-lock-o</div>
+                            <div class="fontclass">.icon-m1-lock-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-rocket"></i>
+                            <div class="name">m1-rocket</div>
+                            <div class="fontclass">.icon-m1-rocket</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-logo-thin"></i>
+                            <div class="name">m1-logo-thin</div>
+                            <div class="fontclass">.icon-m1-logo-thin</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-logo-weight"></i>
+                            <div class="name">m1-logo-weight</div>
+                            <div class="fontclass">.icon-m1-logo-weight</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-logo-normal"></i>
+                            <div class="name">m1-logo-normal</div>
+                            <div class="fontclass">.icon-m1-logo-normal</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-industry"></i>
+                            <div class="name">m1-industry</div>
+                            <div class="fontclass">.icon-m1-industry</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-eye"></i>
+                            <div class="name">m1-eye</div>
+                            <div class="fontclass">.icon-m1-eye</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-eye-close"></i>
+                            <div class="name">m1-eye-close</div>
+                            <div class="fontclass">.icon-m1-eye-close</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-set-up-thin"></i>
+                            <div class="name">m1-set-up-thin</div>
+                            <div class="fontclass">.icon-m1-set-up-thin</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-classification"></i>
+                            <div class="name">m1-classification</div>
+                            <div class="fontclass">.icon-m1-classification</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-time"></i>
+                            <div class="name">m1-time</div>
+                            <div class="fontclass">.icon-m1-time</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-news"></i>
+                            <div class="name">m1-news</div>
+                            <div class="fontclass">.icon-m1-news</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-track"></i>
+                            <div class="name">m1-track</div>
+                            <div class="fontclass">.icon-m1-track</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-security"></i>
+                            <div class="name">m1-security</div>
+                            <div class="fontclass">.icon-m1-security</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-unsubscribe"></i>
+                            <div class="name">m1-unsubscribe</div>
+                            <div class="fontclass">.icon-m1-unsubscribe</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-feather"></i>
+                            <div class="name">m1-feather</div>
+                            <div class="fontclass">.icon-m1-feather</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-smiling1"></i>
+                            <div class="name">m1-smiling</div>
+                            <div class="fontclass">.icon-m1-smiling1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-forward"></i>
+                            <div class="name">m1-forward</div>
+                            <div class="fontclass">.icon-m1-forward</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-link-text"></i>
+                            <div class="name">m1-link-text</div>
+                            <div class="fontclass">.icon-m1-link-text</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-newly-added-0"></i>
+                            <div class="name">m1-newly-added-0</div>
+                            <div class="fontclass">.icon-m1-newly-added-0</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-copy-add"></i>
+                            <div class="name">m1-copy-add</div>
+                            <div class="fontclass">.icon-m1-copy-add</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-map"></i>
+                            <div class="name">m1-map</div>
+                            <div class="fontclass">.icon-m1-map</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-calendar1"></i>
+                            <div class="name">m1-calendar</div>
+                            <div class="fontclass">.icon-m1-calendar1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-link"></i>
+                            <div class="name">m1-link</div>
+                            <div class="fontclass">.icon-m1-link</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-revoke"></i>
+                            <div class="name">m1-revoke</div>
+                            <div class="fontclass">.icon-m1-revoke</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-aircraft"></i>
+                            <div class="name">m1-aircraft</div>
+                            <div class="fontclass">.icon-m1-aircraft</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-template"></i>
+                            <div class="name">m1-template</div>
+                            <div class="fontclass">.icon-m1-template</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-set-up"></i>
+                            <div class="name">m1-set-up</div>
+                            <div class="fontclass">.icon-m1-set-up</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-newly-added"></i>
+                            <div class="name">m1-newly-added</div>
+                            <div class="fontclass">.icon-m1-newly-added</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-webhook"></i>
+                            <div class="name">m1-webhook</div>
+                            <div class="fontclass">.icon-m1-webhook</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-hi"></i>
+                            <div class="name">m1-hi</div>
+                            <div class="fontclass">.icon-m1-hi</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-light-bulb"></i>
+                            <div class="name">m1-light-bulb</div>
+                            <div class="fontclass">.icon-m1-light-bulb</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-gift"></i>
+                            <div class="name">m1-gift</div>
+                            <div class="fontclass">.icon-m1-gift</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-chapter"></i>
+                            <div class="name">m1-chapter</div>
+                            <div class="fontclass">.icon-m1-chapter</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-magic-wand"></i>
+                            <div class="name">m1-magic-wand</div>
+                            <div class="fontclass">.icon-m1-magic-wand</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-loss"></i>
+                            <div class="name">m1-loss</div>
+                            <div class="fontclass">.icon-m1-loss</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-doubt"></i>
+                            <div class="name">m1-doubt</div>
+                            <div class="fontclass">.icon-m1-doubt</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-eye1"></i>
+                            <div class="name">m1-eye</div>
+                            <div class="fontclass">.icon-m1-eye1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-list"></i>
+                            <div class="name">m1-list</div>
+                            <div class="fontclass">.icon-m1-list</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-recommend"></i>
+                            <div class="name">m1-recommend</div>
+                            <div class="fontclass">.icon-m1-recommend</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-arrow-left-o"></i>
+                            <div class="name">m1-arrow-left-o</div>
+                            <div class="fontclass">.icon-m1-arrow-left-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-search1"></i>
+                            <div class="name">m1-search</div>
+                            <div class="fontclass">.icon-m1-search1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-i"></i>
+                            <div class="name">m1-i</div>
+                            <div class="fontclass">.icon-m1-i</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-code"></i>
+                            <div class="name">m1-code</div>
+                            <div class="fontclass">.icon-m1-code</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-add-to1"></i>
+                            <div class="name">m1-add-to</div>
+                            <div class="fontclass">.icon-m1-add-to1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-edit1"></i>
+                            <div class="name">m1-edit</div>
+                            <div class="fontclass">.icon-m1-edit1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-close1"></i>
+                            <div class="name">m1-close</div>
+                            <div class="fontclass">.icon-m1-close1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-download"></i>
+                            <div class="name">m1-download</div>
+                            <div class="fontclass">.icon-m1-download</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-arrow-lower"></i>
+                            <div class="name">m1-arrow-lower</div>
+                            <div class="fontclass">.icon-m1-arrow-lower</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-company1"></i>
+                            <div class="name">m1-company</div>
+                            <div class="fontclass">.icon-m1-company1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-footprint"></i>
+                            <div class="name">m1-footprint</div>
+                            <div class="fontclass">.icon-m1-footprint</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-email-reply"></i>
+                            <div class="name">m1-email-reply</div>
+                            <div class="fontclass">.icon-m1-email-reply</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-email-open"></i>
+                            <div class="name">m1-email-open</div>
+                            <div class="fontclass">.icon-m1-email-open</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-group1"></i>
+                            <div class="name">m1-group</div>
+                            <div class="fontclass">.icon-m1-group1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-sign"></i>
+                            <div class="name">m1-sign</div>
+                            <div class="fontclass">.icon-m1-sign</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-aircraft-add"></i>
+                            <div class="name">m1-aircraft-add</div>
+                            <div class="fontclass">.icon-m1-aircraft-add</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-qr-code1"></i>
+                            <div class="name">m1-qr-code</div>
+                            <div class="fontclass">.icon-m1-qr-code1</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-people-add"></i>
+                            <div class="name">m1-people-add</div>
+                            <div class="fontclass">.icon-m1-people-add</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-email-o"></i>
+                            <div class="name">m1-email-o</div>
+                            <div class="fontclass">.icon-m1-email-o</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-picture"></i>
+                            <div class="name">m1-picture</div>
+                            <div class="fontclass">.icon-m1-picture</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-icon-m1-merge"></i>
+                            <div class="name">m1-merge</div>
+                            <div class="fontclass">.icon-icon-m1-merge</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-angle-right"></i>
+                            <div class="name">m1-angle-right</div>
+                            <div class="fontclass">.icon-m1-angle-right</div>
+                        </li>
+
+                        <li>
+                            <i class="icon iconfont icon-m1-angle-Left-x"></i>
+                            <div class="name">m1-angle-Left-x</div>
+                            <div class="fontclass">.icon-m1-angle-Left-x</div>
+                        </li>
+
+                    </ul>
+
+
+                    <!--引用原下载样式-->
+                </div>
+            </div>
+        </div>
+
+        <!--布局-->
+        <div id="layout" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>layout</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-col-2 demo-layout demo-layout1"></div>
+                    <div class="m1-col-10 demo-layout demo-layout2"></div>
+                </div>
+
+                <div class="m1-row">
+                    <div class="m1-col-5 demo-layout demo-layout3"></div>
+                    <div class="m1-col-7 demo-layout demo-layout4"></div>
+                </div>
+
+                <pre>
+                    <code class="html">
+                        &lt;div class=&quot;m1-row&quot;&gt;
+                        &nbsp;&nbsp;&lt;div class=&quot;m1-col-2&quot;&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class=&quot;m1-col-10&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;m1-row&quot;&gt;
+                        &nbsp;&nbsp;&lt;div class=&quot;m1-col-5&quot;&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class=&quot;m1-col-7&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--左侧导航-->
+        <div id="nav-left" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Navbar 左侧导航</h2>
+
+                <p>a或.m1-nav-item元素上添加类名select表示选中</p>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-panel demo-nav-left">
+                        <ul class="m1-nav">
+                            <li class="m1-dropdown m1-dropdown-right">
+                                <a>导航<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></a>
+                                <ul class="m1-dropdown-menu">
+                                    <li><a>指南</a></li>
+                                    <li><a>布局</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="m1-subnav">
+                                    <li><a>指南</a></li>
+                                    <li><a>布局</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <pre>
+                        <code class="html">
+                            &lt;ul class=&quot;m1-nav&quot;&gt;
+                            &nbsp;&nbsp;&lt;li class=&quot;m1-dropdown m1-dropdown-right&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;导航&lt;i class=&quot;m1-nav-caret&quot; data-m1-toggle=&quot;dropdown&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;指南&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;布局&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-subnav&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;指南&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;布局&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>无&lt;a&gt;导航</h3>
+
+                    <p>导航中有事件，可以使用div加类名m1-nav-item替换a</p>
+
+                    <div class="m1-panel demo-nav-left">
+                        <ul class="m1-nav">
+                            <li class="m1-dropdown m1-dropdown-right">
+                                <div class="m1-nav-item">导航<i class="m1-nav-caret" data-m1-toggle="dropdown"></i></div>
+                                <ul class="m1-dropdown-menu">
+                                    <li><a>指南</a></li>
+                                    <li><a>布局</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="m1-subnav">
+                                    <li>
+                                        <div class="m1-nav-item">指南</div>
+                                    </li>
+                                    <li>
+                                        <div class="m1-nav-item">布局</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <pre>
+                        <code class="html">
+                            &lt;ul class=&quot;m1-nav&quot;&gt;
+                            &nbsp;&nbsp;&lt;li class=&quot;m1-dropdown m1-dropdown-right&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-nav-item&quot;&gt;导航&lt;i class=&quot;m1-nav-caret&quot;
+                            data-m1-toggle=&quot;dropdown&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;指南&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;布局&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-subnav&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;div class=&quot;m1-nav-item&quot;&gt;指南&lt;/div&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;div class=&quot;m1-nav-item&quot;&gt;布局&lt;/div&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--输入框-->
+        <div id="input" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Input 输入框</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <input type="text" placeholder="请输入"/>
+                    <pre>
+                        <code class="html">
+                            &lt;input type=&quot;text&quot;/&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>禁用状态</h3>
+                    <input type="text" disabled placeholder="请输入"/>
+                    <pre>
+                        <code class="html">
+                            &lt;input type=&quot;text&quot; disabled/&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>图标状态</h3>
+
+                    <div class="m1-input-group">
+                        <i class="iconfont icon-m1-search"></i>
+                        <input type="text" placeholder="请输入"/>
+                    </div>
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-input-group&quot;&gt;
+                            &nbsp;&nbsp;&lt;i class=&quot;iconfont icon-m1-search&quot;&gt;&lt;/i&gt;
+                            &nbsp;&nbsp;&lt;input type=&quot;text&quot; placeholder=&quot;请输入&quot;/&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>搜索状态</h3>
+
+                    <p>搜索状态菜单可以带键盘控制</p>
+
+                    <div class="m1-search m1-dropdown">
+                        <input type="text" placeholder="请输入搜索内容"
+                               data-m1-toggle="dropdown"/>
+                        <ul class="m1-dropdown-menu">
+                            <li><a>Page</a></li>
+                            <li><a>Contact</a></li>
+                            <li><a>EDM</a></li>
+                            <li><a>SMS</a></li>
+                        </ul>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-search m1-dropdown&quot;&gt;
+                            &nbsp;&nbsp;&lt;input type=&quot;text&quot; placeholder=&quot;请输入搜索内容&quot;
+                            &nbsp;&nbsp;&nbsp;&nbsp;data-m1-toggle=&quot;dropdown&quot;/&gt;
+                            &nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;EDM&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;SMS&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;/ul&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--单选-->
+        <div id="radio" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Radio 单选框</h2>
+            </div>
+            <div class="m1-panel-content">
+
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-radio1" name="radio" type="radio" checked/>
+                        <label class="m1-tgl-radio" for="m1-radio1"></label>
+                        <label for="m1-radio1">选项一</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-radio2" name="radio" type="radio"/>
+                        <label class="m1-tgl-radio" for="m1-radio2"></label>
+                        <label for="m1-radio2">选项二</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-radio3" name="radio" type="radio"/>
+                        <label class="m1-tgl-radio" for="m1-radio3"></label>
+                        <label for="m1-radio3">选项三</label>
+                    </span>
+
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;demo-radio&quot; name=&quot;radio&quot; type=&quot;radio&quot;/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-radio&quot; for=&quot;demo-radio&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;demo-radio&quot;&gt;选项一&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>禁用状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-radio4" name="radio1" type="radio" disabled/>
+                        <label class="m1-tgl-radio" for="m1-radio4"></label>
+                        <label for="m1-radio4">选项一</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-radio5" name="radio1" type="radio" checked disabled/>
+                        <label class="m1-tgl-radio" for="m1-radio5"></label>
+                        <label for="m1-radio5">选项一</label>
+                    </span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-radio4&quot; name=&quot;radio1&quot; type=&quot;radio&quot;
+                            disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-radio&quot; for=&quot;m1-radio4&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;m1-radio4&quot;&gt;选项一&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-radio5&quot; name=&quot;radio1&quot; type=&quot;radio&quot;
+                            checked disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-radio&quot; for=&quot;m1-radio5&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;m1-radio5&quot;&gt;选项一&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+
+        <!--复选-->
+        <div id="checkbox" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Checkbox 多选框</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-checkbox1" type="checkbox" checked/>
+                        <label class="m1-tgl-checkbox" for="m1-checkbox1"></label>
+                        <label for="m1-checkbox1">复选一</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-checkbox2" type="checkbox"/>
+                        <label class="m1-tgl-checkbox" for="m1-checkbox2"></label>
+                        <label for="m1-checkbox2">复选二</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-checkbox3" type="checkbox"/>
+                        <label class="m1-tgl-checkbox" for="m1-checkbox3"></label>
+                        <label for="m1-checkbox3">复选三</label>
+                    </span>
+
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;demo-checkbox&quot; type=&quot;checkbox&quot;/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot; for=&quot;demo-checkbox&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;demo-checkbox&quot;&gt;复选一&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>禁用状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-checkbox4" type="checkbox" disabled/>
+                        <label class="m1-tgl-checkbox" for="m1-checkbox4"></label>
+                        <label for="m1-checkbox4">复选三</label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-checkbox5" type="checkbox" checked disabled/>
+                        <label class="m1-tgl-checkbox" for="m1-checkbox5"></label>
+                        <label for="m1-checkbox5">复选三</label>
+                    </span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-checkbox4&quot; type=&quot;checkbox&quot; disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot; for=&quot;m1-checkbox4&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;m1-checkbox4&quot;&gt;复选三&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-checkbox5&quot; type=&quot;checkbox&quot; checked
+                            disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot; for=&quot;m1-checkbox5&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&lt;label for=&quot;m1-checkbox5&quot;&gt;复选三&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+
+        <!--开关-->
+        <div id="switch" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Switch 开关</h2>
+            </div>
+
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-switch1" type="checkbox" checked/>
+                        <label class="m1-tgl-switch" for="m1-switch1"></label>
+                    </span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-switch&quot; type=&quot;checkbox&quot; checked/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-switch&quot; for=&quot;m1-switch&quot;&gt;&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>禁用状态</h3>
+                    <span class="m1-tgl">
+                        <input id="m1-switch2" type="checkbox" disabled/>
+                        <label class="m1-tgl-switch" for="m1-switch2"></label>
+                    </span>
+                    <span class="m1-tgl">
+                        <input id="m1-switch3" type="checkbox" checked disabled/>
+                        <label class="m1-tgl-switch" for="m1-switch3"></label>
+                    </span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-switch2&quot; type=&quot;checkbox&quot; disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-switch&quot; for=&quot;m1-switch2&quot;&gt;&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&lt;input id=&quot;m1-switch3&quot; type=&quot;checkbox&quot; checked disabled/&gt;
+                            &nbsp;&nbsp;&lt;label class=&quot;m1-tgl-switch&quot; for=&quot;m1-switch3&quot;&gt;&lt;/label&gt;
+                            &lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--按钮-->
+        <div id="button" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Button 按钮</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+
+                    <p>
+                        <button class="m1-btn">button</button>
+                        <button class="m1-btn m1-btn-default">默认</button>
+                        <button class="m1-btn m1-btn-primary">主要</button>
+                        <button class="m1-btn m1-btn-success">成功</button>
+                        <button class="m1-btn m1-btn-danger">错误</button>
+                        <button class="m1-btn m1-btn-warning">警告</button>
+                        <button class="m1-btn m1-btn-text">文本按钮</button>
+                    </p>
+                    <p>
+                        <button class="m1-btn m1-btn-tag-default">默认</button>
+                        <button class="m1-btn m1-btn-tag-primary">主要</button>
+                        <button class="m1-btn m1-btn-tag-success">成功</button>
+                        <button class="m1-btn m1-btn-tag-danger">错误</button>
+                        <button class="m1-btn m1-btn-tag-warning">警告</button>
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;button class=&quot;m1-btn&quot;&gt;button&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-default&quot;&gt;默认&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary&quot;&gt;主要&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-success&quot;&gt;成功&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-danger&quot;&gt;错误&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-warning&quot;&gt;警告&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-text&quot;&gt;文本按钮&lt;/button&gt;
+
+                            &lt;button class=&quot;m1-btn m1-btn-tag-default&quot;&gt;默认&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-tag-primary&quot;&gt;主要&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-tag-success&quot;&gt;成功&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-tag-danger&quot;&gt;错误&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-tag-warning&quot;&gt;警告&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>禁用状态</h3>
+                    <button class="m1-btn" disabled>button</button>
+                    <button class="m1-btn m1-btn-primary" disabled>主要</button>
+                    <button class="m1-btn m1-btn-text" disabled>文本按钮</button>
+                    <pre>
+                        <code class="html">
+                            &lt;button class=&quot;m1-btn&quot; disabled&gt;button&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary&quot; disabled&gt;button&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-text&quot; disabled&gt;button&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>不同尺寸</h3>
+                    <button class="m1-btn m1-btn-primary m1-btn-lg">按钮(大)</button>
+                    <button class="m1-btn m1-btn-primary">按钮</button>
+                    <button class="m1-btn m1-btn-primary m1-btn-sm">按钮(小)</button>
+                    <button class="m1-btn m1-btn-primary m1-btn-xs">按钮(超小)</button>
+                    <pre>
+                        <code class="html">
+                            &lt;button class=&quot;m1-btn m1-btn-primary m1-btn-lg&quot;&gt;按钮(大)&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary&quot;&gt;按钮&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary m1-btn-sm&quot;&gt;按钮(小)&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary m1-btn-xs&quot;&gt;按钮(超小)&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--按钮组-->
+        <div id="button-group" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Button-group 按钮按钮组</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <div class="m1-btn-group">
+                        <button class="m1-btn">button</button><button class="m1-btn">button</button><button class="m1-btn">button</button><button class="m1-btn">button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--进度条-->
+        <div id="progress" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Progress 进度条</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>静态</h3>
+
+                    <div class="m1-progress">
+                        <div class="m1-progress-bar" style="width:20%;"></div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-progress&quot;&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-progress-bar&quot; style=&quot;width:20%;&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>动态</h3>
+
+                    <div class="m1-progress-dynamic">
+                        <div class="m1-progress-bar" style="width:50%;"></div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-progress-dynamic&quot;&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-progress-bar&quot; style=&quot;width:20%;&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>圆形</h3>
+
+                    <p>改变属性stroke-dashoffset值实现不同进度，stroke-dasharray值为圆周长：C=2πr</p>
+
+                    <div>
+                        <svg class="m1-progress-circle" width="120" height="120">
+                            <circle cx="60" cy="60" r="50"></circle>
+                            <circle cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="214"></circle>
+                        </svg>
+                    </div>
+                    <pre>
+                        <code class="html">
+                            &nbsp;&lt;svg class="m1-progress-circle"&gt;
+                            &nbsp;&nbsp;&nbsp;&lt;circle cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot;&gt;&lt;/circle&gt;
+                            &nbsp;&nbsp;&nbsp;&lt;circle cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot;stroke-dasharray=&quot;314&quot;
+                            &nbsp;&nbsp;&nbsp;stroke-dashoffset=&quot;214&quot;&gt;&lt;/circle&gt;
+                            &nbsp;&lt;/svg&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--标签-->
+        <div id="tag" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Tag 标签</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通状态</h3>
+                    <span class="m1-tag">tag</span>
+                    <span class="m1-tag m1-tag-primary">主要</span>
+                    <span class="m1-tag m1-tag-success">成功</span>
+                    <span class="m1-tag m1-tag-danger">错误</span>
+                    <span class="m1-tag m1-tag-warning">警告</span>
+                    <span class="m1-tag m1-tag-ignore">忽视</span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tag&quot;&gt;tag&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary&quot;&gt;主要&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success&quot;&gt;成功&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-danger&quot;&gt;错误&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-warning&quot;&gt;警告&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-ignore&quot;&gt;忽视&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>不同尺寸</h3>
+                    <span class="m1-tag m1-tag-primary m1-tag-lg">主要(大)</span>
+                    <span class="m1-tag m1-tag-primary">主要</span>
+                    <span class="m1-tag m1-tag-primary m1-tag-sm">主要(小)</span>
+                    <span class="m1-tag m1-tag-success m1-tag-lg">成功(大)</span>
+                    <span class="m1-tag m1-tag-success">成功</span>
+                    <span class="m1-tag m1-tag-success m1-tag-sm">成功(小)</span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-lg&quot;&gt;主要(大)&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary&quot;&gt;主要&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-sm&quot;&gt;主要(小)&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-lg&quot;&gt;成功(大)&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success&quot;&gt;成功&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-sm&quot;&gt;成功(小)&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>可移除状态</h3>
+                    <span class="m1-tag m1-tag-primary m1-tag-lg">主要(大)<i class="m1-tag-close"></i></span>
+                    <span class="m1-tag m1-tag-primary">主要<i class="m1-tag-close"></i></span>
+                    <span class="m1-tag m1-tag-primary m1-tag-sm">主要(小)<i class="m1-tag-close"></i></span>
+                    <span class="m1-tag m1-tag-success m1-tag-lg">成功(大)<i class="m1-tag-close"></i></span>
+                    <span class="m1-tag m1-tag-success">成功<i class="m1-tag-close"></i></span>
+                    <span class="m1-tag m1-tag-success m1-tag-sm">成功(小)<i class="m1-tag-close"></i></span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-lg&quot;&gt;主要(大)&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary&quot;&gt;主要&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-sm&quot;&gt;主要(小)&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-lg&quot;&gt;成功(大)&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success&quot;&gt;成功&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-sm&quot;&gt;成功(小)&lt;i class=&quot;m1-tag-close&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>可选择状态</h3>
+                    <span class="m1-tag m1-tag-primary m1-tag-lg">主要(大)<i class="m1-tag-check"></i></span>
+                    <span class="m1-tag m1-tag-primary">主要<i class="m1-tag-check"></i></span>
+                    <span class="m1-tag m1-tag-primary m1-tag-sm">主要(小)<i class="m1-tag-check"></i></span>
+                    <span class="m1-tag m1-tag-success m1-tag-lg">成功(大)<i class="m1-tag-check"></i></span>
+                    <span class="m1-tag m1-tag-success">成功<i class="m1-tag-check"></i></span>
+                    <span class="m1-tag m1-tag-success m1-tag-sm">成功(小)<i class="m1-tag-check"></i></span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-lg&quot;&gt;主要(大)&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary&quot;&gt;主要&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-primary m1-tag-sm&quot;&gt;主要(小)&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-lg&quot;&gt;成功(大)&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success&quot;&gt;成功&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                            &lt;span class=&quot;m1-tag m1-tag-success m1-tag-sm&quot;&gt;成功(小)&lt;i class=&quot;m1-tag-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--文本-->
+        <div id="text" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Text 文本</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+
+                    <span class="m1-text-primary">主要</span>
+                    <span class="m1-text-success">成功</span>
+                    <span class="m1-text-danger">错误</span>
+                    <span class="m1-text-warning">警告</span>
+                    <span class="m1-text-ignore">忽视</span>
+                    <pre>
+                        <code class="html">
+                            &lt;span class=&quot;m1-text-primary&quot;&gt;主要&lt;/span&gt;
+                            &lt;span class=&quot;m1-text-success&quot;&gt;成功&lt;/span&gt;
+                            &lt;span class=&quot;m1-text-danger&quot;&gt;错误&lt;/span&gt;
+                            &lt;span class=&quot;m1-text-warning&quot;&gt;警告&lt;/span&gt;
+                            &lt;span class=&quot;m1-text-ignore&quot;&gt;忽视&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--表格-->
+        <div id="table" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Table 表格</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通表格</h3>
+                    <table class="m1-table">
+                        <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>标题</th>
+                            <th>标题</th>
+                            <th>标题</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                        </tr>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                        </tr>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                        </tr>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                            <td>内容</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre>
+                        <code class="html" style="height: 200px;">
+                            &lt;table class=&quot;m1-table&quot;&gt;
+                            &lt;thead&gt;
+                            &lt;tr&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                            &lt;/table&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>阴影表格</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <th>标题</th>
+                                <th>标题</th>
+                                <th>标题</th>
+                                <th>标题</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                            </tr>
+                            <tr>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                            </tr>
+                            <tr>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                            </tr>
+                            <tr>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                                <td>内容</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <pre>
+                        <code class="html" style="height: 200px;">
+                            &lt;div class=&quot;m1-panel&quot;&gt;
+                            &lt;table class=&quot;m1-table&quot;&gt;
+                            &lt;thead&gt;
+                            &lt;tr&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;td&gt;内容&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                            &lt;/table&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>可编辑表格</h3>
+
+                    <table class="m1-table-editable">
+                        <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>标题</th>
+                            <th>标题</th>
+                            <th>标题</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                            <td><input type="text" placeholder="请输入内容"/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre>
+                        <code class="html" style="height: 200px">
+                            &lt;table class=&quot;m1-table-editable&quot;&gt;
+                            &lt;thead&gt;
+                            &lt;tr&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;th&gt;标题&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot;/&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                            &lt;/table&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--无序列表-->
+        <div id="ul" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Ul 无序列表</h2>
+            </div>
+
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <ul class="m1-ul">
+                        <li>page</li>
+                        <li>contact</li>
+                        <li>edm</li>
+                        <li>sms</li>
+                    </ul>
+                    <pre>
+                        <code class="html">
+                            &lt;ul class=&quot;m1-ul&quot;&gt;
+                            &nbsp;&nbsp;&lt;li&gt;page&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;li&gt;contact&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;li&gt;edm&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;li&gt;sms&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--面板-->
+        <div id="panel" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Panel 面板</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-panel">
+                        <div class="m1-panel-header">标题</div>
+                        <div class="m1-panel-content">
+                            内容
+                        </div>
+                        <div class="m1-panel-footer">
+                            页脚
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-panel&quot;&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-panel-header&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;标题
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-panel-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;内容
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-panel-footer&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;页脚
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--表单-->
+        <div id="form" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Form 表单</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-panel demo-form">
+                        <div class="m1-panel-content">
+                            <div class="m1-form">
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">姓名</label>
+
+                                    <div class="m1-form-content">
+                                        <input class="m1-form-input" type="text" placeholder="请输入姓名"/>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">性别</label>
+
+                                    <div class="m1-form-content">
+                                        <span class="m1-tgl">
+                                            <input id="gender-male" name="gender" type="radio" checked/>
+                                            <label class="m1-tgl-radio" for="gender-male"></label>
+                                        </span>
+                                        <label for="gender-male">男</label>
+                                        &nbsp;&nbsp;
+                                        <span class="m1-tgl">
+                                            <input id="gender-female" name="gender" type="radio"/>
+                                            <label class="m1-tgl-radio" for="gender-female"></label>
+                                        </span>
+                                        <label for="gender-female">女</label>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">生日</label>
+
+                                    <div class="m1-form-content">
+                                        <input id="demo-form-birthday" class="m1-form-input" type="text" value=""
+                                               placeholder="请选择生日"/>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">地址</label>
+
+                                    <div class="m1-form-content">
+                                        <input class="m1-form-input" type="text" placeholder="请输入地址"/>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">行业</label>
+
+                                    <div class="m1-form-content">
+                                        <span class="m1-tgl">
+                                            <input id="business-edu" type="checkbox"/>
+                                            <label class="m1-tgl-checkbox" for="business-edu"></label>
+                                        </span>
+                                        <label for="business-edu">教育</label>
+                                        &nbsp;&nbsp;
+                                        <span class="m1-tgl">
+                                            <input id="business-finance" type="checkbox"/>
+                                            <label class="m1-tgl-checkbox" for="business-finance"></label>
+                                        </span>
+                                        <label for="business-finance">金融</label>
+                                        &nbsp;&nbsp;
+                                        <span class="m1-tgl">
+                                            <input id="business-tourism" type="checkbox"/>
+                                            <label class="m1-tgl-checkbox" for="business-tourism"></label>
+                                        </span>
+                                        <label for="business-tourism">旅游</label>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">开启推送</label>
+
+                                    <div class="m1-form-content">
+                                        <span class="m1-tgl">
+                                            <input id="form-push" type="checkbox" checked/>
+                                            <label class="m1-tgl-switch" for="form-push"></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <label class="m1-form-label">备注</label>
+
+                                    <div class="m1-form-content">
+                                        <textarea class="m1-form-textarea" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="m1-form-row">
+                                    <div class="m1-form-content">
+                                        <button class="m1-btn">取消</button>
+                                        &nbsp;&nbsp;
+                                        <button class="m1-btn m1-btn-primary">添加</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="html" style="height:500px;">
+                            &lt;div class=&quot;m1-form&quot;&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;姓名&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;m1-form-input&quot; type=&quot;text&quot;placeholder=&quot;请输入姓名&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;性别&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;gender-male&quot; name=&quot;gender&quot;type=&quot;radio&quot;
+                            checked/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-radio&quot;for=&quot;gender-male&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;gender-male&quot;&gt;男&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbsp;&amp;nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;gender-female&quot; name=&quot;gender&quot;type=&quot;radio&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-radio&quot;for=&quot;gender-female&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;gender-female&quot;&gt;女&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;生日&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;demo-form-birthday&quot; class=&quot;m1-form-input&quot;type=&quot;text&quot;
+                            value=&quot;&quot;
+                            &nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;请选择生日&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;地址&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;m1-form-input&quot; type=&quot;text&quot;placeholder=&quot;请输入地址&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;行业&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;business-edu&quot; type=&quot;checkbox&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot;for=&quot;business-edu&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;business-edu&quot;&gt;教育&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbsp;&amp;nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;business-finance&quot;type=&quot;checkbox&quot;/&gt;
+                            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot;for=&quot;business-finance&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;business-finance&quot;&gt;金融&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbsp;&amp;nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;business-tourism&quot;type=&quot;checkbox&quot;/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-checkbox&quot;for=&quot;business-tourism&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;business-tourism&quot;&gt;旅游&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;开启推送&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;m1-tgl&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;form-push&quot; type=&quot;checkbox&quot;checked/&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-tgl-switch&quot; for=&quot;form-push&quot;&gt;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=&quot;m1-form-label&quot;&gt;备注&lt;/label&gt;
+                            &nbsp;&nbsp; &nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&lt;textarea class=&quot;m1-form-textarea&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-form-row&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-form-content&quot;&gt;
+                            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;m1-btn&quot;&gt;取消&lt;/button&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbsp;&amp;nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&lt;button class=&quot;m1-btn m1-btn-primary&quot;&gt;添加&lt;/button&gt;
+                            &nbsp;&nbsp; &nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--警告-->
+        <div id="alert" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Alert 警告</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <p class="m1-alert m1-alert-primary">alert 主要</p>
+
+                    <p class="m1-alert m1-alert-success">alert 成功</p>
+
+                    <p class="m1-alert m1-alert-danger">alert 错误</p>
+
+                    <p class="m1-alert m1-alert-warning">alert 警告</p>
+
+                    <p class="m1-alert m1-alert-ignore">alert 忽视</p>
+                    <pre>
+                        <code class="html">
+                            &lt;p class=&quot;m1-alert m1-alert-primary&quot;&gt;alert 主要&lt;/p&gt;
+                            &lt;p class=&quot;m1-alert m1-alert-success&quot;&gt;alert 成功&lt;/p&gt;
+                            &lt;p class=&quot;m1-alert m1-alert-danger&quot;&gt;alert 错误&lt;/p&gt;
+                            &lt;p class=&quot;m1-alert m1-alert-warning&quot;&gt;alert 警告&lt;/p&gt;
+                            &lt;p class=&quot;m1-alert m1-alert-ignore&quot;&gt;alert 忽视&lt;/p&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--返回顶部-->
+        <div id="back-top" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>BackTop 回滚</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-back-top&quot;&gt;&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--提示-->
+        <div id="tooltip" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Tooltip 提示</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <p>
+                        <label data-m1-tooltip="这是一个提示呦！">短提示</label>
+                        <label data-m1-tooltip="这是一个提示呦，用来表示这是一个长长长长长长长长长长长长长长长长长长提示！">长提示</label>
+                    </p>
+
+                    <p>
+                        <button class="m1-btn m1-btn-primary m1-example" data-m1-tooltip="按钮提示！">按钮提示</button>
+                    </p>
+
+                    <pre>
+                        <code class="html">
+                            &lt;label data-m1-tooltip=&quot;这是一个提示呦！&quot;&gt;短提示&lt;/label&gt;
+                            &lt;label data-m1-tooltip=&quot;这是一个提示呦，用来表示这是一个长长长长长长长长长长长长长长长长长长提示！&quot;&gt;长提示&lt;/label&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary m1-example&quot; data-m1-tooltip=&quot;按钮提示！&quot;&gt;按钮提示&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--标签页-->
+        <div id="tabs" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Tabs 标签页</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div class="m1-tabs">
+                        <ul class="m1-tab-nav">
+                            <li class="select"><a data-tab="1">标签页1</a></li>
+                            <li><a data-tab="2">标签页2</a></li>
+                        </ul>
+                        <div class="m1-tab-content">
+                            <div class="m1-tab-pane select" data-tab-pane="1">
+                                <h2>这是一个标签页</h2>
+                            </div>
+                            <div class="m1-tab-pane" data-tab-pane="2">
+                                <h2>这也是一个标签页</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-tabs&quot;&gt;
+                            &nbsp;&nbsp;&lt;ul class=&quot;m1-tab-nav&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;select&quot;&gt;&lt;a data-tab=&quot;1&quot;&gt;标签页1&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a data-tab=&quot;2&quot;&gt;标签页2&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-tab-content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-tab-pane select&quot; data-tab-pane=&quot;1&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;这是一个标签页&lt;/h2&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;m1-tab-pane&quot; data-tab-pane=&quot;2&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;这也是一个标签页&lt;/h2&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>属性</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>说明</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>data-tab</td>
+                                <td>标签选项索引</td>
+                            </tr>
+                            <tr>
+                                <td>data-tab-pane</td>
+                                <td>标签页显示索引，与标签选项对应</td>
+                            </tr>
+                            <tr>
+                                <td>select</td>
+                                <td>当前显示页</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--下拉菜单-->
+        <div id="dropdown" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>DropDown 下拉菜单</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>普通菜单</h3>
+
+                    <div class="m1-dropdown">
+                        <button class="m1-btn m1-btn-primary" data-m1-toggle="dropdown">M1应用<i
+                                class="m1-caret" data-m1-toggle="dropdown"></i></button>
+                        <div class="m1-dropdown-menu">
+                            <ul>
+                                <li><a>Page <i class="m1-dropdown-check"></i></a></li>
+                                <li><a>Contact</a></li>
+                                <li><a>EDM</a></li>
+                                <li><a>SMS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-dropdown&quot;&gt;
+                            &nbsp;&nbsp;&lt;button class=&quot;m1-btn m1-btn-primary&quot; data-m1-toggle=&quot;dropdown&quot;&gt;M1应用&amp;nbsp;&lt;i
+                            &nbsp;&nbsp;class=&quot;m1-caret&quot; data-m1-toggle="dropdown"&gt;&lt;/i&gt;&lt;/button&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page &lt;i class="m1-dropdown-check"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;EDM&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;SMS&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>多级菜单</h3>
+
+                    <div class="m1-dropdown">
+                        <button class="m1-btn m1-btn-primary" data-m1-toggle="dropdown">M1应用<i
+                                class="m1-caret" data-m1-toggle="dropdown"></i></button>
+                        <div class="m1-dropdown-menu">
+                            <ul>
+                                <li class="m1-dropdown-submenu">
+                                    <a>Page</a>
+                                    <ul class="m1-dropdown-menu">
+                                        <li><a>Page列表</a></li>
+                                        <li><a>Page域名</a></li>
+                                    </ul>
+                                </li>
+                                <li class="m1-dropdown-submenu">
+                                    <a>Contact</a>
+                                    <ul class="m1-dropdown-menu">
+                                        <li><a>Contact列表</a></li>
+                                        <li><a>Contact域名</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>EDM</a></li>
+                                <li><a>SMS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-dropdown&quot;&gt;
+                            &nbsp;&nbsp;&lt;button class=&quot;m1-btn m1-btn-primary&quot; data-m1-toggle=&quot;dropdown&quot;&gt;M1应用&amp;nbsp;&lt;i
+                            &nbsp;&nbsp;class=&quot;m1-caret&quot; data-m1-toggle="dropdown"&gt;&lt;/i&gt;&lt;/button&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;m1-dropdown-submenu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;Page&lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page列表&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page域名&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;m1-dropdown-submenu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;Contact&lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact列表&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact域名&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;EDM&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;SMS&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>右侧</h3>
+
+                    <div class="m1-dropdown m1-dropdown-right" style="display: inline-block;">
+                        <button class="m1-btn m1-btn-primary" data-m1-toggle="dropdown">M1<i
+                                class="m1-caret" data-m1-toggle="dropdown"></i></button>
+                        <div class="m1-dropdown-menu">
+                            <ul>
+                                <li class="m1-dropdown-submenu">
+                                    <a>Page</a>
+                                    <ul class="m1-dropdown-menu">
+                                        <li><a>Page列表</a></li>
+                                        <li><a>Page域名</a></li>
+                                    </ul>
+                                </li>
+                                <li class="m1-dropdown-submenu">
+                                    <a>Contact</a>
+                                    <ul class="m1-dropdown-menu">
+                                        <li><a>Contact列表</a></li>
+                                        <li><a>Contact域名</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>EDM</a></li>
+                                <li><a>SMS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;m1-dropdown m1-dropdown-right&quot;&gt;
+                            &nbsp;&nbsp;&lt;button class=&quot;m1-btn m1-btn-primary&quot; data-m1-toggle=&quot;dropdown&quot;&gt;M1应用&amp;nbsp;&lt;i
+                            &nbsp;&nbsp;class=&quot;m1-caret&quot; data-m1-toggle="dropdown"&gt;&lt;/i&gt;&lt;/button&gt;
+                            &nbsp;&nbsp;&lt;div class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;m1-dropdown-submenu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;Page&lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page列表&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Page域名&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;m1-dropdown-submenu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;Contact&lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class=&quot;m1-dropdown-menu&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact列表&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Contact域名&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;EDM&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;SMS&lt;/a&gt;&lt;/li&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                            &nbsp;&nbsp;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>属性</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>说明</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>data-m1-toggle="dropdown"</td>
+                                <td>触发下拉</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--日期选择-->
+        <div id="date-picker" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>DatePicker 日期选择</h2>
+            </div>
+            <div class="m1-panel-content">
+
+                <div class="m1-row">
+                    <h3>日期选择</h3>
+
+                    <p>控件由bootstrap-daterangepicker修改（<a href="http://www.daterangepicker.com/"
+                                                         target="_blank">项目文档</a>）</p>
+                    <input id="demo-datetimepicker" type="text" placeholder="请选择日期"/>
+                    <pre>
+                        <code class="javascript">
+                            &lt;input id=&quot;demo-datetimepicker&quot; type=&quot;text&quot; placeholder=&quot;请选择日期&quot;/&gt;
+
+                            $('#demo-datetimepicker').daterangepicker({
+                            &nbsp;&nbsp;"singleDatePicker": true,
+                            &nbsp;&nbsp;"showDropdowns": true,
+                            });
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>日期范围选择</h3>
+                    <input id="demo-daterangepicker" type="text" placeholder="请选择日期范围"/>
+
+                    <pre>
+                        <code class="javascript">
+                            &lt;input id=&quot;demo-daterangepicker&quot; type=&quot;text&quot; placeholder=&quot;请选择日期范围&quot;/&gt;
+
+                            $('#demo-daterangepicker').daterangepicker({
+                            &nbsp;&nbsp;"showDropdowns": true,
+                            &nbsp;&nbsp;"autoApply": true,
+                            &nbsp;&nbsp;"startDate": "2017-05-21",
+                            &nbsp;&nbsp;"endDate": "2017-05-27",
+                            &nbsp;&nbsp;"ranges": {
+                            &nbsp;&nbsp;&nbsp;&nbsp;"今天": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-27",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-27"
+                            &nbsp;&nbsp;&nbsp;&nbsp;],
+                            &nbsp;&nbsp;&nbsp;&nbsp;"昨天": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-26",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-26"
+                            &nbsp;&nbsp;&nbsp;&nbsp;],
+                            &nbsp;&nbsp;&nbsp;&nbsp;"最近7天": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-21",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-27"
+                            &nbsp;&nbsp;&nbsp;&nbsp;],
+                            &nbsp;&nbsp;&nbsp;&nbsp;"最近30天": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-04-28",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-27"
+                            &nbsp;&nbsp;&nbsp;&nbsp;],
+                            &nbsp;&nbsp;&nbsp;&nbsp;"本月": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-04-30",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-05-31"
+                            &nbsp;&nbsp;&nbsp;&nbsp;],
+                            &nbsp;&nbsp;&nbsp;&nbsp;"上月": [
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-03-31",
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-04-30"
+                            &nbsp;&nbsp;&nbsp;&nbsp;]
+                            &nbsp;&nbsp;}
+                            }, function (start, end, label) {
+                            &nbsp;&nbsp;console.log("daterangepicker start:" + start + " end:" + end + " range: " +
+                            label);
+                            });
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>属性</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <td>名称</td>
+                                <td>说明</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>initialValue</td>
+                                <td>是否初始化input值，默认初始化</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--弹层-->
+        <div id="layer" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Layer 弹层</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>消息提示</h3>
+
+                    <p>m1消息提示2秒后消失，例如：操作成功，修改成功</p>
+                    <button id="demo-msg" class="m1-btn m1-btn-primary">msg</button>
+
+                    <pre>
+                        <code class="javascript">
+                            $('#demo-msg').click(function () {
+                            &nbsp;&nbsp;m1.msg('弹出一个消息！');
+                            });
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>确认框</h3>
+                    <button id="demo-confirm" class="m1-btn m1-btn-primary">confirm</button>
+                    <pre>
+                        <code class="javascript">
+                            $('#demo-confirm').click(function () {
+                            &nbsp;&nbsp;m1.confirm('这是一个确认框&lt;br/&gt;请确认', function () {
+                            &nbsp;&nbsp;&nbsp;&nbsp;m1.closeCover();
+                            &nbsp;&nbsp;&nbsp;&nbsp;m1.msg('确认');
+                            &nbsp;&nbsp;}, function () {
+                            &nbsp;&nbsp;&nbsp;&nbsp;m1.msg('取消');
+                            &nbsp;&nbsp;});
+                            });
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="m1-row">
+                    <h3>会话框</h3>
+
+                    <p>后续改进</p>
+                    <button id="demo-dialog" class="m1-btn m1-btn-primary">dialog</button>
+                    <pre>
+                        <code class="html">
+                            &lt;div id=&quot;demo-dialog-content&quot; class=&quot;m1-dialog&quot;&gt;
+                            &lt;span class=&quot;m1-dialog-close&quot; data-m1-cover-cancel&gt;&lt;/span&gt;
+
+                            &lt;div class=&quot;m1-dialog-header&quot;&gt;添加字段&lt;/div&gt;
+                            &lt;div class=&quot;m1-dialog-content&quot;&gt;
+                            &lt;div class=&quot;m1-form demo-form&quot;&gt;
+                            &lt;div class=&quot;m1-form-row&quot;&gt;
+                            &lt;label class=&quot;m1-form-label&quot;&gt;字段名称&lt;/label&gt;
+
+                            &lt;div class=&quot;m1-form-content&quot;&gt;
+                            &lt;input class=&quot;m1-form-input&quot; type=&quot;text&quot; placeholder=&quot;请输入字段名称&quot;/&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;m1-form-row&quot;&gt;
+                            &lt;label class=&quot;m1-form-label&quot;&gt;字段类型&lt;/label&gt;
+
+                            &lt;div class=&quot;m1-form-content&quot;&gt;
+                            &lt;input class=&quot;m1-form-input&quot; type=&quot;text&quot; placeholder=&quot;请输入字段类型&quot;/&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;m1-form-row&quot;&gt;
+                            &lt;label class=&quot;m1-form-label&quot;&gt;描述&lt;/label&gt;
+
+                            &lt;div class=&quot;m1-form-content&quot;&gt;
+                            &lt;input class=&quot;m1-form-input&quot; type=&quot;text&quot; placeholder=&quot;请输入描述&quot;/&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;m1-dialog-footer&quot;&gt;
+                            &lt;button class=&quot;m1-btn&quot; data-m1-cover-cancel&gt;取消&lt;/button&gt;
+                            &lt;button class=&quot;m1-btn m1-btn-primary&quot; data-m1-cover-cancel&gt;确认&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="javascript">
+                            $('#demo-dialog').click(function () {
+                            &nbsp;&nbsp;m1.dialog('#demo-dialog-content');
+                            });
+                        </code>
+                    </pre>
+
+                </div>
+
+                <div class="m1-row">
+                    <h3>属性</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>说明</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>data-m1-cover-cancel</td>
+                                <td>关闭弹窗属性</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--加载-->
+        <div id="loading" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Loading 加载</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <h3>局部加载</h3>
+
+                    <p>图标大小可通过字体调整</p>
+                    <i class="m1-loading demo-loading"><i></i></i>
+                    <pre>
+                        <code class="html">
+                            &lt;i class="m1-loading"&gt;&lt;i&gt;&lt;/i&gt;&lt;/i&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>全局加载</h3>
+
+                    <p>参数为延迟关闭时间，默认不关闭</p>
+                    <button id="demo-loading" class="m1-btn m1-btn-primary">loading</button>
+                    <pre>
+                        <code class="javascript">
+                            $('#demo-loading').click(function(){
+                            &nbsp;&nbsp;m1.loading(2);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!--分页-->
+        <div id="pagination" class="m1-panel">
+            <div class="m1-panel-header">
+                <h2>Pagination 分页</h2>
+            </div>
+            <div class="m1-panel-content">
+                <div class="m1-row">
+                    <div id="demo-pagination"></div>
+                    <pre>
+                        <code class="javascript">
+                            $('#demo-pagination').pagination({
+                            &nbsp;&nbsp;currentPage: 10,
+                            &nbsp;&nbsp;currentSize: 5,
+                            &nbsp;&nbsp;total: 100,
+                            &nbsp;&nbsp;sizeArr: [5, 10, 20, 50],
+                            &nbsp;&nbsp;onPageChange: function (index) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(index)
+                            &nbsp;&nbsp;},
+                            &nbsp;&nbsp;onSizeChange: function (index) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(index)
+                            &nbsp;&nbsp;}
+                            });
+                        </code>
+                    </pre>
+                </div>
+                <div class="m1-row">
+                    <h3>属性</h3>
+
+                    <div class="m1-panel">
+                        <table class="m1-table">
+                            <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>说明</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>currentPage</td>
+                                <td>当前页码</td>
+                            </tr>
+                            <tr>
+                                <td>currentSize</td>
+                                <td>当前页数</td>
+                            </tr>
+                            <tr>
+                                <td>total</td>
+                                <td>分页总数</td>
+                            </tr>
+                            <tr>
+                                <td>sizeArr</td>
+                                <td>页数数组，默认不显示</td>
+                            </tr>
+                            <tr>
+                                <td>firstPage</td>
+                                <td>首页文字，默认不显示</td>
+                            </tr>
+                            <tr>
+                                <td>lastPage</td>
+                                <td>末页文字，默认不显示</td>
+                            </tr>
+                            <tr>
+                                <td>prvPage</td>
+                                <td>上一页文字</td>
+                            </tr>
+                            <tr>
+                                <td>nextPage</td>
+                                <td>下一页文字</td>
+                            </tr>
+                            <tr>
+                                <td>onPageChange</td>
+                                <td>切换页码回调方法</td>
+                            </tr>
+                            <tr>
+                                <td>onSizeChange</td>
+                                <td>切换页数回调方法</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m1-back-top"></div>
+
+<div id="demo-dialog-content" class="m1-dialog">
+    <span class="m1-dialog-close" data-m1-cover-cancel></span>
+
+    <div class="m1-dialog-header">添加字段</div>
+    <div class="m1-dialog-content">
+        <div class="m1-form demo-form">
+            <div class="m1-form-row">
+                <label class="m1-form-label">字段名称</label>
+
+                <div class="m1-form-content">
+                    <input class="m1-form-input" type="text" placeholder="请输入字段名称"/>
+                </div>
+            </div>
+            <div class="m1-form-row">
+                <label class="m1-form-label">字段类型</label>
+
+                <div class="m1-form-content">
+                    <input class="m1-form-input" type="text" placeholder="请输入字段类型"/>
+                </div>
+            </div>
+            <div class="m1-form-row">
+                <label class="m1-form-label">描述</label>
+
+                <div class="m1-form-content">
+                    <input class="m1-form-input" type="text" placeholder="请输入描述"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m1-dialog-footer">
+        <button class="m1-btn" data-m1-cover-cancel>取消</button>
+        <button class="m1-btn m1-btn-primary" data-m1-cover-cancel>确认</button>
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="js/m1.js"></script>
+
+<script>
+    (function () {
+
+        $(document).on('click.m1.navbar', '.m1-nav>li>a,.m1-nav>li>.m1-nav-item,.m1-subnav>li>a,.m1-subnav>li>.m1-nav-item', function () {
+            var $this = $(this);
+            $this.closest('.m1-nav').find(">li>a,>li>.m1-nav-item,.m1-subnav>li>a,.m1-subnav>li>.m1-nav-item").removeClass('select');
+            $this.addClass('select');
+        });
+
+        $('#demo-msg').click(function () {
+            m1.msg('弹出一个消息');
+        });
+
+        $('#demo-confirm').click(function () {
+            m1.confirm('这是一个确认框<br/>请确认', function () {
+                m1.closeCover();
+                m1.msg('确认');
+            }, function () {
+                m1.msg('取消');
+            });
+        });
+
+        $('#demo-dialog').click(function () {
+            m1.dialog('#demo-dialog-content');
+        });
+
+        $('#demo-loading').click(function () {
+            m1.loading(2);
+        });
+
+        $('#demo-form-birthday').daterangepicker({
+            "singleDatePicker": true,
+            "showDropdowns": true,
+        });
+
+        $('#demo-datetimepicker').daterangepicker({
+            "singleDatePicker": true,
+            "showDropdowns": true,
+        });
+
+        $('#demo-daterangepicker').daterangepicker({
+            "showDropdowns": true,
+            "autoApply": true,
+            "startDate": "2017-05-21",
+            "endDate": "2017-05-27",
+            "ranges": {
+                "今天": [
+                    "2017-05-27",
+                    "2017-05-27"
+                ],
+                "昨天": [
+                    "2017-05-26",
+                    "2017-05-26"
+                ],
+                "最近7天": [
+                    "2017-05-21",
+                    "2017-05-27"
+                ],
+                "最近30天": [
+                    "2017-04-28",
+                    "2017-05-27"
+                ],
+                "本月": [
+                    "2017-04-30",
+                    "2017-05-31"
+                ],
+                "上月": [
+                    "2017-03-31",
+                    "2017-04-30"
+                ]
+            }
+
+        }, function (start, end, label) {
+            console.log("daterangepicker start:" + start + " end:" + end + " range: " + label);
+        });
+
+        $('#demo-pagination').pagination({
+            currentPage: 20,
+            currentSize: 5,
+            total: 100,
+            sizeArr: [5, 10, 20, 50],
+            onPageChange: function (index) {
+                console.log(index)
+            },
+            onSizeChange: function (index) {
+                console.log(index)
+            }
+        });
+
+    })()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+.navigator {
+	position: relative;
+	$acc-nav-height: 58px;
+	height: $acc-nav-height;
+	background-color: $white;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+	& > ul{
+		text-align: center;
+		width: 400px;
+		margin: 0 auto;
+		li{
+			display: inline-block;
+			height: $acc-nav-height;
+			margin: 0 10px;
+			line-height: $acc-nav-height;
+
+			a{
+				padding: 0 10px;
+				display: block;
+				height: inherit;
+				width: inherit;
+				color: $text-light;
+				font-size:14px;
+				&.active{
+					color: $text-base;
+				}
+			}
+		}
+	}
+
+	.left {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-left: 20px;
+		height: 100%;
+		&:before {
+			content:"";
+	    display:inline-block;
+	    height:100%;
+	    vertical-align: middle;
+			
+		}
+		.logo {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $text-lightest;
+			vertical-align: middle;
+		}
+
+		.company {
+			display: inline-block;
+			margin-left: 20px;
+
+			.m1-dropdown > .m1-btn{
+				border-bottom: 0;
+			}
+
+			.active {
+				a {
+					color: $text-light;
+
+					&:hover {
+						color: $white;
+					}
+				}
+				.dot {
+					background-color: $brand-success;
+				}
+			}
+
+			.dot {
+				display: inline-block;
+				margin-right: 5px;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: $text-lighter;
+			}
+		}
+	}
+
+	.right {
+		position: absolute;
+		right:0;
+		top:0;
+		height: 100%;
+
+		& > ul {
+			padding-right: 20px;
+			& > li {
+				float: left;
+				height: 58px;
+				&:hover {
+					.account-menu {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+	.account-base {
+		position: relative;
+		height: 100%;
+		&:before {
+			content:"";
+	    display:inline-block;
+	    height:100%;
+	    vertical-align: middle;
+			
+		}
+
+		.avatar {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $text-lightest;
+			vertical-align: middle;
+			overflow: hidden;
+			
+			img {
+				width: 100%;
+				height: 100%;
+
+			}
+		}
+	}
+
+	.account-menu {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 40px;
+		z-index: 10;
+		padding-top: 20px;
+		min-width: 230px;
+
+		& > ul {
+			padding: 10px 0;
+			background-color: $white;
+			border-radius: 4px;
+			box-shadow: $box-shadow;
+
+			& > li {
+				
+				& > a {
+					display: block;
+					padding: 0 16px;
+					line-height: 40px;
+					color: $text-base;
+					&:hover {
+						color: $white;
+						background-color: $brand-primary;
+					}
+				}
+			}
+		}
+	}
+
+	.account-info {
+		padding: 0 16px;
+		.wrap {
+			display: block;
+			border-bottom: 1px solid $text-lightest;
+		}
+		h2 {
+			line-height: 14px;
+		}
+		p {
+			color: $text-light;
+		}
+	}
+	.logout {
+		.wrap {
+			display: block;
+			border-top: 1px solid $text-lightest;
+		}
+	}
+
+	.m1-dropdown-form {
+	
+	.m1-btn {
+		width: 100%;
+		text-align: left;
+		padding: 0 0 10px 0;
+		border: none;
+		border-bottom: 1px solid $text-lightest;
+    background-color: transparent;
+
+    .m1-caret {
+    	float: right;
+    }
+	}
+
+	&.full {
+		width: 100%;
+	}
+}

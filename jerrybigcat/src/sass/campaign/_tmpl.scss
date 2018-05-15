@@ -1,0 +1,177 @@
+.tmpl-tab{
+	padding-top: 30px;
+	border-top: 1px solid $text-lightest;
+}
+
+.tmpl-list{
+	padding-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	& > li {
+		position: relative;
+		margin-bottom:30px;
+		margin-right: 30px;
+		width: 277px;
+		height: 360px;
+		box-shadow: $box-shadow;
+		border-radius: 5px;
+		overflow: hidden;
+		background-color: $white;
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		&.empty {
+			&:hover {
+				// color: $white;
+				// background-color: $brand-primary;
+
+				.content {
+					display: none;
+				}
+
+				.create-panel {
+					opacity: 1;
+				}
+
+				// h3 {
+				// 	color: $white;
+				// }
+			}
+		}
+
+		.create-panel {
+			position: absolute;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+
+			.create-btn {
+				cursor: pointer;
+				-webkit-transition: background-color .5s;
+								transition: background-color .5s;
+				text-align: center;
+				
+				&:before {
+					content: ' ';
+					display: inline-block;
+					width: 1em;
+					height: 50%;
+				}
+
+				&:hover {
+					color: $white;
+					background-color: $brand-primary;
+				}
+
+				&.automatic {
+					height: 70%;
+				}
+
+				&.single {
+					height: 30%;
+				}
+
+				span {
+					vertical-align: middle;
+				}
+			}
+			
+		}
+
+		.m1-tag {
+			background-color: $white;
+		}
+
+		.top{
+			position: absolute;
+			top:0;
+			left:0;
+			padding: 10px;
+		}
+
+		.content{
+			margin-top: 90px;
+			height: 160px;
+			padding: 0 20px;
+			text-align: center;
+
+			.icon{
+				font-size: 62px;
+			}
+
+			h3{
+				margin: 20px 0;
+				color: $text-base;
+			}
+		}
+
+		.button-group{
+			position: absolute;
+			bottom:30px;
+			width: 100%;
+			text-align: center;
+		}
+
+		&.single {
+			.title {
+				position: absolute;
+				bottom:0;
+				padding: 10px 30px;
+				width: 100%;
+				background-color: $white;
+				text-align: center;
+			}
+
+			.image {
+				position: absolute;
+				left:0;
+				top:0;
+				width: 100%;
+				height: 100%;
+
+				img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+
+			.button-group {
+				left: 0;
+				top: 0;
+				display: flex;
+				justify-content:center;
+				align-items:center;
+				flex-direction: column;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($black, .3);
+
+				.m1-btn {
+					margin-right: 0;
+					min-width: 120px;
+
+					&:first-child {
+						margin-bottom: 16px;
+					}
+				}
+			}
+		} 
+		
+	}
+}
+
+.preview-intro {
+	padding-left: 40px;
+	color: $text-light;
+}
+
+.arrive-icon {
+	color: $brand-primary;
+	font-size: 16px;
+}

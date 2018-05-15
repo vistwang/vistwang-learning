@@ -1,0 +1,54 @@
+@import 'variables.scss';
+@import 'base.scss';
+@import 'active_email.scss';
+
+#invite-intro p{
+	margin-bottom: 10px;
+}
+
+h4{
+	font-size: 16px;
+	span{
+		color: $brand-primary;
+	}
+}
+
+.hidden{
+	display: none;
+}
+
+.input-pwd-container{
+	width: 320px;
+	margin: 0 auto;
+	text-align: left;
+	a{
+		float: right;
+		margin-top:10px;
+	}
+
+	&.unregistered {
+		a{
+			display: none;
+		}
+		.input-wrap{
+			margin-right: 0;
+		}
+	}
+}
+
+.input-wrap{
+	margin-left: 0;
+	margin-right: 70px;
+
+	.iconfont {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: #C9CACD;
+		font-size: 16px;
+	}
+
+	input {
+		padding-left:28px;
+	}
+}

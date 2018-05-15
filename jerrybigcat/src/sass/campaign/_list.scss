@@ -1,0 +1,72 @@
+
+.screening {
+	margin-bottom: 14px;
+}
+
+.dropdown-betch{
+	& > button {
+		padding-left: 0;
+	}
+	& > .m1-dropdown-menu {
+		min-width: 150px;
+	}
+}
+
+.btn-add-campaign {
+	float: right;
+	padding: 8px 10px;
+}
+
+
+.campaign-nav {
+
+	.iconfont {
+		float: initial;
+
+		&:first-child {
+			font-size: 14px;
+		}
+
+		&.right {
+			float: right;
+		}
+	}
+
+	.count {
+		float: right;
+		color: $text-light;
+	}
+
+	.m1-nav {
+		li {
+			a {
+				padding: 10px;
+			}
+		}
+	}
+
+}
+
+.nav-group {
+	margin-bottom: 10px;
+}
+
+.nav-folder {
+	margin-top: 10px;
+	.nav-header {
+		.iconfont {
+			font-weight: bold;
+			color: $text-base;
+		}
+	}
+	.nav-menu > li {
+	
+		& > a {
+			color: $text-light;
+		}
+
+		&.open .count, & > a:hover .count {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    /*function PushData(arr,item)
+    {
+        var arrTemp
+        if(item.type) {
+            for (var ite in arr) {
+
+                arrTemp.push([ite,item])
+            }
+        }
+        else {
+            arrTemp=arr;
+            arrTemp.push(item);
+        }
+
+        return PushData(arrTemp) ;
+
+    }
+*/
+
+
+    var arr = [
+        {name:'A'},
+        {name:'B',type:true},  //与为true  或为false
+        {name:'C',type:false},
+        {name:'D',type:true},
+        {name:'E',type:false},
+        {name:'f',type:true},
+        {name:'g',type:false},
+        {name:'h',type:true},
+    ];
+
+    var allData = [[arr[0]]];
+
+
+    function diGui(n,all,arr) {
+        if(n > arr.length-1){
+            return all;
+        };
+
+        var preAll = all.slice(0); //数组的拷贝
+
+        for(var i =0; i < preAll.length; i++){
+
+            if(arr[n].type){
+                all[i].push(arr[n]);
+            }else{
+                all.push([arr[n]]);
+                //如果该选项是 或者的关系 直接添加到上面 然后跳出循环
+                break;
+            }
+        }
+
+        return diGui(n+1,all,arr);
+    }
+
+
+    //前面值
+    console.log(allData);
+
+    //后面值
+    console.log(diGui(1,allData,arr));
+    var aaa = 111;
+    var bbb = aaa;
+
+    console.log(aaa);
+    console.log(bbb);
+
+    bbb = bbb-100;
+
+    console.log(aaa);
+    console.log(bbb);
+
+    var arr2 = [
+        [[{A:name},{B:name}],[{C:name},{D:name}]],
+        [[{E:name},{F:name}],[{G:name},{H:name}],[{N:name},{M:name}]],
+        [[{I:name},{J:name}],[{K:name},{L:name}]]
+    ]
+    //处理前
+    console.log(arr2);
+    //处理后
+    console.log(diGui2(0,[],arr2))
+
+    function diGui2(n,all,arr) {
+
+        if(n > arr.length-1){
+            return all; //当整个数据遍历完后返回重新排列的数据
+        };
+
+        if(n){
+            var preAttr = all.slice(0); //数组的拷贝
+
+            all = [];//清空数组内容
+
+            for(var i =0; i < preAttr.length; i++){
+
+                for(var j =0; j < arr[n].length; j++){
+
+                    var preattr2 = preAttr[i].slice(0); //数组的拷贝2
+
+                    for(var k =0; k < arr[n][j].length; k++){
+
+                        preattr2.push(arr[n][j][k]);
+                    }
+
+                    //一个一个添加进去
+                    all.push(preattr2);
+                }
+            }
+        }else{
+            all = arr[n].slice(0); //数组的拷贝;
+        }
+
+        return diGui2(n+1,all, arr);
+
+    }
+
+</script>
+</body>
+</html>

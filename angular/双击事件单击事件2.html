@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        tr{
+            height: 40px;
+        }
+    </style>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<table>
+    <tr ng-click="sig($event)">
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">111</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">222</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">333</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">444</td>
+    </tr>
+    <tr ng-click="sig($event)">
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">1111</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">2222</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">3333</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">4444</td>
+    </tr>
+    <tr ng-click="sig($event)">
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">11111</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">22222</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">33333</td>
+        <td ng-click="son_sig($event)" ng-dblclick="dob($event)">44444</td>
+    </tr>
+</table>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$timeout) {
+
+        $scope.sig=function ($event) {
+            console.warn('我触发了父元素单击事件');
+        };
+
+        $scope.son_sig=function ($event) {
+            if ($scope.clicked) {
+                $scope.cancelClick = true;
+                return;
+            }
+
+            $scope.clicked = true;
+
+            $timeout(function () {
+                if ($scope.cancelClick) {
+                    $scope.cancelClick = false;
+                    $scope.clicked = false;
+                    return;
+                }
+
+                //do something with your single click here
+                console.warn('我触发了子元素单击事件');
+
+                //clean up
+                $scope.cancelClick = false;
+                $scope.clicked = false;
+            }, 500);
+
+
+
+
+            //阻止事件冒泡 2017年12月13日
+            $event.stopPropagation();
+        };
+
+        $scope.dob=function ($event) {
+            console.warn('我触发了子元素双击事件');
+
+
+        }
+
+    })
+</script>
+</body>
+</html>

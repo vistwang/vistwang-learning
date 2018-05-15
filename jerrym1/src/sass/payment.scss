@@ -1,0 +1,32 @@
+@import "variables.scss";
+@import "base.scss";
+
+.m1-panel{
+	height: calc(100vh - 74px);
+}
+
+.m1-panel-content {
+	position: relative;
+	height: 100%;
+}
+
+.container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 300px;
+	margin:0 auto;
+	text-align: center;
+
+	h2 {
+		font-size: 18px;
+		margin:16px 0;
+	}
+
+	p{
+		color: $text-light;
+		margin-bottom:30px;
+	}
+}

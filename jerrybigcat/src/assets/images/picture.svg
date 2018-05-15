@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="73px" viewBox="0 0 101 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="17.5" cy="7.5" r="7.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="15" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账户中心--企业资质认证" transform="translate(-1195.000000, -673.000000)">
+            <g id="Group-6" transform="translate(1196.000000, 673.000000)">
+                <g id="Group-3-Copy">
+                    <use id="Oval-2-Copy" stroke="#1DACFD" mask="url(#mask-2)" stroke-width="4" fill="#E8F6FE" xlink:href="#path-1"></use>
+                    <path d="M96.3995325,73 L3.6004675,73 C1.61197739,73 0,71.6292396 0,69.9382635 L0,58.2941176 C0,58.2941176 8.82298345,38.8114932 20.0239666,35.818038 C30.9141965,32.9076315 38.0141729,48 48.1933308,48 C58.1414031,48 62.7898926,23 76.2623902,23 C83.4883274,23 99.9998521,38.319484 99.9998521,38.319484 L99.9998521,69.9382635 C100,71.6292396 98.3881705,73 96.3995325,73 Z" id="Fill-3-Copy-3" fill="#1DACFD" opacity="0.1"></path>
+                    <path d="M0.949425161,58.3613156 C0.981143199,51.7859642 13.4342534,35.8034132 22.3785186,35.853316 C31.3227838,35.9032188 39.6165884,48.0688054 49.3701751,48.0688054 C56.4597796,48.0688054 60.7403609,34.2014129 67.7797925,27.0945455 C70.2050643,24.6460403 72.9578078,23 76.2657204,23 C82.2669243,23 94.9522646,34.5404086 98.2264546,37.6160262 C98.7298315,38.0888744 99.010764,38.3616466 99.010764,38.3616466" id="Fill-3-Copy-4" stroke="#1DACFD" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

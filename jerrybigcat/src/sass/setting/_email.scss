@@ -1,0 +1,70 @@
+
+.safe-setting {
+	
+	.setting-intro {
+		margin-left: 30px;
+		color: $text-light;
+	}
+
+	.m1-form-input {
+		text-align: center;
+	}
+}
+
+.send-interval {
+
+	& > .m1-form-label {
+		width: 140px;
+	}
+	& > .m1-form-content {
+		float: left;
+		margin-left: 0;
+		width: 280px;
+	}
+
+	.m1-form-input {
+		width: 260px;
+	}
+
+}
+
+.send-max {
+
+	& > .m1-form-label {
+		width: 210px;
+	}
+	& > .m1-form-content {
+		float: left;
+		margin-left: 0;
+		width: 210px;
+	}
+
+	.m1-form-input {
+		width: 190px;
+	}
+
+}
+
+.time-zone {
+	& > label {
+		margin-right: 20px;
+	}
+
+	.m1-dropdown {
+		min-width: 350px;
+	}
+}
+
+.blacklist-setting {
+
+	.email-input {
+		input {
+			width: 400px;
+		}
+
+		p{
+			margin-top: 10px;
+			color: $text-light;
+		}
+	}
+}

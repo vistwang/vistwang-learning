@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Filter（滤镜）</title>
+    <style>
+        /*
+        grayscale 灰度          值为0-1之间的小数
+        sepia 褐色　　　　　　   值为0-1之间的小数
+        saturate 饱和度　　　　 值为num
+        hue-rotate 色相旋转　　值为angle
+        invert 反色　　　　　　  值为0-1之间的小数
+        opacity 透明度　　　　　值为0-1之间的小数
+        brightness 亮度　　　　 值为0-1之间的小数
+        contrast 对比度　　　　 值为num
+        blur 模糊　　　　　　     值为length
+        drop-shadow 阴影*/
+        img{
+           width: 20%;
+            margin-right: 20px;
+        }
+        .img1{filter: blur(5px);}
+        .img2{filter: grayscale(1)}
+        .img3{filter: brightness(2.3)}
+        .img4{filter: sepia(1)}
+        .img5{filter: invert(1)}
+        .img6{filter: opacity(.5)}
+        .img7{filter: contrast(2)}
+        .img8{filter: saturate(2)}
+        .img9{filter: drop-shadow(5px 5px 10px black)}/*(x偏移, y偏移, 模糊大小, 色值)*/
+
+        div{
+            background: #efb73e;
+            width: 100%;
+            height: 100px; /* vmax代表占据最大viewport的百分比，这里占据33%最大viewport */
+        }
+
+        div:nth-child(1){
+            -ms-filter: hue-rotate(0deg); /* 0度则不变，维持原色，可以是任何dus */
+            -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+        }
+        div:nth-child(1){
+            -ms-filter: hue-rotate(90deg); /* 0度则不变，维持原色，可以是任何dus */
+            -webkit-filter: hue-rotate(90deg);
+            filter: hue-rotate(90deg);
+        }
+        div:nth-child(1){
+            -ms-filter: hue-rotate(180deg); /* 0度则不变，维持原色，可以是任何dus */
+            -webkit-filter: hue-rotate(180deg);
+            filter: hue-rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+<img title="原图" src="../../img/dalin.png" alt="">
+<img class="img1" title="模糊" src="../../img/dalin.png" alt="">
+<img class="img2" title="灰度" src="../../img/dalin.png" alt="">
+<img class="img3" title="亮度" src="../../img/dalin.png" alt="">
+<img class="img4" title="褐色" src="../../img/dalin.png" alt="">
+<img class="img5" title="反色" src="../../img/dalin.png" alt="">
+<img class="img7" title="透明度" src="../../img/dalin.png" alt="">
+<img class="img6" title="对比度" src="../../img/dalin.png" alt="">
+<img class="img8" title="饱和度" src="../../img/dalin.png" alt="">
+<img class="img9" title="阴影" src="../../img/dalin.png" alt="">
+
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=<你的UUID>&style=-1"></script>

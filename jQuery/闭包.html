@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="btn1">点我触发闭包</button>
+<button class="btn2">非闭包存储</button>
+<button class="btn3">闭包变量</button>
+<button class="btn4">闭包传对象</button>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+    var nut = 10;
+
+    function father(x) {
+        var tt = 10
+
+        return function (y) {
+            var gg = x + y + (++tt)
+            alert(gg)
+        }
+    }
+
+    function father2(x) {
+        var tt = 20
+
+        return function (y) {
+            alert(x + y + tt);
+
+            x.ment = x.ment ? x.ment : 1;
+            //var gg = x + y + (++tt)
+            alert(x.ment)
+        }
+    }
+
+    var aa = father(6)
+    var bb = father2(6)
+
+    $('.btn1').click(function () {
+        aa(4)
+    })
+    $('.btn2').click(function () {
+        nut++
+        alert(nut)
+    })
+    $('.btn3').click(function () {
+        alert(tt)
+    })
+
+    $('.btn4').click(function () {
+        bb(40)
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*for...of语句在可迭代对象(包括 Array, Map, Set, String, TypedArray，arguments 对象等等)上创建一个迭代循环，对每个不同属性的属性值,调用一个自定义的有执行语句的迭代挂钩.
+也就是说，for of只可以循环可迭代对象的可迭代属性，不可迭代属性在循环中被忽略了。
+并且给与了一个对比的例子*/
+    var aa={
+        qq:111,
+        ee:111,
+        rr:111,
+    }
+
+    var bb=['虾米','百度','腾讯','许内','质量']
+    var cc='没有什么能够阻挡'
+    if(!('qq' in aa) || !('ww' in aa)){
+        aa.qq=aa.qq ? aa.qq :222
+        aa.ww=aa.ww ? aa.ww :333
+    }else{
+        console.log('wwwwww')
+    }
+
+    for(i in aa){
+        console.log(i)
+    }
+    console.log(aa)
+    for(let i in aa){
+        console.log(aa.i)
+    }
+
+    for(i of bb){
+        console.log(i)
+    }
+    for(i of cc){
+        console.log(i)
+    }
+</script>
+</body>
+</html>

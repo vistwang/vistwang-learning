@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 100;
+    var b = {
+        name:'bbbbbbbbb'
+    };
+
+    c = {
+        name:'ccccccccc'
+    };
+
+    d = {
+        name:'ddddddddd'
+    };
+
+    c.name = b.name;
+
+    a = b;
+
+    a.name = '哈哈哈';
+
+    d.name = b.name;
+
+
+    console.log(b.name);
+    console.log(c.name);
+    console.log(d.name);
+</script>
+</body>
+</html>

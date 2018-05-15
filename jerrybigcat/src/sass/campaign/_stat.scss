@@ -1,0 +1,133 @@
+.stat-range {
+	margin-bottom: 20px;
+
+	.date-picker {
+		display: inline-block;
+		padding: 10px;
+		border: 1px solid $text-lightest;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	.time-zone {
+		float: right;
+	}
+}
+
+.stat-loops {
+	margin-bottom: 20px;
+
+	.m1-progress-circle-wrapper {
+		margin-top: 16px;
+		margin-right: 6px;
+	}
+
+	& > ul {
+		display: flex;
+		justify-content: space-between;
+		& > li {
+			h2 {
+				font-size: 20px;
+			}
+			.left, .right {
+				float: left;
+			}
+			& > .content {
+				height: 70px;
+			}
+			&:first-child > .content{
+				h2 {
+					margin-top: 20px;
+				}
+
+				&:before {
+					display: table;
+					content: '';
+					line-height: 0;
+				}
+			}
+			
+			& > .title {
+				position: relative;
+				margin-top: 10px;
+				margin-bottom: 0;
+				padding-bottom: 10px;
+				text-align: center;
+
+				&:hover .classify-detail{
+					display: block;
+				}
+			}
+			
+			// 圆环7种颜色
+			$strokes:($color-stat-1, $color-stat-2, $color-stat-3, $color-stat-4, $color-stat-5, $color-stat-6, $color-stat-7);
+			@for $i from 1 through length($strokes) {
+				&:nth-of-type(#{$i + 1}) .m1-progress-circle > circle:nth-of-type(2) {
+					stroke: nth($strokes, $i);
+				}
+			}
+
+		}
+	}
+
+	.classify-detail {
+		display: none;
+		position: absolute;
+		top: 28px;
+		box-shadow: $box-shadow-light;
+		border-radius: 4px;
+		min-width: 132px;
+		background-color: $white;
+
+		h3 {
+			margin:0;
+			padding: 10px;
+			border-bottom: 1px solid $text-lightest;
+		}
+
+		ul {
+			li {
+				padding: 5px 10px;
+				text-align: left;
+
+				i {
+					color: $text-lighter;
+					margin-left: 5px;
+					cursor: pointer;
+
+					&:hover {
+						color: $brand-primary;
+					}
+				}
+
+				span {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.stat-detail {
+	margin-top: 50px;
+
+	h2 {
+		margin-bottom: 20px;
+	}
+	.m1-table {
+		
+		.m1-text-primary {
+			display: inline-block; // 为了tooltip箭头居中
+		}
+
+		tr {
+			& > th, & > td {
+				padding: 0 10px;
+			}
+
+			& > th:last-child, & > td:last-child {
+				text-align: justify;
+			}
+		}
+	}
+}

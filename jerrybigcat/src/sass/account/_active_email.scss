@@ -1,0 +1,38 @@
+.active-email-header {
+	button{
+		float: right;
+	}
+}
+
+.active-email-content {
+	max-width: 630px;
+	margin: 60px auto 80px;
+	text-align: center;
+
+	h3{
+		font-size: 20px;
+	}
+
+	p{
+		margin-bottom: 0;
+		line-height: 22px;
+	}
+
+	.btns{
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		.m1-btn{
+			min-width: 116px;
+		}
+	}
+
+	.m1-loading{
+		color: $text-lighter;
+		font-size: 34px;
+	}
+}
+
+.active-status-image{
+	margin-bottom: 20px;
+}

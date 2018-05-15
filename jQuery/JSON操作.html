@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+
+    //1、什么是json？
+    /*JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。*/
+
+    //2、json的格式？
+    /*JSON建构于两种结构：
+    （1）“名称/值”对的集合  对象
+    （2）值的有序列表   数组
+    数据以名称/值对的形式保存，名称/值对包括字段名称（在双引号中），后面写一个冒号，然后是值，如 ："firstName" : "John"。JSON的值可以是数字、字符串、null、true、false、数组或对象。
+    数组是值（value）的有序集合。一个数组以“[”（左中括号）开始，“]”（右中括号）结束。值之间使用“,”（逗号）分隔。*/
+
+    //3、json文件
+    /*JSON 文件的文件类型是 ".json"
+    JSON 文本的 MIME 类型是 "application/json"
+    */
+
+    //4、什么是json字符串？
+    /*json字符串是json对象的string形式，也就是string，但是符合json对象的格式*/
+
+    //5、什么是json对象？ 指常规称呼
+    /*json对象是对象 ，是json格式的对象 ，什么是json格式啊 就是 键值对， 键可以是字符串也可以数字 ，值可以是字符串 也是可以是数值，还可以是数组，但是有时候json对象写成json格式 的对象时， 又跟js的对象的写法非常相似*/
+
+    //6、什么是js对象？
+    /*对象是“无序属性的集合，其属性可以包括基本值，对象或者函数”。也就是一组名值对的无序集合。对象的特性（不可直接访问），也就是属性包含两种，数据属性和访问器属性*/
+
+    //7、json字符串，json对象，js对象之间的相互转化  方法都采取最优方法实现，一些摒弃的不推荐的就不介绍了
+
+
+    //新版本的 JSON 修改了 API，将 JSON.stringify() 和 JSON.parse() 两个方法都注入到了 Javascript 的内建对象里面，前者变成了 Object.toJSONString()，而后者变成了 String.parseJSON()。如果提示找不到toJSONString()和parseJSON()方法，则说明您的json包版本太低。
+    //下面是一个自定义的js对象
+
+    var obj = {
+        uniqueId: "唯一码",
+        name: "腾讯集团",
+        logo: "logo",
+        anotherName: "游戏大厂",
+        email: "774866776@qq.com",
+        telephone: null,
+        country: "中国",
+        province: 2,//城市ID
+        city: 3561,//城市id
+        address: "地址",
+        industry: 0,//"行业"
+        subIndustry: 0,//"行业子分类"
+        staff: true,
+        income: 1000,//年收入
+        description: "王阳测试公司",
+        website: "王阳测试网站",
+        hobby:['吃饭','睡觉','打豆豆'],
+        "介绍":{
+            aa:8989,
+            bb:'bb',
+            cc:true
+        }
+    }
+
+    console.warn('js对象：')
+    console.log( obj);
+
+    /*2. 浏览器支持的转换方式(Firefox，chrome，opera，safari，ie9，ie8)等浏览器：*/
+    obj = JSON.stringify(obj); //将js对象转化为JSON对象
+    console.warn('将js对象转化为JSON对象：')
+    console.log(obj);
+
+    obj = JSON.stringify(obj); //json对象转换为json字符串
+    console.warn('json对象转换为json字符串：')
+    console.log(obj);
+
+    obj = JSON.parse(obj); //json字符串转换为json对象
+    console.warn('json字符串转换为json对象：')
+    console.log(obj);
+
+    obj = JSON.parse(obj); //JSON对象转换为js对象
+    console.warn('JSON对象转换为js对象：')
+    console.log(obj);
+
+    obj = JSON.stringify(JSON.stringify(obj)); //js对象转换为json字符串  步骤：js对象->json对象->json字符串
+    console.warn('js对象转换为json字符串：')
+    console.log(obj);
+
+    obj = JSON.parse(JSON.parse(obj)); //json字符串转换为js对象  步骤：son字符串->json对象->js对象
+    console.warn('json字符串转换为js对象：')
+    console.log(obj);
+
+    console.log(JSON.parse("[{\"condition\":\"name\",\"operation\":22,\"type\":2,\"origin\":true,\"scope\":1,\"value\":[\"gu\"]}]","[{\"condition\":\"name\",\"operation\":7,\"type\":2,\"origin\":true,\"scope\":1,\"value\":[\"顾鑫\"]}]"))
+
+
+    var gg = {"success":true,"data":{"total":6,"list":[{"id":"393355386138132480","avatar":" ","name":"网购","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393355385915834368,"company":{"id":"393355385915834368","uniqueId":null,"name":"水电费","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513824832192,"gmtModified":1513824832192},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1},{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513824832234,"gmtModified":1513824832234,"properties":[],"sources":null,"groups":null,"logs":null},{"id":"393355671476633600","avatar":" ","name":"哈哈","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393355671338221568,"company":{"id":"393355671338221568","uniqueId":null,"name":"都是","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513824900242,"gmtModified":1513824900242},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513824900273,"gmtModified":1513824900273,"properties":[],"sources":null,"groups":null,"logs":null},{"id":"393356470021783552","avatar":" ","name":"玩儿","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393356469870788608,"company":{"id":"393356469870788608","uniqueId":null,"name":"地方撒旦","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513825090627,"gmtModified":1513825090627},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513825090662,"gmtModified":1513825090662,"properties":[],"sources":null,"groups":null,"logs":null},{"id":"393478940171173888","avatar":" ","name":"玩儿","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393356469870788608,"company":{"id":"393356469870788608","uniqueId":null,"name":"地方撒旦","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513825090627,"gmtModified":1513825090627},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513854289814,"gmtModified":1513854289814,"properties":[],"sources":null,"groups":null,"logs":null},{"id":"393479287887364096","avatar":" ","name":"玩儿","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393356469870788608,"company":{"id":"393356469870788608","uniqueId":null,"name":"地方撒旦","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513825090627,"gmtModified":1513825090627},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513854372722,"gmtModified":1513854372722,"properties":[],"sources":null,"groups":null,"logs":null},{"id":"393479437716291584","avatar":" ","name":"玩儿","gender":false,"genderStr":"女","gmtBirthday":1512230400000,"birthdayStr":"2017-12-03","companyId":393356469870788608,"company":{"id":"393356469870788608","uniqueId":null,"name":"地方撒旦","logo":null,"anotherName":null,"size":null,"email":null,"telephone":null,"country":null,"province":null,"provinceStr":null,"city":null,"cityStr":null,"address":null,"industry":null,"subIndustry":null,"staff":null,"income":null,"description":null,"website":null,"source":"导入联系人创建","userId":338211,"accountId":12,"gmtCreate":1513825090627,"gmtModified":1513825090627},"job":"","email":"[{\"item\":\"\",\"type\":1}]","phone":"[{\"item\":\"\",\"type\":1}]","telephone":"","website":"","fax":"","country":"","province":0,"provinceStr":" ","city":0,"cityStr":" ","address":"","postCode":"","qq":"","weibo":"","weixin":"","remark":"","registeredSources":" ","gmtRegistration":null,"gmtFirstVisit":null,"gmtLastVisit":null,"online":null,"userId":338211,"accountId":12,"gmtCreate":1513854408444,"gmtModified":1513854408444,"properties":[],"sources":null,"groups":null,"logs":null}]}}
+
+
+
+    var sdfafd = [[{name:"1212"}], [{name:"21212"}], [{name:"332323"}]];
+    var data = [];
+
+    for(var i = 0; i<sdfafd.length; i++){
+        data.push( JSON.stringify(sdfafd[i]) )
+    }
+
+    data = JSON.stringify(data);
+    console.log({
+        data:data
+    })
+
+    $.ajax({
+        url: "http://soupai_t.m1world.com/contact/list?page=1&limit=10&token=5d7b09bd1291631676bd1b02c76df4973bf87a0ef2f56eded7323e38ebeb6a90333cf61f2c3e3c71", // 加随机数防止缓存
+        type: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        traditional: true,//这里设置为true
+        data:data,
+        dataType: "json",
+        success: function (data2) {
+
+        }
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            background-color: #ccc;
+            margin: 100px;
+        }
+
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+<h3>采用自定义指令实现 获取双击间隔时间控制单价双击事件</h3>
+<div class="box"  sglclick="funwang($event)">
+    <div class="container"
+         ng-dblclick="funwang2($event)"></div>
+</div>
+
+<h3>采用自定义指令实现 获取双击间隔时间控制单价双击事件</h3>
+<div class="box"  ng-click="$evalAsync(funwang($event))">
+    <div class="container"
+         ng-dblclick="funwang2($event)">
+    </div>
+</div>
+
+<h3>同一个元素上面既有单击事件又有双击事件 采用$evalAsync 双击单击同时触发 未能生效</h3>
+<div class="box">
+    <div class="container"
+         ng-click="$evalAsync(funwang3($event))"
+         ng-dblclick="funwang2($event)">
+    </div>
+</div>
+
+<h3>采用$evalAsync 实现子元素单击，父元素双击 未能生效</h3>
+<div class="box" ng-click="$evalAsync(funwang($event))">
+    <div class="container"
+         ng-dblclick="funwang2($event)">
+    </div>
+</div>
+
+<div class="box">
+    <!--ng-click="$evalAsync(funwang($event))"-->
+    <!-- sglclick="funwang($event)"-->
+    <!--ng-click="funwang($event)"-->
+    <div class="container"
+         ng-dblclick="funwang2($event)"
+         ng-click="$evalAsync(funwang3($event))">
+    </div>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,hexafy) {
+        $scope.name = "John Doe";
+
+        $scope.funwang = function ($event) {
+            alert('我触发了父元素单击事件')
+        };
+
+        $scope.funwang2 = function ($event) {
+            alert('我触发了子元素双击事件')
+            $event.stopPropagation();//阻止冒泡
+        };
+
+        $scope.funwang3 = function ($event) {
+            alert('我触发了子元素单击事件')
+            //$event.stopPropagation();//阻止冒泡
+        };
+
+    })
+
+    app.service('hexafy', function() {
+        this.myFunc = function (x) {
+            return x.toString(16);
+        }
+    })
+
+    app.directive('sglclick', ['$parse', function($parse) {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attr) {
+                var fn = $parse(attr['sglclick']);
+                var delay = 400, clicks = 0, timer = null;
+                element.on('click', function (event) {
+                    clicks++;  //count clicks
+                    if(clicks === 1) {
+                        timer = setTimeout(function() {
+                            scope.$apply(function () {
+                                fn(scope, { $event: event });
+                            });
+                            clicks = 0;
+                        }, delay);
+                    } else {
+                        clearTimeout(timer);
+                        clicks = 0;
+                    }
+                });
+            }
+        };
+    }])
+</script>
+</body>
+</html>

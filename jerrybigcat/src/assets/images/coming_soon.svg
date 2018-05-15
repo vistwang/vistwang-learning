@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="209px" height="132px" viewBox="0 0 209 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="173.731462" cy="92.2525884" rx="4.36526443" ry="4.36526443"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.73052887" height="8.73052887" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="3.63772036" cy="86.0320866" rx="3.63772036" ry="3.63772036"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="7.27544072" height="7.27544072" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="16.4788732" cy="22.8873239" rx="2.74647887" ry="2.74647887"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.49295775" height="5.49295775" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <path d="M133.141158,107.112676 L49.8435055,107.112676 C47.5964789,107.112676 45.7746479,105.122027 45.7746479,102.666782 L45.7746479,38.3191335 C45.7746479,35.8638885 47.5964789,33.8732394 49.8435055,33.8732394 L133.141158,33.8732394 C135.388185,33.8732394 137.210016,35.8638885 137.210016,38.3191335 L137.210016,102.666782 C137.210016,105.122027 135.388185,107.112676 133.141158,107.112676 Z" id="path-7"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账户中心--邀请协作高级权限设置-copy" transform="translate(-992.000000, -1746.000000)">
+            <g id="Group-19" transform="translate(992.000000, 1747.000000)">
+                <g id="Group-32" opacity="0.8">
+                    <use id="Oval-7" stroke="#1DACFD" mask="url(#mask-2)" stroke-width="4" opacity="0.4" xlink:href="#path-1"></use>
+                    <use id="Oval-7-Copy" stroke="#1DACFD" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <use id="Oval-7-Copy-2" stroke="#1DACFD" mask="url(#mask-6)" stroke-width="4" opacity="0.4" xlink:href="#path-5"></use>
+                    <path d="M86.0624009,0 L91.2069144,5.14451347" id="Path-5" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M86.0624009,4.813589 L91.5178018,0" id="Path-5-Copy-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M201.190882,49.0845992 L206.335396,54.2291126" id="Path-5" stroke="#1DACFD" stroke-width="2" stroke-linecap="round" transform="translate(203.763139, 51.656856) rotate(12.000000) translate(-203.763139, -51.656856) "></path>
+                    <path d="M201.221887,53.9341225 L206.677288,49.1205335" id="Path-5-Copy-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round" transform="translate(203.949587, 51.527328) rotate(12.000000) translate(-203.949587, -51.527328) "></path>
+                    <path d="M133.141158,107.112676 L49.8435055,107.112676 C47.5964789,107.112676 45.7746479,105.122027 45.7746479,102.666782 L45.7746479,38.3191335 C45.7746479,35.8638885 47.5964789,33.8732394 49.8435055,33.8732394 L133.141158,33.8732394 C135.388185,33.8732394 137.210016,35.8638885 137.210016,38.3191335 L137.210016,102.666782 C137.210016,105.122027 135.388185,107.112676 133.141158,107.112676 Z" id="Shape" fill="#FFFFFF"></path>
+                    <path d="M137.210016,45.063615 L137.210016,37.942097 C137.210016,35.6950704 135.388185,33.8732394 133.141158,33.8732394 L49.8435055,33.8732394 C47.5964789,33.8732394 45.7746479,35.6950704 45.7746479,37.942097 L45.7746479,45.063615 L137.210016,45.063615 Z" id="Shape" fill="#EEEEEE"></path>
+                    <ellipse id="Oval" fill="#F24B45" cx="51.2676056" cy="39.3661972" rx="2.74647887" ry="2.74647887"></ellipse>
+                    <ellipse id="Oval" fill="#FFB202" cx="60.4225352" cy="39.3661972" rx="2.74647887" ry="2.74647887"></ellipse>
+                    <circle id="Oval" fill="#4CBB41" cx="69.5774648" cy="39.3661972" r="2.74647887"></circle>
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <use id="SVGID_33_" stroke="#1DACFD" stroke-width="2" xlink:href="#path-7"></use>
+                    <text id="&lt;/&gt;" mask="url(#mask-8)" font-family="PingFangSC-Medium, PingFang SC" font-size="32" font-weight="400" fill="#1DACFD">
+                        <tspan x="64.084507" y="83.3521127">&lt;/&gt;</tspan>
+                    </text>
+                    <path d="M148.767606,57.4742781 C165.200022,57.4742781 178.521127,46.6576235 178.521127,33.3146039 C178.521127,19.9715842 165.200022,9.15492958 148.767606,9.15492958 C132.33519,9.15492958 119.014085,19.9715842 119.014085,33.3146039 C119.014085,38.4414013 121.747824,43.7437414 125.101947,47.6543197 C126.214599,48.9515637 117.869687,55.9703614 119.742498,58.2840118 C122.125949,61.2285016 131.992909,54.0380767 134.668185,55.1360516 C138.696178,56.7892024 143.945921,57.4742781 148.767606,57.4742781 Z" id="Oval-2" stroke="#1DACFD" stroke-width="2" fill="#FFFFFF"></path>
+                    <text id="coming-soon" font-family="PingFangSC-Semibold, PingFang SC" font-size="13" font-weight="500" line-spacing="13" letter-spacing="-0.18571429" fill="#1DACFD">
+                        <tspan x="125.880282" y="35.1408451">coming </tspan>
+                        <tspan x="133.475067" y="48.1408451">soon</tspan>
+                    </text>
+                </g>
+                <ellipse id="Oval-5" fill="#E0F4FF" cx="93.826357" cy="126.534232" rx="53.826357" ry="3.53423187"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

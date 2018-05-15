@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reactDemo</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+<div id="box5"></div>
+</body>
+</html>
+<script type="text/babel">
+
+    //a && b :如果执行a后返回true，则执行b并返回b的值；如果执行a后返回false，则整个表达式返回a的值，b不执行；
+    //a || b :如果执行a后返回true，则整个表达式返回a的值，b不执行；如果执行a后返回false，则执行b并返回b的值；
+    //&& 优先级高于 ||;
+    //异步
+    var qq=['x'];
+    var gg='小米';
+    var data=1234;
+
+    console.log(qq.length > 0 && 'mimi');
+    console.log( 0 || 'didi');
+    console.log( 'kiki' || '');
+    console.log( 5 && 9);
+    console.log( 0 && 9);
+    console.log( 5 || 9);
+    console.log( 0 || 9);
+
+
+    //this.refs
+    var Myconponent=React.createClass({
+
+        propTypes: {
+            title: React.PropTypes.string.isRequired,
+        },
+
+        handelclick:function () {
+            this.refs.myTextInput.focus();
+        },
+        render:function () {
+            return (
+                <div>
+                    <input type="text" ref="myTextInput" value={this.props.name} />
+                    <input type="button" value="按钮获取焦点" onClick={this.handelclick} />
+                </div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+        <Myconponent  title={data} name="我是组件name值"/>,
+        document.getElementById('box1')
+    );
+
+    //this.state.liked
+    var Myconponent2=React.createClass({
+        getInitialState:function () {
+            return {liked:false};
+        },
+        handelclick:function () {
+            this.setState({liked:!this.state.liked});
+            //this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。
+        },
+        render:function () {
+            var name=this.state.liked ? '喜欢':'一点也不喜欢';
+            return (
+                <div>
+                    <p onClick={this.handelclick}>
+                        我 {name} 学习react
+                    </p>
+                </div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+        <Myconponent2/>,
+        document.getElementById('box2')
+    );
+    //实现双向数据绑定
+    var Myconponent3=React.createClass({//
+        getInitialState:function () {
+            return {value:''};
+        },
+        handelchange:function (event) {
+            this.setState({value:event.target.value});
+            //this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。
+        },
+        render:function () {
+            var name=this.state.value;
+            return (
+                <div>
+                    <input type="text" onChange={this.handelchange}/>
+                    <p>
+                        {name}
+                    </p>
+                </div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+        <Myconponent3/>,
+        document.getElementById('box3')
+    );
+
+    //动画
+    var Myconponent4=React.createClass({
+        getInitialState:function () {
+            return {opacity:1.0};
+        },
+        componentDidMount:function () {
+            this.timer=setInterval(function () {
+                var opacity=this.state.opacity;
+                opacity -=0.05;
+                if(opacity<0.1){
+                    opacity=1.0;
+                };
+                this.setState({opacity:opacity})
+            }.bind(this),100)
+        },
+        render:function () {
+            return (
+                <div style={{opacity:this.state.opacity,color:'tomato',fontSize:'20px'}}>
+                    你好，中国
+                </div>
+            )
+        }
+    });
+    ReactDOM.render(
+        <Myconponent4></Myconponent4>,
+        document.getElementById('box4')
+    );
+
+    //属性值
+    var Myconponent5 = React.createClass({
+        getDefaultProps : function () {
+            return {
+                title : 'Hello World'
+            };
+        },
+
+        propTypes:{
+            name: React.PropTypes.string.isRequired,
+        },
+
+        render:function () {
+            return (
+                <div>
+                    <h3>你好，前端</h3>
+                    <p>{this.props.title}</p>
+                </div>
+            )
+        },
+
+
+    })
+    ReactDOM.render(
+
+        <Myconponent5 name={data} />,
+        document.getElementById('box5')
+    )
+</script>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        name:121,
+        age:false
+    }
+
+    obj.forEach((item) => {
+        console.log(item)
+    })
+
+    var config = [{
+        "option_type": "add",//event_type
+
+        "contact_info": {//params
+            //联系人基本属性
+            "name": name,
+            "job": "web",
+            "email": "24579978",
+            "phone": "18610776607",
+
+            //自定义属性
+            "custom-field-399949442104426496":"小米",
+
+            //联系人自定义事件
+            "custom-event-view_price_page":"11111",
+            "custom-event-Vista_wang":"22222",
+            //群组
+            "input_group": "一般群组",
+
+
+            "contacts": [{
+                "propertys": [{
+                    "propertyId": "1139",
+                    "label": "自定义字段测试2"
+                }],
+                "name": name,
+                "job": "web",
+                "email": "24579978",
+                "phone": "18610776607"
+            }],
+            "group": "一般群组",
+            "custom_events":["123456"]
+        }
+    }];
+
+</script>
+<pre>
+    var config = [{
+    "option_type": "add",//event_type
+
+    "contact_info": {//params
+    //联系人基本属性
+    "name": name,
+    "job": "web",
+    "email": "24579978",
+    "phone": "18610776607",
+
+    //自定义属性
+    "custom-field-399949442104426496":"小米",
+
+    //联系人自定义事件
+    "custom-event-view_price_page":"11111",
+    "custom-event-Vista_wang":"22222",
+    //群组
+    "input_group": "一般群组",
+
+
+    "contacts": [{
+    "propertys": [{
+    "propertyId": "1139",
+    "label": "自定义字段测试2"
+    }],
+    "name": name,
+    "job": "web",
+    "email": "24579978",
+    "phone": "18610776607"
+    }],
+    "group": "一般群组",
+    "custom_events":["123456"]
+    }
+    }];
+</pre>
+</body>
+</html>

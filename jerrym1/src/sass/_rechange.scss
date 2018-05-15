@@ -1,0 +1,61 @@
+.recharge-content{
+
+	& > .m1-row:not(:last-child){
+		margin-bottom: 20px;
+	}
+	
+	h3{
+		margin-top: 0;
+		margin-bottom: 20px;
+		line-height: 14px;
+	}
+
+	.ad{
+		margin-bottom: 30px;
+		text-align: center;
+
+		img{
+			max-width: 100%;
+		}
+
+	}
+
+	.num{
+		color: $brand-danger;
+		margin: 0 5px;
+	}
+
+	.deduct{
+		margin: 20px 0 30px;
+		line-height: 13px;
+		.num{
+			font-size: 18px;
+			margin: 0 5px;
+		}
+		.m1-tgl{
+			margin-right: 20px;
+		}
+	}
+
+	.settle {
+		margin: 20px 0;
+
+		.num {
+			margin:0 5px;
+			font-size: 24px;
+			line-height: 14px;
+		}
+
+	}
+
+	.m1-alert{
+		margin: 10px 0;
+	}
+}
+
+.bankpay-info{
+	p{
+		margin-bottom: 0;
+		line-height: 24px;
+	}
+}

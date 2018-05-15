@@ -1,0 +1,67 @@
+
+.bill-btns {
+	text-align:right;
+	
+	.bill-picker{
+		margin-right: 16px;
+		color: $text-light;
+	}
+	.m1-tag{
+		margin-top: 0;
+		margin-right: 16px;
+		min-width: 90px;
+		text-align: center;
+		padding:8px 25px;
+		cursor: pointer;
+	}
+	.m1-btn-group {
+		/* 兼容ie9 */
+		display: inline-block;
+	}
+	.m1-btn{
+		padding-left:0;
+		padding-right: 0;
+		width: 80px;
+	}
+}
+
+.m1-table {
+	tr:hover{
+		.bill-status-menu{
+			display: inline;
+		}
+	}
+}
+
+.bill-status{
+	display: flex;
+	align-items: center;
+}
+
+.bill-status-menu {
+	display: none;
+	i{
+		display: inline-block;
+		font-size:22px;
+		margin-right: 6px;
+		cursor: pointer;
+
+		transition: transform .3s;
+
+		&:hover{
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+
+		&.icon-m1-alipay{
+			color: $color-alipay;
+		}
+
+		&.icon-m1-wechat-payment{
+			color: $color-wxpay;
+		}
+	}
+}

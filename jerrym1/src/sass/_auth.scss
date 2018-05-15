@@ -1,0 +1,283 @@
+
+// Auth
+.auth-nav{
+	$borderWidth: 3px;
+	$textToSide: 13%;
+	margin-bottom:20px;
+	border:none;
+
+	& > li{
+		$pointPos: 20%;
+		border: none;
+		border-bottom: $borderWidth solid $text-lightest;
+		position: relative;
+		
+		a{
+			font-size: 14px;
+			line-height: 14px;
+			padding-top: 0;
+			margin-bottom: 20px;
+		}
+
+		span{
+			$size: 12px;
+
+			position: absolute;
+			bottom: -($size / 2) - 1;
+			width:$size;
+			height:$size;
+			border-radius: 50%;
+			background-color: $text-lightest;
+		}
+
+		&:first-child{
+			a{
+				padding-left: $textToSide;
+			}
+			span{
+				left: $pointPos;
+			}
+		}
+		&:last-child{
+			text-align: right;
+			a{
+				padding-right: $textToSide;
+			}
+			span{
+				right: $pointPos;
+			}
+		}
+
+		&.select{
+			span{
+				background-color: $brand-primary;
+			}
+		}
+	}
+}
+.auth-status-container{
+	margin: 0 auto;
+	max-width:1000px;
+
+
+}
+.auth-content{
+	padding-top: 20px;
+}
+.auth-form{
+	$labelWidth: 70px;
+
+	.m1-form-label{
+		width:$labelWidth;
+	}
+	.m1-form-content{
+		margin-left:$labelWidth;
+		word-wrap: break-word;
+	}
+	.m1-form-input, .input-text{
+		width: 80%;
+	}
+
+	.input-text{
+		margin-top:10px;
+		color: $text-ignore;
+	}
+}
+
+
+.auth-licence{
+	text-align: center;
+	// padding: 0 30px;
+	
+	.auth-enterprise-licence &{
+		width: 205px;
+		float:left;
+
+		&:first-child{
+		margin-right: 50px;
+			
+		}
+	}
+
+	.auth-sms-licence &{
+		width: 200px;
+		margin: 0 auto;
+	}
+
+
+	h4{
+		font-size: 14px;
+		margin-top:0;
+	}
+
+	// &.sms {
+	// 	.licence-intro{
+	// 		width: 350px;
+	// 		margin-left: auto;
+	// 		margin-right: auto;
+	// 	}
+	// }
+
+	.licence-intro{
+		margin:0 auto;
+		width: 200px;
+		color: $text-ignore;
+		text-align:justify;
+	}
+	.licence-image{
+		position:relative;
+		margin: 20px auto;
+		width:200px;
+		height:260px;
+		border:1px dashed $brand-ignore;
+
+		img{
+			border:none;
+			width: 100%;
+			height: 100%;
+		}
+
+		.empty-image{
+			img{
+				margin-top:80px;
+				width:100px;
+			}
+			p{
+				margin-top: 10px;
+				color: $text-lighter;
+			}
+		}
+
+		.upload {
+			position: absolute;
+			top:0;
+			left:0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font-size: 42px;
+			color: #fff;
+			background: rgba(0,0,0,0.4);
+			opacity: 0;
+			-webkit-transition: opacity .3s;
+					transition: opacity .3s;
+			cursor: pointer;
+			
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+.auth-intro{
+	color: $text-ignore;
+}
+.auth-btns{
+	margin-top:30px;
+	text-align: center;
+
+}
+
+.auth-status-content{
+	float:left;
+	width:50%;
+	text-align: center;
+
+	&:first-child .line{
+		border-top-left-radius: 1.5px;
+		border-bottom-left-radius: 1.5px;
+	}
+	&:last-child .line{
+		border-top-right-radius: 1.5px;
+		border-bottom-right-radius: 1.5px;
+	}
+
+	h4{
+		margin-top:0;
+		font-size: 14px;
+	}
+	
+	&.success {
+		.auth-status-style .icon{
+			background-color: $brand-success;
+		}
+		.auth-status-info{
+			color: $brand-success;
+		}
+	}
+
+	&.fail {
+		.auth-status-style .icon{
+			background-color: $brand-danger;
+		}
+		.auth-status-info{
+			color: $brand-danger;
+		}
+	}
+	&.proceed {
+		.auth-status-style .icon{
+			background-color: $text-lightest;
+		}
+		.auth-status-info{
+			color: $text-light;
+		}
+	}
+	
+}
+.auth-status-style{
+	position:relative;
+	padding: 20px 0;
+	margin: 20px 0;
+	.line{
+		height: 3px;
+		background-color: $text-lightest;
+	}
+	.icon{
+		position: absolute;
+	    top: 0;
+	    left: 50%;
+	    -webkit-transform: translateX(-50%);
+	    		transform: translateX(-50%);
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    color: #fff;
+	    border-radius: 50%;
+	    background-color: $white;
+
+		i{
+		font-size: 24px;
+			
+		}
+	}
+}
+.auth-status-info {
+	font-size: 16px;
+	margin: 5px 0;
+}
+.auth-time{
+	color: $text-ignore;
+
+}
+.auth-handle-btns{
+	margin-top: 30px;
+	p{
+		margin-bottom: 16px;
+	}
+	button{
+		width: 140px;
+	}
+}
+.auth-remark{
+	margin-top: 30px;
+	padding: 0 100px;
+	color: $text-ignore;
+}
+.auth-alert{
+	margin-top:50px;
+}
+
+
+

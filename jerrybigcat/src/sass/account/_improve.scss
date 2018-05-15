@@ -1,0 +1,79 @@
+
+
+.improve-content{
+	width: 450px;
+	margin: 30px auto;
+	padding: 0 50px;
+
+	a{
+		color: $brand-primary;
+	}
+
+	.m1-form-row{
+
+		margin-bottom: 30px;
+	}
+
+	.m1-form-content {
+		margin-left: 0;
+		text-align: center;
+
+		.iconfont {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: $text-lighter;
+			font-size: 16px;
+			z-index: 1;
+		}
+
+		input {
+			padding-left: 28px;
+		}
+	}
+
+	.m1-btn{
+		width: 100%;
+	}
+
+	.m1-dropdown{
+		width: 100%;
+
+		&.no-select .m1-btn{
+			color: $text-lighter;
+		}
+
+		.m1-btn{
+			text-align: left;
+			border-width: 0 0 1px 0;
+			border-radius: 0;
+			padding: 0px 0 10px 28px;
+
+			&:hover{
+				background-color: transparent;
+			}
+
+			i{
+				float:right;
+			}
+		}
+
+		.m1-dropdown-menu {
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	.industry-keys {
+		text-align: left;
+		.m1-tag{
+			margin-bottom: 20px;
+		}
+	}
+
+	.industry-intro {
+		text-align: justify;
+		margin-bottom: 0;
+		line-height: 22px;
+	}
+}

@@ -1,0 +1,315 @@
+
+// Price
+.price-body{
+
+	%header-footer{
+		text-align: center;
+	}
+	.versions-header {
+		@extend %header-footer;
+		border-bottom: none;
+		margin-bottom: 50px;
+
+		h2{
+			margin-top: 0;
+		}
+	}
+
+	.versions-footer {
+		@extend %header-footer;
+		border-top: none;
+		margin-top: 50px;
+	}
+
+	.single-price &{
+		max-width: 1200px;
+		min-width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.price-intro{
+		min-width: 960px;
+	}
+
+	.slogan{
+		margin-bottom:30px;
+		font-size: 24px;
+		color: $text-dark;
+	}
+
+	h2{
+		color:$text-light;
+	}
+
+	p{
+		color:$text-base;
+	}
+
+	.btns {
+		button{
+			min-width: 125px;
+		}
+	}
+
+	.btn-appoinment{
+		margin-top:20px;
+	}
+}
+
+.single-price {
+	.m1-panel {
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	.version-item{
+		background-color: $white;
+	}
+	
+	.m1-table > tbody > tr:hover {
+		background-color: $white;
+	}
+}
+
+.price-versions {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.version-item{
+	display: inline-block;
+	position: relative;
+	padding: 18px;
+	margin: 0 6px;
+	min-width: 210px;
+	max-width: 254px;
+	width: 254px;
+	text-align: center;
+	// box-shadow: 0 0 10px $gray-lighter;
+	// border: 1px solid $text-lightest;
+	border: 1px solid #f3f3f3;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: box-Shadow 0.5s, transform .5s;
+
+	&:hover {
+		// box-shadow: 0 5px 10px $text-lightest;
+		box-shadow: 0 4px 12px 0 rgba(52,63,75,0.06), 0 10px 40px 0 rgba(52,63,75,0.08), 0 0 0 1px rgba(52,63,75,0.02);
+		transform: translateY(-5px);
+	}
+
+	&.expand{
+		padding-top: 60px;
+		.version-label{
+			position: absolute;
+			left:0;
+			top:0;
+			width: 100%;
+			height:40px;
+			line-height: 40px;
+			font-size: 14px;
+			color:$white;
+		}
+		
+	}
+
+	&.free{
+		&.year strong{
+			margin-top:31px;
+			margin-bottom: 20px;
+		}
+
+		.btns button{
+			border-color:$color-diamond;
+			color:$color-diamond;
+
+			&:hover{
+				background-color:$color-diamond;
+				color:$white;
+			}
+		}
+	}
+	&.base {
+		.btns button {
+			border-color: $color-base;
+			color: $color-base;
+			&:hover{
+				background-color:$color-base;
+				color:$white;
+			}
+		}
+	}
+
+	&.gold {
+		min-width: 235px;
+		max-width: 288px;
+		width: 288px;
+		border:none;
+		box-shadow: 0 0 10px $text-lightest;
+
+		&:hover{
+			box-shadow: 0 4px 12px 0 rgba(52,63,75,0.06), 0 10px 40px 0 rgba(52,63,75,0.08), 0 0 0 1px rgba(52,63,75,0.02);
+		}
+		.version-label{
+			background-color: $color-gold;
+		}
+		.btns button{
+			border-color:$color-gold;
+			color:$color-gold;
+			&:hover{
+				background-color:$color-gold;
+				color:$white;
+			}
+		}
+	}
+	&.diamond {
+
+		.btns button{
+			border-color:$color-diamond;
+			color:$color-diamond;
+			&:hover{
+				background-color:$color-diamond;
+				color:$white;
+			}
+		}
+	}
+	
+	h2{
+		font-size: 20px;
+		color: $text-dark;
+		margin-bottom: 5px;
+	}
+	strong{
+		display: block;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 2;
+	}
+
+	.version-origin{
+		color: $text-base;
+		margin-bottom:20px;
+
+		.m1-tag{
+			margin-right: 0;
+		}
+	}
+
+	.version-intro{
+		margin: 30px 0;
+		text-align: left;
+		min-height: 270px;
+
+		p{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&:nth-child(3) .version-intro{
+		margin-bottom: 30px;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.m1-right .price-body{
+		.m1-panel-content{
+			padding: 50px 30px;
+		}
+		
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.m1-right .price-body{
+
+		.version-item {
+			width: 210px;
+			&.gold{
+				width: 235px;
+			}
+		}
+	}
+}
+
+.price-detail{
+
+	h3{
+		text-align: center;
+		font-size: 20px;
+		color: $text-dark;
+	}
+
+	h4{
+		line-height: 2;
+		margin-top:30px;
+		margin-bottom:15px;
+		color: $text-dark;
+		font-size: 16px;
+	}
+
+	.m1-table {
+		color:#f00;
+		border-bottom: none;
+		%td{
+			text-align: center;
+			border-bottom: none;
+		}
+		%td-first {
+			width: 24%;
+			text-align: left;
+		}
+		tr {
+			th{
+				@extend %td;
+				&:first-child{
+					@extend %td-first;
+					
+				}
+				&:not(:first-child) {
+					width:19%;
+				}
+			}
+			 td{
+				@extend %td;
+				&:first-child{
+					@extend %td-first;
+					
+				}
+			}
+		}
+
+		& > tbody > tr{
+			&.btns{
+				& > td{
+					height: 70px;
+				}
+			}
+		}
+
+		.iconfont {
+			font-size:16px;
+		}
+	}
+}
+
+
+.m1-table{
+	$table-color-list: ('success','warning','primary','danger','gray');
+	$table-color-arr: ($brand-success,$brand-warning,$brand-primary,$brand-danger,$brand-gray);
+	@for $i from 0 to length($table-color-list) {
+		&.#{unquote(nth($table-color-list, $i+1))}{
+			thead > tr{
+				// background-color: lighten(unquote(nth($table-color-arr, $i+1)), 50%);
+				background-color: rgba(unquote(nth($table-color-arr, $i+1)), 0.1);
+				& > th {
+					color: unquote(nth($table-color-arr, $i+1));
+				}
+			}
+		}
+	}
+
+}
+
+

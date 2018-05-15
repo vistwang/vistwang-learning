@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="funwang()">点我改变URL</button>
+<script>
+    function funwang () {
+        var stateObject = {};
+        var title = "Wow Title";
+        var newUrl = "/web-vue2/src/angular/changeURL_NOangular.html?/foo2?name=yang&age=18";
+        history.pushState(stateObject, title, newUrl);
+
+
+    };
+</script>
+</body>
+</html>

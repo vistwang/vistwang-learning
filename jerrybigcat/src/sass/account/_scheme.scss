@@ -1,0 +1,78 @@
+
+// 推荐
+.scheme-content{
+	position: relative;
+
+	.tag-circle{
+		position:absolute;
+		left:0;
+		padding:0;
+		width:18px;
+		height:18px;
+		line-height: 16px;
+		border-radius: 50%;
+		text-align: center;
+		font-size: 10px;
+		margin-top: 0;
+		margin-right:0;
+	}
+
+	ul{
+		li{
+			padding:10px 0 10px 30px;
+
+			h4{
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+.scheme-link{
+	input{
+		width:450px;
+		margin-right:10px;
+	}
+}
+.scheme-code{
+	label{
+		color: $text-dark;
+	}
+	input{
+		width:100px;
+		margin-right: 10px;
+		color: $text-dark;
+	}
+}
+.scheme-social{
+	a{
+		display: inline-block;
+		margin-right: 10px;
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+		background-color: $brand-ignore;
+		color: $white;
+		line-height: 40px;
+	    text-align: center;
+	    font-size: 22px;
+
+    	&.sina:hover{
+    		background-color: $color-sina;	
+    	}
+    	&.wechat:hover{
+    		background-color: $color-wechat;
+    	}
+    	&.qq:hover{
+    		background-color: $color-qq;
+    	}
+	}
+}
+.scheme-notice{
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+.scheme-reward-num{
+	font-size: 16px;
+}

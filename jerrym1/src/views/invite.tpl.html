@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>邀请子账户 - M1云端市场部</title>
+<link rel="stylesheet" href="//cdn.m1world.com/m1ui/1.0.0/css/m1.css">
+</head>
+<body>
+    <div id="root">
+    	<div class="m1-body">
+    		<div class="body-container">
+    			<div class="m1-panel">
+    				<div class="m1-panel-header"><h2>邀请协作</h2></div>
+    				<div class="m1-panel-content">
+    					
+    					<div class="active-email-content">
+    						<div id="invite-check">
+    							<h3><i class="m1-loading"><i></i></i> 邀请信息获取中，请稍后...</h3>
+    						</div>
+    						<div id="invite-view" class="hidden">
+    							<h4 id="invite-intro"><p>来自<span id="accountName"></span>的<span id="username"></span> 邀请您加入M1云端市场部平台</p>
+                                <p>您的邮箱：<span id="email"></span> <label id="info-tips"></label></p></h4>
+    							<br>
+                                <br>
+    							<div id="input-wrap" class="m1-form-row input-pwd-container">
+                                    <a href="http://www.meihua.info/forget" target="_blank">忘记密码</a>
+    								<div class="m1-form-content input-wrap"><i class="iconfont icon-m1-lock-o"></i><input type="password" id="password" class="m1-form-input" placeholder="密码">
+    								</div>
+                                    <span id="error-info" class="form-error"></span>
+    							</div>
+    							<p></p>
+    							<div class="btns">
+    								<a id="invite-agree" class="m1-btn m1-btn-primary m1-btn-lg">验证并加入</a>
+    								<a href="/" class="m1-btn m1-btn-lg">取消</a>
+    							</div>
+    						</div>
+                            <div id="invite-info" class="hidden">
+                                <h3></h3>
+                            </div>
+                            <div id="invite-active" class="hidden">
+                                <h3>请前往激活</h3>
+                                <br>
+                                <br>
+                                <a id="invite-login" class="m1-btn m1-btn-primary m1-btn-lg">登录邮箱</a>
+                            </div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-65209370-1', 'm1world.com');
+        ga('send', 'pageview');
+    </script>
+    <script src="http://www.m1world.com/js/intercom-running.js"></script>
+</body>
+</html>

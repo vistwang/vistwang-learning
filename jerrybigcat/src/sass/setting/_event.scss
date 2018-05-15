@@ -1,0 +1,79 @@
+.event-list-container {
+	margin-top: 30px;
+}
+
+.custom-event {
+
+	.table-body {
+		max-height: 300px;
+	}
+}
+
+.event-intro {
+
+	text-align: center;
+}
+
+.select-event {
+	display: flex;
+	justify-content: space-between;
+	margin:30px 50px 0;
+
+	li {
+		width: 130px;
+		height: 130px;
+		text-align: center;
+
+		.img {
+			width: 120px;
+			height: 110px;
+			text-align: center;
+			line-height: 110px;
+		}
+	}
+}
+
+.code-tab {
+	margin-top: 30px;
+	border: 1px solid $text-lightest;
+}
+
+.code-content {
+	padding: 30px;
+}
+
+.install-intro {
+	margin-top: 10px;
+	text-align: center;
+}
+.install-copy {
+
+	input {
+		width: calc(100% - 88px);
+
+		&[readonly] {
+			border: none;
+			border-radius: 4px;
+			background-color: $color-bg;
+		}
+
+		&:focus[readonly] {
+			border: none;
+		}
+	}
+
+	.m1-btn {
+		float:right;
+	}
+}
+.install-send {
+	text-align: justify;
+	
+	input {
+		width: calc(100% - 296px);
+	}
+
+	.m1-btn {
+		float:right;
+	}
+}

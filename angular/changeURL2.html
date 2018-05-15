@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!--<script src="http://contact.m1world.com/lib/angular.min.js"></script>-->
+</head>
+<body ng-controller="myCtrl">
+<button ng-click="funwang()">点我改变URL</button>
+<button ng-click="funwang2()">点我改变URL2</button>
+<button ng-click="funwang3()">点我$location获取</button>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$location,hexafy, $http, $sce, $filter) {
+        $scope.name = "John Doe";
+
+        $scope.funwang = function () {
+            var stateObject = {};
+            var title = "Wow Title";
+            var newUrl = "contacts.html#callback=index.html&from=contact";
+            history.pushState(stateObject, title, newUrl);
+
+            //console.log($location.hash)
+        };
+
+        $scope.funwang2 = function () {
+            var stateObject = {};
+            var title = "Wow Title";
+            var newUrl = "contacts.html#callback=yang.html&from=contact";
+            history.pushState(stateObject, title, newUrl);
+
+
+        };
+
+        $scope.funwang3 = function () {
+            setTimeout(function () {
+                //$location.url('/foo2?name=bunny2&age=12#myhash2');
+                console.log(window.location.search)
+                console.log(window.location.hash)
+            },0)
+        }
+    });
+    app.service('hexafy', function() {
+        this.myFunc = function (x) {
+            return x.toString(16);
+        }
+    });
+</script>
+</body>
+</html>

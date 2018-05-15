@@ -1,0 +1,185 @@
+.email-account-header {
+	h2 {
+		display: inline-block;
+	}
+
+	.m1-btn {
+		float: right;
+	}
+}
+
+.account-status {
+	font-size: 12px;
+	
+	&.success {
+		color: $brand-success;
+	}
+	&.danger {
+		color: $brand-danger;
+	}
+	&.ignore {
+		color: $brand-ignore;
+	}
+}
+
+.service-row {
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+
+	li {
+		width: 148px;
+		text-align: center;
+		cursor: pointer;
+		border: 1px solid transparent;
+
+		&:hover {
+			background-color: $color-bg;
+		}
+
+		&.select {
+			border-color: $brand-primary;
+		}
+
+		.img {
+			display: inline-block;
+			width:100%;
+			height: 100px;
+			line-height: 100px
+		}
+	}
+}
+.email-set-item {
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $text-lightest;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.email-set-header {
+	cursor: pointer;
+
+	h3 {
+		font-size: 16px;
+		.iconfont {
+			&:last-child {
+				float: right;
+				font-size: 12px;
+			}
+		}
+	}
+	p {
+		color: $text-light;
+	}
+}
+
+.email-set-content {
+	padding: 0 20px;
+}
+
+.email-safe {
+	input {
+		text-align: center;
+	}
+}
+
+.email-unsubscribe {
+	.unsubscribe-type {
+		margin-top: 20px;
+
+		.m1-tgl {
+			margin-right: 30px;
+		}
+	}
+
+	.unsubscribe-link {
+		margin-top: 20px;
+		.m1-input {
+			padding: 10px;
+			border: 1px solid $text-lightest;
+			border-radius: 4px;
+
+		}
+	}
+
+	.unsubscribe-contact {
+		margin-top: 20px;
+	}
+
+	.unsubscribe-content {
+
+		textarea {
+			width: 100%;
+			height: 120px;
+			resize: none;
+		}
+	}
+}
+
+.email-signature {
+
+	.signature-switch {
+		margin-top: 20px;
+
+		.m1-tgl {
+			margin-right: 10px;
+		}
+	}
+
+	.signature-content {
+		position: relative;
+		margin-top: 20px;
+	}
+
+	.not-editable{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($white, .5);
+		cursor: not-allowed;
+	}
+
+	.quill {
+		.ql-toolbar {
+			border: none;
+		}
+		.ql-toolbar + .ql-container.ql-snow {
+			border-top: 1px;
+			border: 1px solid $text-lightest;
+			min-height: 160px;
+			max-height: 300px;
+			overflow-y: scroll;
+		}
+
+		.ql-editor {
+			min-height: 160px;
+			max-height: 290px;
+		}
+	}
+	
+}
+
+.email-configure {
+	h3 {
+		margin: 0;
+	}
+	.m1-tgl {
+		margin-right: 10px;
+	}
+
+	& > .m1-row, & > .container > .m1-row {
+		margin-top: 20px;
+	}
+
+	.imap {
+		padding-right: 20px;
+	}
+
+	.stmp {
+		padding-left: 20px;
+	}
+}

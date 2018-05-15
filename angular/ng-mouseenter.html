@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+        .field_select{
+            width: 200px;
+            height: 50px;
+            border: 1px solid blue;
+        }
+        .field_select:after{
+            float: right;
+            content: '';
+            width: 0;
+            height: 0;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid;
+        }
+        input{
+            padding: 15px 10px;
+        }
+    </style>
+
+    <!--<script src="http://contact.m1world.com/lib/angular.min.js"></script>-->
+</head>
+<body ng-controller="myCtrl">
+<ul>
+    <li ng-mouseenter="left_group_item_show=true" ng-mouseleave="left_group_item_show = false">什么1 <a ng-if="left_group_item_check || left_group_item_show">黑</a><a ng-if="!left_group_item_show && !left_group_item_check">哈</a></li>
+    <li ng-mouseenter="left_group_item_show=true" ng-mouseleave="left_group_item_show = false">什么2 <a ng-if="left_group_item_check || left_group_item_show">黑</a><a ng-if="!left_group_item_show && !left_group_item_check">哈</a></li>
+    <li ng-mouseenter="left_group_item_show=true" ng-mouseleave="left_group_item_show = false">什么3 <a ng-if="left_group_item_check || left_group_item_show">黑</a><a ng-if="!left_group_item_show && !left_group_item_check">哈</a></li>
+    <li ng-mouseenter="left_group_item_show=true" ng-mouseleave="left_group_item_show = false">什么4 <a ng-if="left_group_item_check || left_group_item_show">黑</a><a ng-if="!left_group_item_show && !left_group_item_check">哈</a></li>
+</ul>
+
+<div class="field_select">
+
+</div>
+
+<input type="text" class="field_select">
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+        $scope.left_group_item_show = false;
+        $scope.left_group_item_check = false;
+
+    });
+</script>
+</body>
+</html>

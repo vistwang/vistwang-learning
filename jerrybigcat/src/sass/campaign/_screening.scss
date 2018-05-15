@@ -1,0 +1,27 @@
+.dropdown-screening {
+	
+	& > .m1-dropdown-menu {
+
+		& > ul > .m1-dropdown-submenu > .m1-dropdown-menu{
+			top: initial;
+			bottom: -5px;
+
+			// & > .m1-dropdown-menu-content {
+			// 	min-height: 120px;
+			// }
+		}
+	}
+
+	.m1-dropdown-menu {
+		overflow: visible;
+		max-height: initial;
+
+		& > ul > li {
+			border-top: 1px solid $text-lightest;
+		}
+
+		li > a > .count {
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+<textarea name="" cols="30" rows="10" ng-model="str"></textarea>
+<textarea name="" cols="30" rows="10" ng-model="str2"></textarea>
+<textarea name="" cols="30" rows="10" ng-model="str3"></textarea>
+
+<button ng-click="change()">显示</button>
+
+
+<script>
+    //解决初始化 $watch监听函数页面刷新就触发的情况
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.str = 1;
+        $scope.str = 2;
+        $scope.str = 3;
+        $scope.str = 4;
+        $scope.str2 = 2;
+        $scope.str3 = 333;
+
+        setTimeout(function () {
+            $scope.str = 3;
+
+            setTimeout(function () {
+                $scope.str = 6;
+            }, 0);
+        }, 0);
+
+        //方法2可取
+        $scope.$watch('str2',function (newVal, oldVal) {
+            if(newVal === oldVal || oldVal == null){
+                //不执行任何操作
+                return;
+            }
+            //console.log($scope.str2 + '是的法定')
+            IsDate($scope.str2);
+        });
+
+        $scope.$watch('str3',function (newVal, oldVal) {
+            if(newVal === oldVal || oldVal == null){
+                //不执行任何操作
+                return;
+            }
+
+            $scope.str3 = '王阳阳'
+
+            console.log($scope.str3 + '改变了')
+        });
+
+        $scope.change = function (s) {
+            if(s){
+                $scope.str3 = 'dfsadfasdfs';
+            }else{
+                setTimeout(function () {
+                    $scope.str3 = '是的法定发';
+                }, 0);
+            }
+            $scope.str3 = '会让他让他';
+
+        };
+
+        //3，判断日期是否正确
+        function IsDate(mystring) {
+            console.log('dfasdfsd');
+            var reg = /^(\d{4})-(\d{2})-(\d{2})$/;
+            var str = mystring;
+            var arr = reg.exec(str);
+            if (str=="") return true;
+            if (!reg.test(str)&&RegExp.$2<=12&&RegExp.$3<=31){
+                return false;
+            }
+            return true;
+
+        }
+    });
+
+
+</script>
+</body>
+</html>

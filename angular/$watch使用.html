@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+<textarea name="" id="11" cols="30" rows="10" ng-model="str"></textarea>
+<textarea name="" id="22" cols="30" rows="10" ng-model="str2"></textarea>
+<div>速度达到法定法{{sds}}</div>
+
+<button ng-click="change()">显示</button>
+
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.str = '';
+        $scope.str2 = '';
+        $scope.arr = [1212,3333,556];
+        $scope.sds = 'fdasfdasdfasdfasdfasd';
+
+        //1，$watch 单一的变量
+        $scope.$watch('str',function () {
+            console.log('改变了！！！')
+        });
+
+        //1，$watch 多个变量
+        $scope.$watch('str + str2',function () {
+            console.log('其中一个改变了！！！')
+        });
+
+        //1，$watch对象或数组
+        $scope.$watch('arr',function () {
+            console.log('数组项改变了！！！')
+        },true);
+
+        //1，$watch 函数的返回结果
+        //未完成的任务个数
+        $scope.unDoneCount = function() {
+            var count = 0;
+            angular.forEach($scope.todoList, function(todo) {
+                count += todo.done ? 0 : 1;
+            });
+            return count;
+        };
+        //单选影响全选部分
+        $scope.$watch('unDoneCount()', function(nv) {
+            $scope.isDoneAll = nv ? false : true;
+        });
+
+        //1 取消$watch
+
+        var count=1;
+        var unbingWatch=$scope.$watch('todoList',function(){
+            console.log('todoList change');
+            count++;
+            //相当于在todoList变化了4次之后，就调用unbingWatch()取消这个watch
+            //在第5次todoList改变的时候,就不会输出todoList change了。
+            if(count>4){
+                unbingWatch();
+            }
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<input type="text" class="demo">
+<script>
+    $('.demo').on('focus',function () {
+        setTimeout(function () {
+            console.log('我获取到焦点了');
+        },200);
+    });
+    $('.demo').on('click',function () {
+        console.log('我被点击了');
+
+    })
+</script>
+</body>
+</html>

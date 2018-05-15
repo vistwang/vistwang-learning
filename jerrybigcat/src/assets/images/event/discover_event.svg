@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="65px" viewBox="0 0 75 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 16</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="创建自定义事件" transform="translate(-1110.000000, -539.000000)">
+            <g id="Group-16" transform="translate(1110.000000, 539.000000)">
+                <path d="M73.287771,62.049403 L2.35118503,61.9417879 L2.35118503,52.0340956 L2.35118503,48.4016632 L2.35118503,1.16424116 C2.35118503,0.521580042 1.82960499,0 1.18694387,0 C0.544282744,0 0.0227027027,0.521580042 0.0227027027,1.16424116 L0.0227027027,51.0747609 C-0.00756756757,51.2307692 -0.00756756757,51.3867775 0.0227027027,51.5427859 L0.0227027027,63.1060291 C0.0227027027,63.7486902 0.544282744,64.2702703 1.18694387,64.2702703 L73.287771,64.3778854 C73.9304321,64.3778854 74.4520121,63.8563053 74.4520121,63.2136442 C74.4520121,62.5709831 73.9304321,62.049403 73.287771,62.049403 Z" id="Shape" fill="#1DACFD"></path>
+                <path d="M35.0165996,37.4164024 C36.0223141,37.8658464 37.3106398,37.4690858 37.8955346,36.5279942 L45.1907228,24.7900884 L58.1220428,20.0994116 L66.0566862,10.612499 C66.4128309,10.1866811 66.3600408,9.55586246 65.9367658,9.20184462 L65.7787633,9.06969483 C65.3563884,8.71642982 64.7221694,8.77895703 64.3706027,9.19930144 L56.8147125,18.2333644 L43.7243482,22.9817326 L35.9824739,35.4383533 L17.8690329,27.343633 L0.21235018,45.4553948 L1.78764982,46.9911132 L18.3728345,29.978466 L35.0165996,37.4164024 Z" id="Path-8" fill="#1DACFD"></path>
+                <circle id="Oval" stroke="#1DACFD" stroke-width="2.2" fill="#FFFFFF" cx="17.5" cy="28.5" r="2.5"></circle>
+                <circle id="Oval-Copy-2" stroke="#1DACFD" stroke-width="2.2" fill="#FFFFFF" cx="44.5" cy="24.5" r="2.5"></circle>
+                <circle id="Oval-Copy-3" stroke="#1DACFD" stroke-width="2.2" fill="#FFFFFF" cx="57.5" cy="18.5" r="2.5"></circle>
+                <rect id="Rectangle-4" fill="#1DACFD" x="9" y="50" width="2" height="13" rx="1"></rect>
+                <rect id="Rectangle-4-Copy" fill="#1DACFD" x="18" y="46" width="2" height="17" rx="1"></rect>
+                <rect id="Rectangle-4-Copy-2" fill="#1DACFD" x="27" y="44" width="2" height="19" rx="1"></rect>
+                <rect id="Rectangle-4-Copy-3" fill="#1DACFD" x="36" y="50" width="2" height="14" rx="1"></rect>
+                <rect id="Rectangle-4-Copy-4" fill="#1DACFD" x="46" y="37" width="2" height="27" rx="1"></rect>
+                <rect id="Rectangle-4-Copy-5" fill="#1DACFD" x="55" y="43" width="2" height="21" rx="1"></rect>
+                <rect id="Rectangle-4-Copy-6" fill="#1DACFD" x="64" y="27" width="2" height="37" rx="1"></rect>
+                <circle id="Oval-Copy" stroke="#1DACFD" stroke-width="2.2" fill="#FFFFFF" cx="35.5" cy="35.5" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

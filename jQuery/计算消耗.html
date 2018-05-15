@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var mon11 = [3700,521,129,1200,4400,500]
+    var mon12 = [700,250,170]
+    function add(mounth) {
+        var data = 0;
+        for(var i = 0 ;i<mounth.length; i++){
+            data +=mounth[i]
+        }
+        return data
+    }
+
+    document.write('2017年11月支出：'+ add(mon11));
+    document.write('2017年12月支出：'+ add(mon12));
+
+</script>
+</body>
+</html>

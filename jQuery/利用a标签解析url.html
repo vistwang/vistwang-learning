@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*哈哈 恶作剧*/
+        /**{
+        cursor: none!important;
+        }*/
+        p {
+        color: transparent;
+        text-shadow: #111 0 0 5px;
+        }
+        .box{
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        }
+        /*实现垂直居中*/
+        .center-vertical {
+        width: 200px;
+        height: 299px;
+        background-color: skyblue;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+<!--页面显示样式可编辑-->
+<!--<style style="display:block" contentEditable>
+    /*哈哈 恶作剧*/
+    /**{
+    cursor: none!important;
+    }*/
+    p {
+    color: transparent;
+    text-shadow: #111 0 0 5px;
+    }
+    .box{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    }
+    /*实现垂直居中*/
+    .center-vertical {
+    width: 200px;
+    height: 299px;
+    background-color: skyblue;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+</style>-->
+
+
+<p>以下两行简单的CSS3代码可达到将文字模糊化处理的目的，出来的效果有点像使用PS的滤镜，so cool!</p>
+<div class="box">
+    <div class="center-vertical">
+</div>
+<script>
+    function parseURL(url) {
+        var a =  document.createElement('a');
+        a.href = url;
+        return {
+            source: url,
+            protocol: a.protocol.replace(':',''),
+            host: a.hostname,
+            port: a.port,
+            query: a.search,
+            params: (function(){
+                var ret = {},
+                    seg = a.search.replace(/^\?/,'').split('&'),
+                    len = seg.length, i = 0, s;
+                for (;i<len;i++) {
+                    if (!seg[i]) { continue; }
+                    s = seg[i].split('=');
+                    ret[s[0]] = s[1];
+                }
+                return ret;
+            })(),
+            file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
+            hash: a.hash.replace('#',''),
+            path: a.pathname.replace(/^([^\/])/,'/$1'),
+            relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
+            segments: a.pathname.replace(/^\//,'').split('/')
+        };
+    }
+
+    console.log(parseURL('www.baidu.com?aadasd#sdsadfsdf!sddd哈哈' ))
+    console.log(typeof 1..toString())
+</script>
+</body>
+</html>

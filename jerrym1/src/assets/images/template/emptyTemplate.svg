@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="150px" viewBox="0 0 206 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 26 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="67.3575318" y="41.4966245" width="29.3997819" height="3.6491401" rx="1.82457005"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="29.3997819" height="3.6491401" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="59.0888431" y="43.3211945" width="85.4431163" height="84.8425073" rx="4"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="85.4431163" height="84.8425073" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="199.631965" cy="82.0455329" rx="5.13726556" ry="5.12245602"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="10.2745311" height="10.244912" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <ellipse id="path-7" cx="22.5118239" cy="4.26871335" rx="4.28105463" ry="4.26871335"></ellipse>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.56210927" height="8.5374267" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="模板搜索筛选无结果" transform="translate(-857.000000, -549.000000)">
+            <g id="Group-26-Copy" transform="translate(858.000000, 549.000000)">
+                <g id="Group-22-Copy">
+                    <path d="M81.6923077,13.4615385 L87.7466332,19.4984108" id="Path-5" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M81.6923077,19.1100847 L88.1125013,13.4615385" id="Path-5-Copy-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <use id="Rectangle-2-Copy-4" stroke="#1DACFD" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                    <use id="Rectangle" stroke="#1DACFD" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                    <path d="M77.4637069,75.2542169 C77.4637069,75.2542169 84.0660972,83.8064021 91.8919988,75.2511704" id="Path-2-Copy-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M111.457205,75.2542169 C111.457205,75.2542169 118.059595,83.8064021 125.885497,75.2511704" id="Path-2-Copy-3" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M92.1635978,91.6763746 C92.1635978,91.6763746 100.992358,103.112413 111.457205,91.6723008" id="Path-2-Copy-4" stroke="#1DACFD" stroke-width="2" stroke-linecap="round" transform="translate(101.810401, 94.215076) rotate(-180.000000) translate(-101.810401, -94.215076) "></path>
+                    <ellipse id="Oval-5" fill-opacity="0.25" fill="#1DACFD" cx="100.891658" cy="146.409402" rx="50.3408733" ry="3.29584682"></ellipse>
+                    <use id="Oval-7" stroke="#1DACFD" mask="url(#mask-6)" stroke-width="4" opacity="0.4" xlink:href="#path-5"></use>
+                    <path d="M144,26.9230769 L144,35.9894443" id="Path-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M149,38.9008954 L155.252539,32.6923077" id="Path-3" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M150.923077,43 L159.718264,43" id="Path-4" stroke="#1DACFD" stroke-width="2" stroke-linecap="round"></path>
+                    <use id="Oval-7-Copy-2" stroke="#1DACFD" mask="url(#mask-8)" stroke-width="4" opacity="0.4" xlink:href="#path-7"></use>
+                    <path d="M0.584569367,83.9608178 L6.63889489,89.9976901" id="Path-5" stroke="#1DACFD" stroke-width="2" stroke-linecap="round" transform="translate(3.611732, 86.979254) rotate(12.000000) translate(-3.611732, -86.979254) "></path>
+                    <path d="M0.620940585,89.6516411 L7.04113424,84.0030949" id="Path-5-Copy-2" stroke="#1DACFD" stroke-width="2" stroke-linecap="round" transform="translate(3.831037, 86.827368) rotate(12.000000) translate(-3.831037, -86.827368) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,245 @@
+.inbox-screening {
+
+	.text-record {
+		margin: 0 20px;
+	}
+
+	& > .m1-dropdown {
+		float: right;
+		min-width: 180px;
+
+		.m1-btn {
+			width: 100%;
+		}
+
+		li {
+			& > a {
+				position: relative;
+				& > span {
+					position: absolute;
+					right: 12px;
+				}
+			}
+
+			
+			.set {
+				display: none;
+
+				& > i:hover {
+					font-size: 16px;
+				}
+			}
+
+			&:hover {
+				span {
+					color: $white;
+				}
+				.count {
+					display: none;
+				}
+				.set {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+.inbox-btns {
+	display: inline-block;
+
+	.btn-icon {
+		width: 32px;
+		height: 32px;
+		line-height: 27px;
+		font-size: 16px;
+		border: 1px solid $text-lightest;
+		background-color: transparent;
+	}
+}
+
+.inbox-box {
+
+	h2 {
+		margin: 0;
+		padding: 15px 0;
+		line-height: 40px;
+
+		&:hover {
+			background-color: $color-bg;
+			cursor: pointer;
+		}
+		
+		.title {
+			margin-left: 16px;
+		}
+		
+		.iconfont {
+			&:first-child {
+				position: relative;
+				top: 2px;
+				font-size: 22px;
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+
+}
+
+.inbox-table {
+	position: relative;
+
+	.inbox-table-content {
+		padding-bottom: 40px;
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	.load-more {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		cursor: pointer;
+		background-image: -webkit-linear-gradient(top, transparent, #fff);
+		background-image: -moz-linear-gradient(top, transparent, #fff);
+		background-image: -ms-linear-gradient(top, transparent, #fff);
+		background-image: -o-linear-gradient(top, transparent, #fff);
+		background-image: linear-gradient(top, transparent, #fff);
+
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+
+	.m1-table {
+
+		td {
+			padding: 0 10px;
+			
+			
+			&:nth-child(4), &:nth-child(5) {
+  			& > div {
+  				display: flex;
+  				align-items: center;
+  			}
+				.m1-tag {
+					float: left;
+					margin-right: 10px;
+					color: $text-light;
+				}
+
+  			p {
+  				display: inline-block;
+			    margin-bottom: 0;
+					width:250px;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    line-height: 26px;
+  			}
+			}
+		}
+	}
+}
+
+.inbox-create-classify {
+	 .m1-form-label {
+	 	width: 70px;
+	 }
+	 .m1-form-content {
+	 	margin-left: 70px;
+	 }
+}
+
+.message-header {
+	border-bottom: 1px solid $text-lightest;
+	padding-bottom: 10px;
+	
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+
+	h4 {
+		float: left;
+		width:400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+		line-height: 32px;
+	}
+
+	.inbox-btns {
+		float: right;
+	}
+}
+
+.message-item {
+	margin-bottom: 30px;
+
+	&.guest {
+		.avatar {
+			background-color: $brand-primary;
+		}
+		strong {
+			color: $brand-primary;
+		}
+	}
+
+	h2 {
+		margin-top: 0;
+
+		.avatar {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-color: $text-lightest;
+			border-radius: 50%;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		strong {
+			font-weight: normal;
+			margin-left: 10px;
+		}
+
+		.email {
+			margin-left: 10px;
+			color: $text-light;
+			font-size: 13px;
+		}
+
+		.datetime {
+			float: right;
+			color: $text-light;
+			font-size: 13px;
+		}
+	}
+
+	.message-content {
+		padding-left: 35px;
+
+		iframe {
+			border: 0;
+			width: 100%;
+		}
+	}
+
+	.message-source {
+		margin-top: 20px;
+		padding-left: 35px;
+		color: $text-light;
+	}
+}

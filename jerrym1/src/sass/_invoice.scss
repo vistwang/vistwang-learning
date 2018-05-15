@@ -1,0 +1,18 @@
+.invoice-setting-tabs{
+	text-align: center;
+
+	li{
+		display: inline-block;
+		padding: 0 20px;
+		margin-bottom: 50px;
+
+		label{
+			cursor:pointer;
+		}
+	}
+}
+.invoice-form-content{
+	.m1-form > .m1-form-row:last-of-type{
+		margin-bottom: 0;
+	}
+}

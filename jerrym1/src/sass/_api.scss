@@ -1,0 +1,65 @@
+
+.api-content{
+    
+    .app-column{
+    	width: 420px;
+    	float:left;
+
+    	&:first-child{
+    		margin-right: 20px;
+    	}
+    }
+
+    .m1-form-row{
+
+    	line-height: 40px;
+
+    	.m1-alert{
+    		display: inline-block;
+    		padding: 0 10px;
+    	}
+    }
+
+	.m1-form-label{
+		width:72px;
+	}
+	.m1-form-content{
+		margin-left:72px;
+		width: 320px;
+
+		.m1-alert {
+			width: 100%;
+			padding:0;
+			text-align: center;
+		}
+	}
+
+	.m1-form-row{
+		// padding: 20px 0;
+		margin-bottom: 30px;
+	}
+	.api-secret, .api-cburl{
+		.m1-form-label{
+			width: 100px;
+			
+		}
+		.m1-form-content{
+			margin-left:100px;
+		}
+	}
+
+	.api-auth-btn{
+		margin-top:20px;
+		padding:10px 0;
+
+		.m1-btn{
+			margin-right: 10px;
+		}
+	}
+	.api-auth-intro{
+		color: $text-ignore;
+	}
+	.api-notify{
+		margin-top:30px;
+	}
+}

@@ -1,0 +1,33 @@
+.push-type {
+
+	li {
+		float:left;
+		margin-right: 20px;
+		width: 180px;
+		height: 74px;
+		border-radius: 4px;
+		text-align: center;
+		background-color: $text-lightest;
+		cursor: pointer;
+
+		&.active {
+			color: $brand-primary;
+			background-color: $brand-tag-primary;
+
+			h5 {
+				color: $brand-primary;
+			}
+		}
+
+		h5 {
+			margin-top: 16px;
+			margin-bottom: 8px;
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ::selection {
+            background: #ffffff;
+            color: tomato;
+        }
+        div div{
+            display: inline-block;
+        }
+
+        .box{
+            font-size: 20px;
+            line-height: 4em;
+        }
+
+        .box div{
+            display: inline-block;
+        }
+    </style>
+    <script language=JavaScript>
+        function click() {
+            alert('谢绝复制！')
+        }
+        function clickl(){
+            if (event.button==2){
+                alert('请谅解！')
+            }}
+        function ctrlkeydown(){
+            if (event.ctrlkey) {
+                alert('本网站禁止复制！')
+            }}
+        //document.onkeydown=ctrlkeydown;
+        //document.onselectstart=click;
+        //document.onmousedown=clickl;
+    </script>
+</head>
+<body>
+<h2>150%</h2>
+<div style="font-size: 20px;line-height: 150%">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px">子元素内容font-size: 30px</div>
+</div>
+<h2>1.5em</h2>
+<div style="font-size: 20px;line-height: 1.5em">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px">子元素内容font-size: 30px</div>
+</div>
+<h2>1.5 子元素设置line-height:1.5</h2>
+<div style="font-size: 20px;line-height: 1.5em">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px; line-height: 1.5">子元素内容font-size: 30px</div>
+</div>
+<h2>1.5rem</h2>
+<div style="font-size: 20px;line-height: 1.5rem">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px">子元素内容font-size: 30px</div>
+</div>
+<h2>1.5</h2>
+<div style="font-size: 20px;line-height: 1.5">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px;line-height: 2">子元素内容font-size: 30px <span style="font-size: 40px">孙子元素</span></div>
+</div>
+
+<h2>1.5 子元素未设置字体大小</h2>
+<div style="font-size: 20px;line-height: 1.5">
+    父元素内容font-size: 20px
+    <div style="font-size: 30px">子元素内容font-size: 30px</div>
+</div>
+
+<h2>继承性理解</h2>
+<div class="box">
+    <div>子元素未设置行高
+        <div>孙子元素未设置行高</div>
+    </div>
+</div>
+
+<div style="font-size: 50px">
+    父元素
+    <div style="font-size: 20px;line-height: 1em">子元素</div>
+</div>
+<h1>已经完全理解</h1>
+
+</body>
+</html>

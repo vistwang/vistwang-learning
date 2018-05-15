@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清浮动</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .box{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin: auto;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: inline-block;
+            opacity: 0.69;
+            background-color: #fff;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.06);
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .box span{
+            font-size: 35px;
+            color: #FF4600;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box clearfix">
+<span>是</span>
+</div>
+</body>
+</html>

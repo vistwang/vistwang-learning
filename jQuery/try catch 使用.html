@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    var val = 'sdsfds'
+    function aaa() {
+        try {
+            window.someNonexistentFunction(); //调用不存在的函数
+        }catch (err){
+            console.log('三大地方撒旦')
+            console.log(err)
+
+            return;
+        }
+
+        alert('sdafdsdf')
+    }
+
+    aaa();
+
+    if(11 != 22){
+        console.log('士大夫发地方');
+    }
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。
+    如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+    若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+    若 a 等于 b，则返回 0。
+    若 a 大于 b，则返回一个大于 0 的值。*/
+    var arr = [23,12,1,34,116,8,18,37,56,50];
+    console.log(arr.sort());
+
+    var arr2 = [23,12,1,34,116,8,18,37,56,50];
+    function sequence(a,b){
+        return a - b;
+    }
+    function sequence2(a,b){
+        return b - a;
+    }
+    //当arr从第一个数开始调用sort时，23前面是没有数与它比较的，所以就到第二个，就是12，这时23就会与12比较，于是就会调用sequence2并将23和10传进去，这是sort（）的特性。
+    console.log(arr2.sort(sequence));
+    console.log(arr2.sort(sequence2));
+
+    var arr3 = new Array(6)
+    arr3[0] = "George"
+    arr3[1] = "John"
+    arr3[2] = "Thomas"
+    arr3[3] = "James"
+    arr3[4] = "Adrew"
+    arr3[5] = "Martin"
+
+    document.write(arr3 + "<br />")
+    document.write(arr3.sort())
+
+</script>
+</body>
+</html>

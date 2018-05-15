@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中的几种方法</title>
+    <style>
+
+        .box1{
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .box2 {
+            position: relative;
+            padding: 50px;
+            border: 2px solid black;
+        }
+
+        .box2 div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .box3{
+            padding: 2em 1.5em;
+            background-color: #655;
+            text-align: center;
+        }
+        .box3 h3{
+            margin: 0 0 .2em;
+        }
+        .box3 p{
+            margin: 0;/*消除默认的margin值*/
+        }
+
+        .box4{
+            width: 400px;
+            height: 400px;
+            background-color: #c0a16b;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box4 div{
+            width: 200px;
+            height: 200px;
+            background-color: #a94442;
+        }
+
+        .box5{
+            width: 600px;
+            height: 600px;
+            background-color: #c0a16b;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box5 div{
+            width: 140px;
+            height: 200px;
+            background-color: #a94442;
+        }
+
+    </style>
+</head>
+<body>
+<h3>方法1，设置父辈元素line-height: (父元素宽度); text-align: center;</h3>
+<p>子元素最好是行及元素，避免默认的块级元素自带的一下margin和panding</p>
+<hr style="border:1px dashed red">
+<div class="box box1">
+    <span>居中啦啦啦1</span>
+</div>
+<div class="box box2">
+    <div>居中啦啦啦2</div>
+</div>
+<div class="box box3">
+    <h3>居中啦啦啦3</h3>
+    <p>采用的方式是父元素设置text-align: center和上下相同的padding，子元素设置margin</p>
+</div>
+<h3>方法4，弹性布局实现</h3>
+<div class="box box4">
+    <div>
+        居中啦啦啦4
+    </div>
+
+</div>
+<div class="box box5">
+    <div>
+        居中啦啦啦5
+    </div>
+    <div style="height: 150px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 250px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 100px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 120px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 180px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 100px">
+        居中啦啦啦5
+    </div>
+     <div style="height: 150px">
+        居中啦啦啦5
+    </div>
+
+</div>
+<div class="box box6">
+    居中啦啦啦6
+</div>
+
+<a href="www.zealer.com">我试试看</a>
+</body>
+</html>

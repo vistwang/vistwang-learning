@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular1.6.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+<body ng-controller="myCtrl">
+<textarea ng-if="nub2 == 7 && nub != 7" name="" id="" cols="30" rows="10" ng-model="arr"></textarea>
+
+<button ng-click="change()">显示</button>
+
+<pre>
+
+</pre>
+
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+
+        $scope.arr = '';
+        $scope.nub = 7;
+        $scope.nub2 = 7;
+
+        $scope.change = function () {
+            console.log($scope.arr);
+        }
+    });
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+$banner: banner-user;
+.#{$banner}, .banner-anim{
+  height: 100%;
+}
+.banner-anim-elem.#{$banner}-elem {
+  color: #fff;
+  h1,h2,h3,h4,h5,h6,p{
+  	color: $white;
+  }
+}
+
+.#{$banner}-content{
+	padding: 50px;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.banner-thumb-bottom{
+  .banner-anim-elem{
+    height: 560px;
+  }
+  .banner-anim-thumb{
+    background: #999;
+  }
+}
+.banner-anim-elem .bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.banner-anim-thumb-default{
+	height: 120px;
+	line-height: 120px;
+	span {
+		display: inline-block;
+		width: 40px;
+		height: 13px;
+		border-radius: unset;
+    background-color:transparent;
+    box-shadow: none;
+    &:before {
+      display: block;
+      content: ' ';
+      margin-top: 5px;
+      height:3px;
+      background-color: rgba($text-lighter, 0.5);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    }
+		
+		&:active, &.active{
+      background-color: transparent;
+      &:before{
+			 background-color: $brand-primary;
+      }
+		}
+
+    
+	}
+} 

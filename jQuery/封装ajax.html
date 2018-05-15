@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * http
+     * @param url
+     * @param method
+     * @param data
+     * @param callback
+     */
+    function http(url, method, data, callback) {
+        ajax({
+            url: url,
+            type: method,
+            data: data,
+            success: function (res) {
+                if (typeof callback === 'function') {
+                    callback(res && JSON.parse(res))
+                }
+            },
+            fail: function (status) {
+            }
+        });
+    }
+
+    /**
+     * 封装Ajax方法
+     * @param options
+     */
+    function ajax(options) {
+        options = options || {};
+        options.type = (options.type || "GET").toUpperCase();
+        options.dataType = options.dataType || "json";
+        var params = formatParams(options.data);
+        //var params = JSON.stringify(options.data);
+
+        //创建
+        if (XMLHttpRequest) {
+            var xhr = new XMLHttpRequest();
+        } else { //IE6及其以下版本浏览器
+            var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        //连接
+        if (options.type == "GET") {
+            xhr.open("GET", options.url + "?" + params, true);
+            xhr.send(null);
+        } else if (options.type == "POST") {
+            xhr.open("POST", options.url, true);
+            //设置表单提交时的内容类型
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send(params);
+        }
+
+        //接收
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                var status = xhr.status;
+                if (status >= 200 && status < 300) {
+                    options.success && options.success(xhr.response);
+                } else {
+                    options.fail && options.fail(status);
+                }
+            }
+        };
+
+        //格式化参数
+        function formatParams(data) {
+            var arr = [];
+            for (var name in data) {
+                arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+            }
+            arr.push(("_v=" + Math.random()).replace(".", ""));
+            return arr.join("&");
+        }
+    }
+
+    http("http://rest_t.soup.ai/contact/online",'post',{contacts:JSON.stringify([])},function (status, data) {
+        console.log(status);
+        /*if(data.succees){
+            console.log(status);
+        }else{
+            console.log(status);
+        }*/
+    })
+</script>
+</body>
+</html>

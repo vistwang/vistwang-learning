@@ -1,0 +1,128 @@
+
+.preiod-time {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.content-box-group {
+	margin-top: 30px;
+}
+
+.content-box {
+	position: relative;
+	margin-left: 11px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	border-left: 1px solid $text-lightest;
+
+	&.final {
+		border-left:transparent;
+	}
+
+	&:hover {
+		.tag-delete {
+			opacity: 1;
+		}
+	}
+
+	.m1-tag-circle {
+		position: absolute;
+		left: -11px;
+	}
+
+	.tag-delete {
+		opacity: 0;
+		-webkit-transition: opacity .3s;
+						transition: opacity .3s;
+	}
+
+	.m1-panel {
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	.m1-panel-content {
+		padding: 10px 30px;
+	}
+
+	.content-item {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+		border-bottom: 1px solid $text-lightest;
+
+		&:last-child {
+			border-bottom:none;
+		}
+
+		// &:hover {
+		// 	background-color: $color-bg;
+		// }
+
+		.title {
+			margin-bottom: 20px;
+		}
+	}
+
+	.item-operation {
+		display: inline-block;
+		float:right;
+	}
+
+	.btn-icon-add {
+		position: absolute;
+		left: 30px;
+		bottom: -10px;
+	}
+}
+
+.delay-time {
+	position: relative;
+	display: inline-block;
+
+	& > .m1-btn {
+		padding-top:0;
+		padding-left:0;
+
+	}
+
+	&.open > .delay-time-box {
+		display: block;
+	}
+}
+
+.delay-time-box {
+	display: none;
+	position: absolute;
+	padding: 30px;
+	width: 240px;
+	z-index: 1;
+	background-color: $white;
+	border-radius: 4px;
+	box-shadow: $box-shadow;
+
+	.box-bottom {
+		margin-top: 30px;
+		text-align: center;
+
+	}
+}
+
+.delay-time-setting {
+	input,.m1-dropdown {
+		width: 120px;
+		text-align: center;
+	}
+
+	.m1-dropdown {
+		margin-left: 10px;
+		& > .m1-btn {
+			text-align: center;
+		}
+	}
+}
+
+.send-content-bottom {
+	margin-top: 30px;
+	padding-left: 40px;
+}

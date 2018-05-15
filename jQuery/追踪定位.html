@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background:#4D4948;
+        }
+
+        .send {
+            position:relative;
+            width:150px;
+            height:35px;
+            background:#F8C301;
+            border-radius:5px; /* 圆角 */
+            margin:30px auto 0;
+        }
+
+        .send .arrow {
+            position:absolute;
+            top:5px;
+            right:-16px; /* 圆角的位置需要细心调试哦 */
+            width:0;
+            height:0;
+            font-size:0;
+            border:solid 8px;
+            border-color:#4D4948 #4D4948 #4D4948 #F8C301;
+        }
+
+        .box{
+            width: 500px;
+            height: 700px;
+            position: relative;
+        }
+
+        .sss{
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            margin: 100px;
+        }
+
+        .aaa{
+            width: 100px;
+            height: 60px;
+            background-color: #7ED321;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="send">
+    <div class="arrow"></div>
+</div>
+
+<div class="box">
+    <div class="sss qqq">1</div>
+    <div class="sss">2</div>
+    <div class="sss">3</div>
+    <div class="sss">4</div>
+    <div class="sss">5</div>
+    <div class="sss qqq">6</div>
+
+    <div class="aaa"></div>
+</div>
+
+<script>
+    $('.sss').on('click',function () {
+        var offset = $(this).offset();
+
+        $('.aaa').css({
+            top:offset.top+'px',
+            left:offset.left+'px'
+        });
+        console.log(offset);
+    })
+
+    $('.sss.qqq').each(function(){
+        // let this = $(this);
+        console.log($(this).html());
+    });
+
+    console.log($('.sss.qqq.ee'));
+</script>
+</body>
+</html>

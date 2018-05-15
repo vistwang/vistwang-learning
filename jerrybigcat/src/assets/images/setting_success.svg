@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="181px" height="112px" viewBox="0 0 181 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="177" cy="92" rx="4" ry="4"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8" height="8" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="3" cy="85" rx="3" ry="3"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="27.781457" cy="35.781457" rx="2.78145695" ry="2.78145695"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.56291391" height="5.56291391" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="邮件激活-copy" transform="translate(-870.000000, -311.000000)">
+            <g id="Group-5" transform="translate(649.000000, 312.000000)">
+                <g id="Group-4" transform="translate(221.000000, 0.000000)">
+                    <g id="Group" transform="translate(66.000000, 42.000000)">
+                        <ellipse id="Oval-14" fill="#00D081" cx="24.4420218" cy="24.3851091" rx="24.4420218" ry="24.3851091"></ellipse>
+                        <path d="M21.479836,28.8650378 L16.6637466,24.0793901 C15.9430672,23.3632971 14.7746471,23.3632971 14.0539677,24.0793901 C13.3333621,24.7954464 13.3333621,25.9565266 14.0539677,26.6726195 L19.8235351,32.4057991 C20.2079294,32.7876567 20.9078747,32.9615749 21.4864769,32.9343727 C22.061279,32.9614649 22.7518532,32.7875467 23.1360631,32.4057258 L36.2781875,19.3465704 C36.9988669,18.6304408 36.9988669,17.4693972 36.2781875,16.7533409 C35.557545,16.0371746 34.3891619,16.0371746 33.6684824,16.7533409 L21.479836,28.8650378 Z" id="勾-copy-34" fill="#FFFFFF"></path>
+                    </g>
+                    <ellipse id="Oval-5" fill="#E0F4FF" cx="91" cy="108.969796" rx="30" ry="1.96979625"></ellipse>
+                    <use id="Oval-7" stroke="#1DACFD" mask="url(#mask-2)" stroke-width="4" opacity="0.4" xlink:href="#path-1"></use>
+                    <use id="Oval-7-Copy" stroke="#1DACFD" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <use id="Oval-7-Copy-2" stroke="#1DACFD" mask="url(#mask-6)" stroke-width="4" opacity="0.4" xlink:href="#path-5"></use>
+                    <g id="Group-7" opacity="0.6" transform="translate(71.000000, 0.000000)" stroke="#1DACFD" stroke-width="2" stroke-linecap="round">
+                        <path d="M0,0 L5.61939164,5.61939164" id="Path-5"></path>
+                        <path d="M0,5.25792029 L5.95897633,0" id="Path-5-Copy-2"></path>
+                    </g>
+                    <g id="Group-7-Copy" transform="translate(159.965148, 38.965148) rotate(12.000000) translate(-159.965148, -38.965148) translate(157.465148, 36.465148)" stroke="#1DACFD" stroke-width="2" stroke-linecap="round">
+                        <path d="M-1.48029737e-16,1.01048799e-13 L4.68282637,4.68282637" id="Path-5"></path>
+                        <path d="M-1.48029737e-16,4.38160025 L4.96581361,1.01048799e-13" id="Path-5-Copy-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

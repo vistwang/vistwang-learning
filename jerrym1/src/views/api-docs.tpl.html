@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>API文档 - M1云端市场部</title>
+<meta name="keywords" content="M1云端市场部, 支撑社交营销，内容营销，活动营销，CRM，营销自动化，营销页面，营销工具，Inbound Marketing,梅花网出品,M1API文档">
+<meta name="description" content="M1云端市场部，面向市场营销人的云端工具集成平台，满足现代化市场部内容营销、社交营销、数据库营销等需求的SaaS应用！">
+<link rel="stylesheet" href="http://www.m1world.com/public/font-awesome/css/font-awesome.min.css">
+<link href="http://cdn.m1world.com/m1ui/1.0.0/css/m1.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.m1world.com/public/hf/css/m1.theme.css">
+<script src="http://www.m1world.com/lib/jquery/dist/jquery.min.js"></script>
+<script src="http://www.m1world.com/public/hf/js/m1.header.js"></script>
+<style type="text/css">
+	h2,h3{
+	    font-size: 16px;
+
+	}
+	h2{
+	    line-height: 18px;
+	}
+	.m1-body{
+	    padding-top: 40px;
+	    max-width: 1500px;
+	}
+	.body-container{
+	    max-width: 1200px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.m1-panel-header {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    height: 58px;
+	}
+	.m1-panel-content {
+	    padding: 50px;
+	}
+
+	.m1-dropdown i{
+		float:right;
+	}
+</style>
+</head>
+<body>
+    <div class="m1-body">
+    	<div class="body-container">
+    	    <div class="m1-panel">
+    	    	<div class="m1-panel-header">
+    	    		<h2>API文档</h2>
+    	    	</div>
+    	        <div class="m1-panel-content">
+    	        	<div class="m1-left">
+    	        		<ul class="m1-nav">
+    	        			<li class="m1-dropdown"><a>使用说明<i class="iconfont icon-m1-unfold-down"></i></a></li>
+    	        			<li>
+    	        				<ul class="m1-subnav">
+    	        					<li><a href="#">文档说明</a></li>
+    	        					<li><a href="#ErrorCode">错误码</a></li>
+    	        					<li><a href="#AccessFreq">访问频次说明</a></li>
+    	        					<li><a href="#oauth1Code">Oauth2验证</a></li>
+    	        				</ul>
+    	        			</li>
+    	        			<li class="m1-dropdown"><a>Contact数据API<i class="fa fa-angle-down"></i></a></li>
+    	        			<li>
+    	        				<ul class="m1-subnav">
+    	        					<li><a href="#AccountAllField">获取当前账户所有字段</a></li>
+    	        					<li><a href="#ConAdd">新增联系人</a></li>
+    	        					<li><a href="#ConDel">删除联系人</a></li>
+    	        					<li><a href="#ConUpdate">编辑联系人</a></li>
+    	        					<li><a href="#ConList">获取联系人列表</a></li>
+    	        					<li><a href="#ConDetail">获取联系人详情</a></li>
+    	        					<li class="m1-divide"></li>
+    	        					<li><a href="#GroupAdd">新增群组</a></li>
+    	        					<li><a href="#GroupDel">删除群组</a></li>
+    	        					<li><a href="#GroupList">获取群组列表</a></li>
+    	        					<li class="m1-divide"></li>
+    	        					<li><a href="#TagAdd">新增标签</a></li>
+    	        					<li><a href="#TagList">获取标签列表</a></li>
+    	        					<li class="m1-divide"></li>
+    	        					<li><a href="#FieldAdd">新增自定义字段</a></li>
+    	        					<li><a href="#FieldUpdate">编辑自定义字段</a></li>
+    	        					<li><a href="#FieldDel">删除自定义字段</a></li>
+    	        					<li><a href="#FieldList">获取自定义字段列表</a></li>
+    	        				</ul>
+    	        			</li>
+    	        			<li class="m1-dropdown"><a>EDM数据API<i class="fa fa-angle-down"></i></a></li>
+    	        			<li>
+    	        				<ul class="m1-subnav">
+    	        					<li><a href="#EDMList">获取EDM列表</a></li>
+    	        		            <li><a href="#EDMDetail">获取EDM详细数据</a></li>
+    	        				</ul>
+    	        			</li>
+    	        		</ul>
+    	        	</div>
+	    	        
+    	            <div class="m1-right">	
+    	            <div class="substance">
+    	                <div class="block" name="DocDes">
+    	                    <div style="background-color: #ffedbc;padding:10px;border-radius: 3px;"><span class="fa fa-bullhorn margin-right"></span>M1 API已更新到V2.0版本，现已支持oauth2验证方式，如您还在使用旧版，考虑更安全使用方式，建议您尽快升级到新版API。</div>
+    	                    <br/>
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>API文档说明</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>1. API请求均使用HTTP协议的GET或POST请求方式。</p>
+    	                        <br/>
+    	                        <p>2. 字符编码：均使用UTF-8 编码。</p>
+    	                        <br/>
+    	                        <p>3. 返回值：以json数据格式返回。</p>
+    	                        <br/>
+    	                        <p>4. API地址：http://api.m1world.com </p>
+    	                        <br/>
+    	                        <p>5. API调用权限仅限于M1云端市场部付费用户（黄金版/钻石版），<a href="http://www.m1world.com/price.html"
+    	                                                                style="color:#0066cc;">点击这里</a>了解版本价格及更多权益。<br />
+    	                            如果您已经是黄金版或钻石版用户，可在“ 账户中心 》 <a href="http://www.m1world.com/account/index.html#aApi" target="_blank">API</a> ”页面获得您的调用app_key和app_secret。如在使用时有任何疑问，可联系客服。
+    	                        </p>
+    	                        <br/>
+
+    	                    </div>
+
+
+    	                </div>
+    	                <a name="ErrorCode"></a>
+    	                <hr class="hr-line"/>
+    	                <!--错误码-->
+    	                <div class="block">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>错误码说明</h2>
+    	                    <br/>
+    	                    <div class="para-table">
+    	                        <table>
+    	                            <thead>
+    	                            <tr>
+    	                                <th>名称</th>
+    	                                <th>说明</th>
+    	                            </tr>
+    	                            </thead>
+    	                            <tbody>
+    	                            <tr>
+    	                                <td id="Td187"><p>E10001</p></td>
+    	                                <td id="Td188">服务器异常</td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td189"><p>E10101</p></td>
+    	                                <td id="Td190"><p>无效的Token</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td193"><p>E10102</p></td>
+    	                                <td id="Td194"><p>无权限访问API</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td197"><p>E10103</p></td>
+    	                                <td id="Td198"><p>参数缺失</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td185"><p>E00001</p></td>
+    	                                <td id="Td186"><p>当前版本为免费版，联系人总数量不能超过5000</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td191"><p>E00002</p></td>
+    	                                <td id="Td192"><p>您的金装版已过期，联系人总数量不能超过5000</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td195"><p>E00003</p></td>
+    	                                <td id="Td196"><p>您当前为金装版，联系人总数量不能超过100000</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td199"><p>E00004</p></td>
+    	                                <td id="Td200"><p>您的钻石版已过期，联系人总数量不能超过5000</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td201"><p>E00005</p></td>
+    	                                <td id="Td202"><p>每次提交导入联系人总数量不能超过1000条</p></td>
+    	                            </tr>
+    	                            <tr>
+    	                                <td id="Td203"><p>E10104</p></td>
+    	                                <td id="Td204"><p>API调用频繁，已超过每小时限额</p></td>
+    	                            </tr>
+    	                            </tbody>
+    	                        </table>
+    	                    </div>
+
+    	                </div>
+
+    	                <a name="AccessFreq"></a>
+    	                <hr class="hr-line"/>
+    	                <!--API访问频次说明-->
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>API访问频次说明</h2>
+    	                    <br/>
+    	                    <div class="para-table">
+    	                        <table>
+    	                            <thead>
+    	                            <tr>
+    	                                <th>免费版</th>
+    	                                <th>黄金版</th>
+    	                                <th>钻石版</th>
+    	                            </tr>
+    	                            </thead>
+    	                            <tbody>
+    	                            <tr>
+    	                                <td id="Td205"><p>-</p></td>
+    	                                <td id="Td206">2000次/小时</td>
+    	                                <td id="Td211">4000次/小时</td>
+    	                            </tr>
+    	                            </tbody>
+    	                        </table>
+    	                        <br/>
+    	                        <p>如果对API请求频次有疑问，可联系客服 021-51602866-789。</p>
+    	                    </div>
+
+    	                </div>
+
+    	                <a name="oauth1Code"></a>
+    	                <hr class="hr-line"/>
+    	                <!--oauth2-->
+    	                <div class="block">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>oauth2验证（Step1）</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：http://auth2.m1world.com/authorize </p>
+
+    	                        <p>参数：</p>
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td181"><p>client_id</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>分配到的app_key</p></td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td181"><p>redirect_uri</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>授权回调地址，站外应用需与设置的回调地址一致</p></td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td181"><p>response_type</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>固定传 "code"</p></td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">成功：
+    	        跳转至授权回调地址
+    	失败：
+    	        {"error_description":"错误描述","error":"错误"}</code></pre>
+    	                    </div>
+
+    	                </div>
+
+    	                <a name="oauth2Code"></a>
+    	                <hr class="hr-line"/>
+    	                <!--oauth2-->
+    	                <div class="block">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>oauth2验证（Step2）获取访问令牌/token</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：http://auth2.m1world.com/access_token </p>
+    	                        <p>传参方式：URL </p>
+    	                        <p>令牌有效期：1天 </p>
+
+    	                        <p>参数：</p>
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td181"><p>client_id</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>分配到的app_key</p></td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td181"><p>client_secret</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>分配到的app_secret</p></td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td181"><p>grant_type</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>可以传"authorization_code"，"refresh_token"</p></td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>当grant_type为authorization_code时 </p>
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td181"><p>code</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>调用authorize获得的code值。</p></td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td181"><p>redirect_uri</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>授权回调地址，站外应用需与设置的回调地址一致</p></td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">成功：
+    	{
+    	    "access_token": "6ae20ce9b0af1bed73ba8718698b87671487923047611",
+    	    "refresh_token": "15e3599c39868dc4579957a0f9423a841487923047611",
+    	    "expires_in": 1488009447620 //令牌到期时间
+    	}
+
+    	失败：
+    	{"error_description":"错误描述","error":"错误"}
+    	        </code></pre>
+    	                        <br />
+    	                        <p>当grant_type为refresh_token时 </p>
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td181"><p>refresh_token</p></td>
+    	                                    <td id="Td182"><p>string</p></td>
+    	                                    <td id="Td183"><p>是</p></td>
+    	                                    <td id="Td183"><p>与授权令牌同时获取的刷新令牌。</p></td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">成功：
+    	{
+    	    "access_token": "6ae20ce9b0af1bed73ba8718698b87671487923047611",
+    	    "refresh_token": "15e3599c39868dc4579957a0f9423a841487923047611",
+    	    "expires_in": 1488009447620 //令牌到期时间
+    	}
+
+    	失败：
+    	{"error_description":"错误描述","error":"错误"}
+    	        </code></pre>
+    	                    </div>
+
+    	                </div>
+
+    	                <a name="AccountAllField"></a>
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取当前账号所有字段列表</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/contact/setting </p>
+
+    	                        <p>参数：</p>
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td181"><p>token</p></td>
+    	                                    <td id="Td182"><p>String</p></td>
+    	                                    <td id="Td183"><p>true</p></td>
+    	                                    <td id="Td184">api请求token值</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	<span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	<span class="hljs-string">"data"</span>: {
+    	           <span class="hljs-string">"id"</span>: <span class="hljs-number">339</span>,
+    	           <span class="hljs-string">"setting"</span>: [
+    	                         {
+    	                              <span class="hljs-string">"field"</span>: <span class="hljs-string">"fullName"</span>,
+    	                              <span class="hljs-string">"name"</span>: <span class="hljs-string">"姓名"</span>,
+    	                              <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	                              <span class="hljs-string">"isShowInQuery"</span>: <span class="hljs-literal">true</span>,
+    	                              <span class="hljs-string">"orderby"</span>: <span class="hljs-number">1</span>,
+    	                              <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	                         },
+    	                         {
+    	                              <span class="hljs-string">"field"</span>: <span class="hljs-string">"gender"</span>,
+    	                              <span class="hljs-string">"name"</span>: <span class="hljs-string">"性别"</span>,
+    	                              <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	                              <span class="hljs-string">"isShowInQuery"</span>: <span class="hljs-literal">false</span>,
+    	                              <span class="hljs-string">"orderby"</span>: <span class="hljs-number">2</span>,
+    	                              <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	                         }
+    	                         ...
+    	                       ]
+    	         }
+    	}</code></pre>
+    	                    </div>
+
+    	                </div>
+    	                <a name="ConAdd"></a>
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>新增联系人</h2>
+    	                    <br/>
+    	                    <div>
+
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/add </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="show_1379243_1_1"><p>token</p></td>
+    	                                    <td id="show_1379243_1_2"><p>String</p></td>
+    	                                    <td id="show_1379243_1_3"><p>true</p></td>
+    	                                    <td id="show_1379243_1_4">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td1"><p>contacts</p></td>
+    	                                    <td id="Td2"><p>Object</p></td>
+    	                                    <td id="Td3"><p>true</p></td>
+    	                                    <td id="Td4">联系人数据集合对象的json字符串</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td5"><p>groupName</p></td>
+    	                                    <td id="Td6"><p>String</p></td>
+    	                                    <td id="Td7"><p>false</p></td>
+    	                                    <td id="Td8">群组名称</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td9"><p>opType</p></td>
+    	                                    <td id="Td10"><p>String</p></td>
+    	                                    <td id="Td11"><p>true</p></td>
+    	                                    <td id="Td12">操作类型：1覆盖、2合并、3新增</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>参数示例：</p>
+
+    	                        <p>contacts：</p>
+    	                        <br/>
+    	                        <pre><code class="0 hljs cs code-json">[
+    	    {
+    	        <span class="hljs-string">"fullName"</span>: <span class="hljs-string">"测试名称1"</span>,
+    	        <span class="hljs-string">"gender"</span>: <span class="hljs-literal">true</span>,<span
+    	                class="hljs-comment">//布尔型</span>
+    	        <span class="hljs-string">"birthday"</span>: <span class="hljs-number">1443628800000</span>,<span
+    	                class="hljs-comment">//时间戳</span>
+    	        <span class="hljs-string">"companyName"</span>: <span class="hljs-string">"梅花信息"</span>,
+    	        <span class="hljs-string">"jobTitle"</span>: <span class="hljs-string">"开发"</span>,
+    	        <span class="hljs-string">"email"</span>: <span
+    	                class="hljs-string">"meihua1@meihua.info"</span>,
+    	        <span class="hljs-string">"workPhone"</span>: <span class="hljs-string">"13800000012"</span>,
+    	        <span class="hljs-string">"mobilePhone"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"website"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"fax"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"country"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"province_zh"</span>: <span class="hljs-string">"上海"</span>,<span
+    	                class="hljs-comment">//省份</span>
+    	        <span class="hljs-string">"city_zh "</span>: <span class="hljs-string">"上海"</span>,<span
+    	                class="hljs-comment">//城市</span>
+    	        <span class="hljs-string">"address"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"postCode"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"qQ"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"weibo"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"weixin"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"notes"</span>: <span class="hljs-string">" "</span>,
+    	        <span class="hljs-string">"propertys"</span>: [
+    	                        {
+    	                            <span class="hljs-string">"propertyId"</span>: <span class="hljs-number">159</span>,
+    	                            <span class="hljs-string">"label"</span>: <span class="hljs-string">"文本"</span>
+    	                        },
+    	                        {
+    	                            <span class="hljs-string">"propertyId"</span>: <span class="hljs-number">160</span>,
+    	                            <span class="hljs-string">"label"</span>: <span class="hljs-string">"文字"</span>
+    	                        }
+    	                      ]
+    	        },
+    	        {
+    	            <span class="hljs-string">"fullName"</span>: <span class="hljs-string">"测试名称2"</span>,
+    	            <span class="hljs-string">"gender"</span>: <span class="hljs-literal">true</span>,
+    	            <span class="hljs-string">"birthday"</span>: <span class="hljs-number">1443628800000</span>,
+    	            <span class="hljs-string">"companyName"</span>: <span class="hljs-string">"梅花信息"</span>,
+    	            <span class="hljs-string">"jobTitle"</span>: <span class="hljs-string">"开发"</span>,
+    	            <span class="hljs-string">"email"</span>: <span
+    	                    class="hljs-string">"meihua2@meihua.info"</span>,
+    	            <span class="hljs-string">"workPhone"</span>: <span class="hljs-string">"13800000013"</span>,
+    	            <span class="hljs-string">"mobilePhone"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"website"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"fax"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"country"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"province_zh"</span>: <span class="hljs-string">"上海"</span>,<span
+    	                    class="hljs-comment">//省份</span>
+    	            <span class="hljs-string">"city_zh "</span>: <span class="hljs-string">"上海"</span>,<span
+    	                    class="hljs-comment">//城市</span>
+    	            <span class="hljs-string">"address"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"postCode"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"qQ"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"weibo"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"weixin"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"notes"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"propertys"</span>: [
+    	                            {
+    	                                <span class="hljs-string">"propertyId"</span>: <span class="hljs-number">159</span>,
+    	                                <span class="hljs-string">"label"</span>: <span class="hljs-string">"文本"</span>
+    	                            },
+    	                            {
+    	                                <span class="hljs-string">"propertyId"</span>: <span class="hljs-number">160</span>,
+    	                                <span class="hljs-string">"label"</span>: <span class="hljs-string">"339"</span>
+    	                            }
+    	                          ]
+    	    }
+    	]</code></pre>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json"><span class="hljs-comment">//不添加群组参数的返回结果</span>
+    	{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	                <span class="hljs-string">"groupId"</span>: <span class="hljs-string">"null"</span>
+    	             }
+    	}
+    	<span class="hljs-comment">//添加群组的返回结果</span>
+    	{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	                <span class="hljs-string">"groupId"</span>: <span class="hljs-number">256</span>
+    	             }
+    	}
+    	</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="ConDel"></a>
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>删除联系人</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/delete </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td13"><p>token</p></td>
+    	                                    <td id="Td14"><p>String</p></td>
+    	                                    <td id="Td15"><p>true</p></td>
+    	                                    <td id="Td16">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td17"><p>ids</p></td>
+    	                                    <td id="Td18"><p>String</p></td>
+    	                                    <td id="Td19"><p>true</p></td>
+    	                                    <td id="Td20">联系人ids，联系人id数组，如[id1,id2,id3]</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+    	                </div>
+    	                <a name="ConUpdate"></a>
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>编辑联系人</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/edit </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td21"><p>token</p></td>
+    	                                    <td id="Td22"><p>String</p></td>
+    	                                    <td id="Td23"><p>true</p></td>
+    	                                    <td id="Td24">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td25"><p>contacts</p></td>
+    	                                    <td id="Td26"><p>Object</p></td>
+    	                                    <td id="Td27"><p>true</p></td>
+    	                                    <td id="Td28">联系人数据集合对象的json字符串</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td29"><p>fields</p></td>
+    	                                    <td id="Td30"><p>Object</p></td>
+    	                                    <td id="Td31"><p>true</p></td>
+    	                                    <td id="Td32">字段顺序[标注唯一字段，用作更新条件],<br/>参数值为数据集合对象的json字符串</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>参数示例：</p>
+    	                        <p>contacts：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">[
+    	    [
+    	        <span class="hljs-string">"test1"</span>,
+    	        <span class="hljs-string">"梅花信息"</span>,
+    	        <span class="hljs-string">"开发测试"</span>,
+    	        <span class="hljs-string">"13800000000"</span>,
+    	        <span class="hljs-string">"test@meihua.info"</span>,
+    	        <span class="hljs-string">"上海"</span>,
+    	        <span class="hljs-string">"上海"</span>,
+    	        <span class="hljs-string">"男"</span>,
+    	        <span class="hljs-string">"Thu May 10 00:00:00 CDT 1990"</span>,
+    	        <span class="hljs-string">"文本1"</span>,
+    	        <span class="hljs-string">"选项1"</span>
+    	    ],
+    	    [
+    	        <span class="hljs-string">"test2"</span>,
+    	        <span class="hljs-string">"梅花信息"</span>,
+    	        <span class="hljs-string">"开发"</span>,
+    	        <span class="hljs-string">"13800000001"</span>,
+    	        <span class="hljs-string">"123456@qq.com"</span>,
+    	        <span class="hljs-string">"上海"</span>,
+    	        <span class="hljs-string">"上海"</span>,
+    	        <span class="hljs-string">"女"</span>,
+    	        <span class="hljs-string">"Fri May 11 00:00:00 CDT 1990"</span>,
+    	        <span class="hljs-string">"文本2"</span>,
+    	        <span class="hljs-string">"选项2"</span>
+    	    ]
+    	]
+    	                        </code></pre>
+    	                        <br/>
+    	                        <p>fields：参数格式样例（属性说明：field 字段名[额外字段为额外字段的id]、name 字段中文名称、isOrigin 是否为系统字段、type [文本类型 1,下拉框类型
+    	                            2]、isUniq[是否设为唯一字段]）</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">[
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"fullName"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"姓名"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"companyName"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"公司"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"jobTitle"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"职位"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"workPhone"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"电话"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"email"</span>,
+    	        <span class="hljs-string">"isUniq"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"邮箱"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"province"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"省份"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"city"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"城市"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"gender"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"性别"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"birthday"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"生日"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">true</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"159"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"API测试额外字段（文本）"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">false</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"field"</span>: <span class="hljs-string">"160"</span>,
+    	        <span class="hljs-string">"name"</span>: <span class="hljs-string">"API测试额外字段（下拉框）"</span>,
+    	        <span class="hljs-string">"isOrigin"</span>: <span class="hljs-literal">false</span>,
+    	        <span class="hljs-string">"type"</span>: <span class="hljs-number">2</span>
+    	    }
+    	]</code></pre>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="ConDetail"></a>
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取联系人详情</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/contact/detail </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td33"><p>token</p></td>
+    	                                    <td id="Td34"><p>String</p></td>
+    	                                    <td id="Td35"><p>true</p></td>
+    	                                    <td id="Td36">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td37"><p>id</p></td>
+    	                                    <td id="Td38"><p>String</p></td>
+    	                                    <td id="Td39"><p>true</p></td>
+    	                                    <td id="Td40">联系人id</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	        <span class="hljs-string">"detail"</span>: {
+    	            <span class="hljs-string">"id"</span>: <span class="hljs-number">2172079</span>,
+    	            <span class="hljs-string">"fullName"</span>: <span class="hljs-string">"李玫"</span>,
+    	            <span class="hljs-string">"birthday_des"</span>: <span class="hljs-string">""</span>,
+    	            <span class="hljs-string">"companyName"</span>: <span class="hljs-string">"美啦"</span>,
+    	            <span class="hljs-string">"jobTitle"</span>: <span class="hljs-string">"Age"</span>,
+    	            <span class="hljs-string">"email"</span>: <span class="hljs-string">"test@sina.com"</span>,
+    	            <span class="hljs-string">"workPhone"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"mobilePhone"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"website"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"fax"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"country"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"province"</span>: <span class="hljs-number">0</span>,
+    	            <span class="hljs-string">"city"</span>: <span class="hljs-number">0</span>,
+    	            <span class="hljs-string">"address"</span>: <span class="hljs-string">""</span>,
+    	            <span class="hljs-string">"postCode"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"qQ"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"weibo"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"weixin"</span>: <span class="hljs-string">" "</span>,
+    	            <span class="hljs-string">"notes"</span>: <span class="hljs-string">"100021"</span>,
+    	            <span class="hljs-string">"createAt"</span>: <span class="hljs-number">287006</span>,
+    	            <span class="hljs-string">"accountId"</span>: <span class="hljs-string">"7"</span>,
+    	            <span class="hljs-string">"createTime"</span>: <span
+    	                    class="hljs-number">1445399164287</span>,
+    	            <span class="hljs-string">"updateTime"</span>: <span
+    	                    class="hljs-number">1445399164287</span>,
+    	            <span class="hljs-string">"QRCodeURL"</span>: <span class="hljs-string">"http://contact.m1world.com/download_tmp/联系人二维码_1445500487311.jpg"</span>,
+    	            <span class="hljs-string">"isEmailActive"</span>: <span class="hljs-literal">true</span>,
+    	            <span class="hljs-string">"propertys"</span>: [
+    	                {
+    	                    <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"propertyId"</span>: <span class="hljs-number">189</span>,
+    	                    <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"label"</span>: <span class="hljs-string">"OnePassUserName"</span>,
+    	                    <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"updateTime"</span>: <span class="hljs-number">0</span>
+    	                }
+    	            ],
+    	            <span class="hljs-string">"groups"</span>: [
+    	                {
+    	                    <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"groupId"</span>: <span class="hljs-number">779</span>,
+    	                    <span class="hljs-string">"groupName"</span>: <span class="hljs-string">"群组"</span>,
+    	                    <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                }
+    	            ],
+    	            <span class="hljs-string">"sources"</span>: [
+    	                {
+    	                    <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"sourceId"</span>: <span class="hljs-number">223</span>,
+    	                    <span class="hljs-string">"name"</span>: <span class="hljs-string">"144539583634516"</span>,
+    	                    <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                    <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                }
+    	            ],
+    	            <span class="hljs-string">"opLogs"</span>: [
+    	                {
+    	                    <span class="hljs-string">"date"</span>: <span class="hljs-string">"2015-10-21"</span>,
+    	                    <span class="hljs-string">"log"</span>: [
+    	                        {
+    	                            <span class="hljs-string">"logs"</span>: [
+    	                                        <span class="hljs-string">"通过Excel导入了联系人李玫"</span>
+    	                             ],
+    	                            <span class="hljs-string">"username"</span>: <span class="hljs-string">"sunwellgu"</span>
+    	                         }
+    	                      ]
+    	                },
+    	                {
+    	                    <span class="hljs-string">"date"</span>: <span class="hljs-string">"2015-10-22"</span>,
+    	                    <span class="hljs-string">"log"</span>: [
+    	                        {
+    	                            <span class="hljs-string">"logs"</span>: [
+    	                                        <span class="hljs-string">"创建了群组:群组"</span>
+    	                                    ],
+    	                            <span class="hljs-string">"username"</span>: <span class="hljs-string">"sunwellgu"</span>
+    	                        }
+    	                    ]
+    	                }
+    	            ],
+    	            <span class="hljs-string">"tags"</span>: []
+    	            },
+    	            <span class="hljs-string">"edm"</span>: {
+    	                <span class="hljs-string">"isEmailActive"</span>: <span class="hljs-literal">false</span>,
+    	                <span class="hljs-string">"edmBehavior"</span>: [
+    	                    {
+    	                        <span class="hljs-string">"task_id"</span>: <span class="hljs-number">2880</span>,
+    	                        <span class="hljs-string">"subject"</span>: <span class="hljs-string">"我们更新了一款圣诞主题"</span>,
+    	                        <span class="hljs-string">"thumbnail"</span>: <span class="hljs-string">"http://7xl909.com2.z0.glb.qiniucdn.com/Fru9jCF1IlmkCsHZ0JGPOCoPfPmv"</span>,
+    	                        <span class="hljs-string">"sendtime"</span>: <span class="hljs-number">1450972800000</span>,
+    	                        <span class="hljs-string">"dmdtype"</span>: <span class="hljs-string">"open"</span>,
+    	                        <span class="hljs-string">"email"</span>: <span
+    	                                class="hljs-string">"test@meihua.info"</span>,
+    	                        <span class="hljs-string">"eventdate"</span>: <span class="hljs-string">"2015-12-25 10:10:44.0"</span>,
+    	                        <span class="hljs-string">"clickname"</span>: <span class="hljs-string">""</span>,
+    	                        <span class="hljs-string">"clickurl"</span>: <span class="hljs-string">""</span>,
+    	                        <span class="hljs-string">"ip"</span>: <span class="hljs-string">"203.156.203.10"</span>,
+    	                        <span class="hljs-string">"country"</span>: <span class="hljs-string">"中国"</span>,
+    	                        <span class="hljs-string">"province"</span>: <span class="hljs-string">"上海"</span>,
+    	                        <span class="hljs-string">"city"</span>: <span class="hljs-string">"上海"</span>,
+    	                        <span class="hljs-string">"software"</span>: <span class="hljs-string">"Windows 7"</span>,
+    	                        <span class="hljs-string">"clientOs"</span>: <span class="hljs-string">"[Unknown]"</span>,
+    	                        <span class="hljs-string">"mailing_id"</span>: <span class="hljs-string">"4905"</span>
+    	                    }
+    	                ]
+    	            }
+    	        }
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="ConList"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取联系人列表</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/contact/all </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td41"><p>token</p></td>
+    	                                    <td id="Td42"><p>String</p></td>
+    	                                    <td id="Td43"><p>true</p></td>
+    	                                    <td id="Td44">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td161"><p>groupIds</p></td>
+    	                                    <td id="Td162"><p>Array</p></td>
+    	                                    <td id="Td163"><p>false</p></td>
+    	                                    <td id="Td164">群组id集合，[id1,id2]</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td45"><p>page</p></td>
+    	                                    <td id="Td46"><p>String</p></td>
+    	                                    <td id="Td47"><p>true</p></td>
+    	                                    <td id="Td48">分页页码</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td49"><p>limit</p></td>
+    	                                    <td id="Td50"><p>String</p></td>
+    	                                    <td id="Td51"><p>true</p></td>
+    	                                    <td id="Td52">每页条数（每页最多50条）</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                       <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	        <span class="hljs-string">"total"</span>: <span class="hljs-number">4831</span>,
+    	        <span class="hljs-string">"list"</span>: [
+    	            {
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">4338372</span>,
+    	                <span class="hljs-string">"fullName"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"gender"</span>: <span class="hljs-literal">true</span>,
+    	                <span class="hljs-string">"gender_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"birthday"</span>: <span class="hljs-number">1451024631</span>,
+    	                <span class="hljs-string">"birthday_des"</span>: <span
+    	                       class="hljs-string">"1970-01-18"</span>,
+    	                <span class="hljs-string">"companyName"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"jobTitle"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"email"</span>: <span
+    	                       class="hljs-string">"baixiaoshen@milord.cn"</span>,
+    	                <span class="hljs-string">"workPhone"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"mobilePhone"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"website"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"fax"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"country"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"province"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"province_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"province_zh"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"city"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"city_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"city_zh"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"address"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"postCode"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"qQ"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"weibo"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"weixin"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"notes"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"createAt"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"accountId"</span>: <span class="hljs-string">"2627"</span>,
+    	                <span class="hljs-string">"createTime"</span>: <span class="hljs-number">1451024646979</span>,
+    	                <span class="hljs-string">"updateTime"</span>: <span class="hljs-number">1451024646979</span>,
+    	                <span class="hljs-string">"QRCodeURL"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"isEmailActive"</span>: <span class="hljs-literal">true</span>,
+    	                <span class="hljs-string">"propertys"</span>: [],
+    	                <span class="hljs-string">"groups"</span>: [
+    	                    {
+    	                        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"groupId"</span>: <span class="hljs-number">1605</span>,
+    	                        <span class="hljs-string">"groupName"</span>: <span
+    	                               class="hljs-string">"shengdan-shengdan"</span>,
+    	                        <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                    }
+    	                ],
+    	                <span class="hljs-string">"sources"</span>: [
+    	                    {
+    	                        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"sourceId"</span>: <span class="hljs-number">299</span>,
+    	                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"API导入"</span>,
+    	                        <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                    }
+    	                ],
+    	                <span class="hljs-string">"tags"</span>: []
+    	            },
+    	            {
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">4338373</span>,
+    	                <span class="hljs-string">"fullName"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"gender"</span>: <span class="hljs-literal">true</span>,
+    	                <span class="hljs-string">"gender_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"birthday"</span>: <span class="hljs-number">1451024631</span>,
+    	                <span class="hljs-string">"birthday_des"</span>: <span
+    	                       class="hljs-string">"1970-01-18"</span>,
+    	                <span class="hljs-string">"companyName"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"jobTitle"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"email"</span>: <span
+    	                       class="hljs-string">"v-ing@vip.163.com"</span>,
+    	                <span class="hljs-string">"workPhone"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"mobilePhone"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"website"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"fax"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"country"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"province"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"province_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"province_zh"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"city"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"city_des"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"city_zh"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"address"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"postCode"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"qQ"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"weibo"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"weixin"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"notes"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"createAt"</span>: <span class="hljs-number">0</span>,
+    	                <span class="hljs-string">"accountId"</span>: <span class="hljs-string">"2627"</span>,
+    	                <span class="hljs-string">"createTime"</span>: <span class="hljs-number">1451024646985</span>,
+    	                <span class="hljs-string">"updateTime"</span>: <span class="hljs-number">1451024646985</span>,
+    	                <span class="hljs-string">"QRCodeURL"</span>: <span class="hljs-string">" "</span>,
+    	                <span class="hljs-string">"isEmailActive"</span>: <span class="hljs-literal">true</span>,
+    	                <span class="hljs-string">"propertys"</span>: [],
+    	                <span class="hljs-string">"groups"</span>: [
+    	                    {
+    	                        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"groupId"</span>: <span class="hljs-number">1605</span>,
+    	                        <span class="hljs-string">"groupName"</span>: <span
+    	                               class="hljs-string">"shengdan-shengdan"</span>,
+    	                        <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                    }
+    	                ],
+    	                <span class="hljs-string">"sources"</span>: [
+    	                    {
+    	                        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"sourceId"</span>: <span class="hljs-number">299</span>,
+    	                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"API导入"</span>,
+    	                        <span class="hljs-string">"contactId"</span>: <span class="hljs-number">0</span>,
+    	                        <span class="hljs-string">"createTime"</span>: <span class="hljs-number">0</span>
+    	                    }
+    	                ],
+    	                <span class="hljs-string">"tags"</span>: []
+    	            }
+    	        ]
+    	    }
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="GroupAdd"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>添加群组</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/group/add </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td53"><p>token</p></td>
+    	                                    <td id="Td54"><p>String</p></td>
+    	                                    <td id="Td55"><p>true</p></td>
+    	                                    <td id="Td56">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td57"><p>name</p></td>
+    	                                    <td id="Td58"><p>String</p></td>
+    	                                    <td id="Td59"><p>true</p></td>
+    	                                    <td id="Td60">群组名称</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="GroupDel"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>删除群组</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/group/delete </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td69"><p>token</p></td>
+    	                                    <td id="Td70"><p>String</p></td>
+    	                                    <td id="Td71"><p>true</p></td>
+    	                                    <td id="Td72">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td73"><p>ids</p></td>
+    	                                    <td id="Td74"><p>String</p></td>
+    	                                    <td id="Td75"><p>true</p></td>
+    	                                    <td id="Td76">群组ids，群组id集合如:[id1,id2]</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td77"><p>flag</p></td>
+    	                                    <td id="Td78"><p>Bool</p></td>
+    	                                    <td id="Td79"><p>true</p></td>
+    	                                    <td id="Td80">是否删除关联联系人（true，false）</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="GroupList"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取群组列表</h2>
+    	                    <br/>
+    	                    <div>
+
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/contact/group/all </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td81"><p>token</p></td>
+    	                                    <td id="Td82"><p>String</p></td>
+    	                                    <td id="Td83"><p>true</p></td>
+    	                                    <td id="Td84">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td85"><p>page</p></td>
+    	                                    <td id="Td86"><p>String</p></td>
+    	                                    <td id="Td87"><p>true</p></td>
+    	                                    <td id="Td88">分页页码</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td89"><p>limit</p></td>
+    	                                    <td id="Td90"><p>String</p></td>
+    	                                    <td id="Td91"><p>true</p></td>
+    	                                    <td id="Td92">分页条数</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td93"><p>key</p></td>
+    	                                    <td id="Td94"><p>String</p></td>
+    	                                    <td id="Td95"><p>false</p></td>
+    	                                    <td id="Td96">关键字</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	        <span class="hljs-string">"total"</span>: <span class="hljs-number">2</span>,
+    	        <span class="hljs-string">"groups"</span>: [
+    	            {
+    	                <span class="hljs-string">"groupName"</span>: <span class="hljs-string">"群组1"</span>,
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">402</span>,
+    	                <span class="hljs-string">"contactSize"</span>: <span class="hljs-number">0</span>
+    	            },
+    	            {
+    	                <span class="hljs-string">"groupName"</span>: <span class="hljs-string">"群组2"</span>,
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">401</span>,
+    	                <span class="hljs-string">"contactSize"</span>: <span class="hljs-number">0</span>
+    	            }
+    	        ]
+    	    }
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="TagAdd"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>添加标签</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/tag/add </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td97"><p>token</p></td>
+    	                                    <td id="Td98"><p>String</p></td>
+    	                                    <td id="Td99"><p>true</p></td>
+    	                                    <td id="Td100">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td101"><p>name</p></td>
+    	                                    <td id="Td102"><p>String</p></td>
+    	                                    <td id="Td103"><p>true</p></td>
+    	                                    <td id="Td104">标签名称</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="TagList"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取标签列表</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/contact/tag/all </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td105"><p>token</p></td>
+    	                                    <td id="Td106"><p>String</p></td>
+    	                                    <td id="Td107"><p>true</p></td>
+    	                                    <td id="Td108">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td109"><p>page</p></td>
+    	                                    <td id="Td110"><p>String</p></td>
+    	                                    <td id="Td111"><p>true</p></td>
+    	                                    <td id="Td112">分页页码</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td113"><p>limit</p></td>
+    	                                    <td id="Td114"><p>String</p></td>
+    	                                    <td id="Td115"><p>true</p></td>
+    	                                    <td id="Td116">分页条数</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td117"><p>key</p></td>
+    	                                    <td id="Td118"><p>String</p></td>
+    	                                    <td id="Td119"><p>false</p></td>
+    	                                    <td id="Td120">关键字</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	        <span class="hljs-string">"total"</span>: <span class="hljs-number">2</span>,
+    	        <span class="hljs-string">"tags"</span>: [
+    	            {
+    	                <span class="hljs-string">"tagName"</span>: <span class="hljs-string">"标签1"</span>,
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">402</span>,
+    	                <span class="hljs-string">"contactSize"</span>: <span class="hljs-number">0</span>
+    	            },
+    	            {
+    	                <span class="hljs-string">"tagName"</span>: <span class="hljs-string">"标签2"</span>,
+    	                <span class="hljs-string">"id"</span>: <span class="hljs-number">401</span>,
+    	                <span class="hljs-string">"contactSize"</span>: <span class="hljs-number">0</span>
+    	            }
+    	        ]
+    	    }
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="FieldAdd"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>添加自定义字段</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/property/add </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td121"><p>token</p></td>
+    	                                    <td id="Td122"><p>String</p></td>
+    	                                    <td id="Td123"><p>true</p></td>
+    	                                    <td id="Td124">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td137"><p>label</p></td>
+    	                                    <td id="Td138"><p>String</p></td>
+    	                                    <td id="Td139"><p>true</p></td>
+    	                                    <td id="Td140">自定义字段名</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td125"><p>fieldType</p></td>
+    	                                    <td id="Td126"><p>String</p></td>
+    	                                    <td id="Td127"><p>true</p></td>
+    	                                    <td id="Td128">字段类型（1 单个，2 下拉框）</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td129"><p>description</p></td>
+    	                                    <td id="Td130"><p>String</p></td>
+    	                                    <td id="Td131"><p>true</p></td>
+    	                                    <td id="Td132">字段描述</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td133"><p>subpropertys</p></td>
+    	                                    <td id="Td134"><p>Object</p></td>
+    	                                    <td id="Td135"><p>false</p></td>
+    	                                    <td id="Td136">字段类型为下拉框时，字段下的子节点集合</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>参数示例：</p>
+
+    	                        <p>subpropertys:</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">[
+    	    {
+    	        <span class="hljs-string">"label"</span>: <span class="hljs-string">"电商行业"</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"label"</span>: <span class="hljs-string">"化工行业"</span>
+    	    }
+    	]</code></pre>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	<pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="FieldUpdate"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>编辑自定义字段</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/property/edit </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td141"><p>token</p></td>
+    	                                    <td id="Td142"><p>String</p></td>
+    	                                    <td id="Td143"><p>true</p></td>
+    	                                    <td id="Td144">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td145"><p>id</p></td>
+    	                                    <td id="Td146"><p>String</p></td>
+    	                                    <td id="Td147"><p>true</p></td>
+    	                                    <td id="Td148">自定义字段id</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td165"><p>label</p></td>
+    	                                    <td id="Td166"><p>String</p></td>
+    	                                    <td id="Td167"><p>true</p></td>
+    	                                    <td id="Td168">自定义字段名称</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td149"><p>fieldType</p></td>
+    	                                    <td id="Td150"><p>String</p></td>
+    	                                    <td id="Td151"><p>true</p></td>
+    	                                    <td id="Td152">字段类型（1 单个，2 下拉框）</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td153"><p>description</p></td>
+    	                                    <td id="Td154"><p>String</p></td>
+    	                                    <td id="Td155"><p>true</p></td>
+    	                                    <td id="Td156">字段描述</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td157"><p>subpropertys</p></td>
+    	                                    <td id="Td158"><p>Object</p></td>
+    	                                    <td id="Td159"><p>false</p></td>
+    	                                    <td id="Td160">字段类型为下拉框时，字段下的子节点集合</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>参数示例：</p>
+
+    	                        <p>subpropertys:</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">[
+    	    {
+    	        <span class="hljs-string">"label"</span>: <span class="hljs-string">"电商行业"</span>
+    	    },
+    	    {
+    	        <span class="hljs-string">"label"</span>: <span class="hljs-string">"化工行业"</span>
+    	    }
+    	]</code></pre>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	<pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="FieldList"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取自定义字段列表</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/property/all </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td169"><p>token</p></td>
+    	                                    <td id="Td170"><p>String</p></td>
+    	                                    <td id="Td171"><p>true</p></td>
+    	                                    <td id="Td172">api请求token值</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: [
+    	        {
+    	            <span class="hljs-string">"description"</span>: <span class="hljs-string">"字段描述"</span>,
+    	            <span class="hljs-string">"id"</span>: <span class="hljs-number">60</span>,
+    	            <span class="hljs-string">"label"</span>: <span class="hljs-string">"注册时间"</span>,
+    	            <span class="hljs-string">"type"</span>: <span class="hljs-number">2</span>
+    	        },
+    	        {
+    	            <span class="hljs-string">"description"</span>: <span class="hljs-string">"字段描述"</span>,
+    	            <span class="hljs-string">"id"</span>: <span class="hljs-number">121</span>,
+    	            <span class="hljs-string">"label"</span>: <span class="hljs-string">"注册来源"</span>,
+    	            <span class="hljs-string">"type"</span>: <span class="hljs-number">1</span>
+    	        }
+    	    ]
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="FieldDel"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>删除自定义字段</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：POST</p>
+
+    	                        <p>请求地址：/contact/property/delete </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td173"><p>token</p></td>
+    	                                    <td id="Td174"><p>String</p></td>
+    	                                    <td id="Td175"><p>true</p></td>
+    	                                    <td id="Td176">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td177"><p>id</p></td>
+    	                                    <td id="Td178"><p>String</p></td>
+    	                                    <td id="Td179"><p>true</p></td>
+    	                                    <td id="Td180">自定义字段id(仅支持单个字段id)</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: <span class="hljs-string">"success"</span>
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="EDMList"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取EDM列表</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/edm/tasks </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td61"><p>token</p></td>
+    	                                    <td id="Td62"><p>String</p></td>
+    	                                    <td id="Td63"><p>true</p></td>
+    	                                    <td id="Td64">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td65"><p>start</p></td>
+    	                                    <td id="Td66"><p>String</p></td>
+    	                                    <td id="Td67"><p>true</p></td>
+    	                                    <td id="Td68">开始时间戳</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td207"><p>end</p></td>
+    	                                    <td id="Td208"><p>String</p></td>
+    	                                    <td id="Td209"><p>true</p></td>
+    	                                    <td id="Td210">结束时间戳</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: [
+    	        {
+    	            <span class="hljs-string">"task_id"</span>: <span class="hljs-number">3450</span>,
+    	            <span class="hljs-string">"createtime"</span>: <span
+    	                class="hljs-number">1452134460000</span>,
+    	            <span class="hljs-string">"sendtime"</span>: <span class="hljs-number">1452214800000</span>,
+    	            <span class="hljs-string">"subject"</span>: <span class="hljs-string">"邮件主题"</span>,
+    	            <span class="hljs-string">"thumbnail"</span>: <span class="hljs-string">"http://7xl909.com2.z0.glb.qiniucdn.com/Fs6biaZF6OAadv0e8ZZ59Vd_4i2F"</span>,
+    	            <span class="hljs-string">"status"</span>: <span class="hljs-number">4</span>
+    	        },
+    	        {
+    	            <span class="hljs-string">"task_id"</span>: <span class="hljs-number">2956</span>,
+    	            <span class="hljs-string">"createtime"</span>: <span
+    	                class="hljs-number">1451284270000</span>,
+    	            <span class="hljs-string">"sendtime"</span>: <span class="hljs-number">1451426400000</span>,
+    	            <span class="hljs-string">"subject"</span>: <span class="hljs-string">"邮件主题"</span>,
+    	            <span class="hljs-string">"thumbnail"</span>: <span class="hljs-string">"http://7xl909.com2.z0.glb.qiniucdn.com/FgUdksoyXVRaXeul1BYP6N4bZYc9"</span>,
+    	            <span class="hljs-string">"status"</span>: <span class="hljs-number">4</span>
+    	        }
+    	    ]
+    	}</code></pre>
+
+    	                    </div>
+
+    	                </div>
+    	                <a name="EDMDetail"></a>
+
+    	                <hr class="hr-line"/>
+    	                <div class="block" name="des">
+    	                    <h2><span class="fa fa-hand-o-right margin-right"></span>获取指定EDM明细</h2>
+    	                    <br/>
+    	                    <div>
+    	                        <p>请求方式：GET</p>
+
+    	                        <p>请求地址：/edm/tasks/open </p>
+
+    	                        <p>参数：</p>
+
+    	                        <div class="para-table">
+    	                            <table>
+    	                                <thead>
+    	                                <tr>
+    	                                    <th>名称</th>
+    	                                    <th>类型</th>
+    	                                    <th>是否必须</th>
+    	                                    <th>说明</th>
+    	                                </tr>
+    	                                </thead>
+    	                                <tbody>
+    	                                <tr>
+    	                                    <td id="Td212"><p>token</p></td>
+    	                                    <td id="Td213"><p>String</p></td>
+    	                                    <td id="Td214"><p>true</p></td>
+    	                                    <td id="Td215">api请求token值</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td232"><p>tasks</p></td>
+    	                                    <td id="Td233"><p>String</p></td>
+    	                                    <td id="Td234"><p>true</p></td>
+    	                                    <td id="Td235">邮件发送任务编号</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td216"><p>start</p></td>
+    	                                    <td id="Td217"><p>String</p></td>
+    	                                    <td id="Td218"><p>true</p></td>
+    	                                    <td id="Td219">开始时间戳</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td220"><p>end</p></td>
+    	                                    <td id="Td221"><p>String</p></td>
+    	                                    <td id="Td222"><p>true</p></td>
+    	                                    <td id="Td223">结束时间戳</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td224"><p>page</p></td>
+    	                                    <td id="Td225"><p>String</p></td>
+    	                                    <td id="Td226"><p>true</p></td>
+    	                                    <td id="Td227">分页页码</td>
+    	                                </tr>
+    	                                <tr>
+    	                                    <td id="Td228"><p>limit</p></td>
+    	                                    <td id="Td229"><p>String</p></td>
+    	                                    <td id="Td230"><p>true</p></td>
+    	                                    <td id="Td231">分页条数</td>
+    	                                </tr>
+    	                                </tbody>
+    	                            </table>
+    	                        </div>
+    	                        <br/>
+    	                        <p>返回数据：</p>
+    	                        <br/>
+    	                        <pre><code class="js hljs code-json">{
+    	    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    	    <span class="hljs-string">"data"</span>: {
+    	        <span class="hljs-string">"total_count"</span>: <span class="hljs-number">500</span>,
+    	        <span class="hljs-string">"detail"</span>: [
+    	            {
+    	                <span class="hljs-string">"task_id"</span>: <span class="hljs-number">3450</span>,
+    	                <span class="hljs-string">"subject"</span>: <span class="hljs-string">"邮件主题"</span>,
+    	                <span class="hljs-string">"thumbnail"</span>: <span class="hljs-string">"http://7xl909.com2.z0.glb.qiniucdn.com/Fs6biaZF6OAadv0e8ZZ59Vd_4i2F"</span>,
+    	                <span class="hljs-string">"sendtime"</span>: <span class="hljs-number">1452214800000</span>,
+    	                <span class="hljs-string">"dmdtype"</span>: <span class="hljs-string">"open"</span>,
+    	                <span class="hljs-string">"email"</span>: <span class="hljs-string">"test@163.com"</span>,
+    	                <span class="hljs-string">"eventdate"</span>: <span class="hljs-string">"2016-01-11 21:49:57.0"</span>,
+    	                <span class="hljs-string">"clickname"</span>: <span class="hljs-string">""</span>,
+    	                <span class="hljs-string">"clickurl"</span>: <span class="hljs-string">""</span>,
+    	                <span class="hljs-string">"ip"</span>: <span class="hljs-string">"183.69.234.48"</span>,
+    	                <span class="hljs-string">"country"</span>: <span class="hljs-string">"中国"</span>,
+    	                <span class="hljs-string">"province"</span>: <span class="hljs-string">"重庆"</span>,
+    	                <span class="hljs-string">"city"</span>: <span class="hljs-string">"重庆"</span>,
+    	                <span class="hljs-string">"software"</span>: <span class="hljs-string">"Windows 7"</span>,
+    	                <span class="hljs-string">"clientOs"</span>: <span
+    	                        class="hljs-string">"Google Chrome"</span>,
+    	                <span class="hljs-string">"mailing_id"</span>: <span class="hljs-string">"24788"</span>
+    	            },
+    	            {
+    	                <span class="hljs-string">"task_id"</span>: <span class="hljs-number">3450</span>,
+    	                <span class="hljs-string">"subject"</span>: <span class="hljs-string">"邮件主题"</span>,
+    	                <span class="hljs-string">"thumbnail"</span>: <span class="hljs-string">"http://7xl909.com2.z0.glb.qiniucdn.com/Fs6biaZF6OAadv0e8ZZ59Vd_4i2F"</span>,
+    	                <span class="hljs-string">"sendtime"</span>: <span class="hljs-number">1452214800000</span>,
+    	                <span class="hljs-string">"dmdtype"</span>: <span class="hljs-string">"open"</span>,
+    	                <span class="hljs-string">"email"</span>: <span class="hljs-string">"test@163.com"</span>,
+    	                <span class="hljs-string">"eventdate"</span>: <span class="hljs-string">"2016-01-11 20:42:45.0"</span>,
+    	                <span class="hljs-string">"clickname"</span>: <span class="hljs-string">""</span>,
+    	                <span class="hljs-string">"clickurl"</span>: <span class="hljs-string">""</span>,
+    	                <span class="hljs-string">"ip"</span>: <span class="hljs-string">"114.64.232.182"</span>,
+    	                <span class="hljs-string">"country"</span>: <span class="hljs-string">"中国"</span>,
+    	                <span class="hljs-string">"province"</span>: <span class="hljs-string">"北京"</span>,
+    	                <span class="hljs-string">"city"</span>: <span class="hljs-string">"北京"</span>,
+    	                <span class="hljs-string">"software"</span>: <span class="hljs-string">"Windows 8"</span>,
+    	                <span class="hljs-string">"clientOs"</span>: <span
+    	                        class="hljs-string">"Google Chrome"</span>,
+    	                <span class="hljs-string">"mailing_id"</span>: <span class="hljs-string">"24788"</span>
+    	            }
+    	        ]
+    	    }
+    	}</code></pre>
+    	                    </div>
+    	                </div>
+    	            </div>
+    	            </div>
+    	        </div>
+    	    </div>
+    	</div>
+    </div>
+    <script src="http://www.m1world.com/public/hf/js/m1.footer.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-65209370-1', 'm1world.com');
+        ga('send', 'pageview');
+    </script>
+    <script src="http://www.m1world.com/js/intercom-running.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //开启新的线程
+    var work = new Worker('地址')
+    //关闭多的线程
+    work.terminate()
+    //.为了在页面主程序接收从多线程传递过来的消息，我们需要使用多线程的 onmessage 事件处理器，定义 onmessage 的实例代码如下：
+    work.onmessage=function (event) {
+        var num = event.data;
+        var result = 0;
+        for(var i=0; i<num; i++){
+            result += i;
+        }
+
+        // 向线程创建源送回消息
+        postMessage(result);
+    }
+    //.将数据传给线程
+    work.postMessage(data)
+
+</script>
+</body>
+</html>
